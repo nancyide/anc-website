@@ -29,8 +29,10 @@ This repository and its dataset release are private staging resources. Draft rel
 - Review the static preview and migration notices for former interactive features.
 - Confirm the final dataset scope; the full server directory is approximately 80 GiB, substantially larger than the files linked from the captured pages. Unlinked datasets and services have not been migrated.
 - Publish the reviewed dataset release and confirm its assets can be downloaded anonymously.
-- Decide repository visibility and enable GitHub Pages for `site/` through a deployment workflow.
+- Decide repository visibility, enable GitHub Pages with GitHub Actions as its source, then run the manual `Publish static website` workflow. The workflow refuses to deploy while the dataset release remains a draft.
 - Validate navigation, download checksums, legacy redirects, and the custom domain's HTTPS certificate.
 - Arrange DNS access for `anc.org` and `www.anc.org`, retain a private backup, and plan rollback before cutover.
 
 WordPress administration, its database, private content, credentials, plugin logs, CGI programs, and the server configuration are not included. Existing copyright and dataset license statements remain in force; this repository does not relicense the source material.
+
+See [the preview review notes](migration/REVIEW.md) for migration changes and unresolved legacy resources.

@@ -18,6 +18,7 @@ class References(HTMLParser):
                 self.references.append((tag, key, value))
 
 missing, old_host, external_assets = [], [], []
+exact_files = {p.relative_to(SITE).as_posix() for p in SITE.rglob('*') if p.is_file()}
 html_files = list(SITE.rglob('*.html'))
 for path in html_files:
     rel = path.relative_to(SITE).as_posix()
@@ -28,9 +29,10 @@ for path in html_files:
         if url.hostname in ('anc.org', 'www.anc.org'):
             old_host.append(item)
         elif url.hostname == 'preview.invalid':
-            target = SITE / unquote(url.path).lstrip('/')
-            if target.is_dir(): target /= 'index.html'
-            if not target.is_file(): missing.append(item)
+            target = unquote(url.path).lstrip('/')
+            if target.endswith('/') or not target: target += 'index.html'
+            if target not in exact_files and target + '/index.html' not in exact_files:
+                missing.append(item)
         elif key in ('src', 'poster') and url.scheme in ('http', 'https'):
             external_assets.append(item)
 for path in SITE.rglob('*.css'):

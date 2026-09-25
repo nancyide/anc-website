@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Using Gate | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../data/" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../../data/oanc/" alt="Open ANC">oanc</a></li>
+	<li class=""><a href="../../../data/masc/" alt="MASC">masc</a></li>
+	<li class=""><a href="../../../data/anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor"><a href="../../" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../../anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../../anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class="current-page-ancestor current-page-parent"><a href="../" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class=""><a href="../../anc2go/" alt="ANC2Go">ANC2Go</a></li>
+<li class=""><a href="../../anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+<li class="current-page-ancestor current-page-parent"><a href="../" alt="GATE Tools">GATE Tools</a></li>
+<li class=""><a href="../../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-255" class="post-255 page type-page status-publish hentry">
+					
+					<h1><a href="../" class="entry-title">GATE Tools</a></h1>
+		
+					<div id="side-links">
+				<ul>
+					<li class="page_item page-item-255 current_page_item"><a href="./" aria-current="page">Using Gate</a></li>
+<li class="page_item page-item-575"><a href="../grate/">Grate</a></li>
+				</ul>
+				<div class="lower"></div>
+			</div>
+			
+			<div id="content" class="sidelinks">
+			
+				
+		
+		
+					<h1 class="subentry-title">Using Gate</h1>
+				
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<h2>Installing Gate</h2>
+<p>First <a href="http://gate.ac.uk/download/index.html">download GATE</a>. It is recommeneded that you use either the Windows or MAC OSX installers or the generic installer (an executable jar file). Run the installer and follow the on screen instructions. The remainder of this page uses the symbol <em><strong>$GATE_HOME</strong></em> to refer to the directory where you installed GATE.</p>
+<p>GATE requires that you have Java installed. <strong>NOTE:</strong> Most Windows computers do <strong>not</strong> come with Java pre-installed. If you are not sure what version of Java is installed on your computer open a command prompt (shell) and type the command:</p>
+<pre><tt>java -version</tt></pre>
+<p>If you get a command not found error, or if the version of Java installed is 1.4 or older you will need to download the latest Java version from <a href="http://java.sun.com/">Sun Microsystems</a>. Be sure to download the Java JDK and not the Java JRE.</p>
+<h2>Installing the GrAF tools for GATE</h2>
+<p>The ANC now maintains a GATE plugin repository.  See the <a title="GATE documentation" href="http://gate.ac.uk/sale/tao/splitch3.html#sec:developer:installplugins" target="_blank">GATE documentation</a> for instructions on installing plugins from a plugin repository.  The ANC&#8217;s repository is located at http://www.anc.org/tools/gate/gate-update-site.xml</p>
+<p>More information on the Gate tools can be found <a href="../../../tools/#gate-tools">here</a>.</p>
+<h2>Annotation Types</h2>
+<p>There are several annotation types distributed with OANC and MASC data. All data have the following annotations:</p>
+<table>
+<tbody>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+<tr valign="top">
+<td><strong>logical</strong></td>
+<td>The logical structure of the document down to the paragraph level. These annotations are required to convert the document into a well-formed XML file.</td>
+</tr>
+<tr>
+<td><strong>s</strong></td>
+<td>Sentence boundary annotations</td>
+</tr>
+<tr>
+<td><strong>penn</strong></td>
+<td>Penn part of speech tags generated by a modified version of the ANNIE POS Tagger in GATE</td>
+</tr>
+<tr>
+<td><strong>nc</strong></td>
+<td>Noun chunks</td>
+</tr>
+<tr>
+<td><strong>vc</strong></td>
+<td>Verb chunks</td>
+</tr>
+<tr>
+<td><strong>ne</strong></td>
+<td>Named entities</td>
+</tr>
+</tbody>
+</table>
+<p>The type indicator associated with each annotation type is an id defined in the resource header distributed with each corpus, used in filenames and annotation spaces etc. in the corpus.</p>
+<p><strong>Notes : </strong></p>
+<ul>
+<li>Some OANC files include token annotations with <a href="../../../FirstRelease/Biber-tags.txt">part of speech tags generated by the Biber tagger</a>. These annotations can be accessed within GATE  in the same way as the core set by using the type indicator &#8220;biber&#8221;.</li>
+<li>MASC includes several annotation types beyond this core set on some of its files; the MASC resource header (included with the distribution) provides the type associated with each. See also the <a href="../../../data/masc/corpus/masc-structure/">description of the MASC structure</a> for a complete list of annotation types in MASC. These additional annotations can be accessed within GATE  in the same way as the core set by using the associated type indicator.</li>
+</ul>
+<h2>Loading a GrAF Document</h2>
+<p><strong>Method 1 (preferred)</strong></p>
+<p>Select <em>GrAF Document</em> under <em>New Language Resource. </em>The new document dialog will open. Fill in the following fields:</p>
+<ul>
+<li><strong>Name:</strong> you can name the <em>document</em> anything you want, although using the file name is likely a good idea. This is simply a human readable name you assigned to the <em>document</em> inside GATE. If nothing is entered, GATE assigns the filename with a numeric suffix for internal bookkeeping purposes.</li>
+<li><strong>resourceHeader: </strong>navigate to the resource header file for OANC or MASC as appropriate (in the top-level data directory), and select it.</li>
+<li><strong>sourceURL:</strong> navigate to the desired document&#8217;s header file, which os the filename with extension .hdr (only documents with .hdr extensions should be highlighted on the selection list) and select it.</li>
+<li><strong>standoffAnnotations: </strong>This is a list of the <a href="../../../tools/using-gate.html#annotation-types">annotation types</a> to be included in the document. Click the list icon to open the List dialog and enter the annotation types to include, click the Add button and then the Ok button to close the dialog.</li>
+<li><strong>standoffASName:</strong> (optional) this is the name of the annotation set that the standoff annotation will be added to. You can leave this as the default or change it to something else. This is useful if you will be loading several sets of standoff annotations and want to keep them separate.</li>
+</ul>
+<div></div>
+<div>Click the OK button to close the dialog and open the document. Check the message tab for error messages. If all went well you should see the document listed in the left hand pane under Lanugage Resources (you may have to expand the Language Resources tree).</div>
+<div></div>
+<div><img fetchpriority="high" decoding="async" src="../../../images/gate-document.jpg" alt="" width="708" height="399" /></div>
+<div></div>
+<div>
+<p>&nbsp;</p>
+<p><strong>Method 2 (alternate)</strong></p>
+<p>If, for some reason, the above method does not work you can load the text file for the document directly. Create a GATE Document (File -&gt; New language resource -&gt; Gate document) and select the text file (with the.txt extension) as the sourceUrl. The New Gate documet dialog is similar to the the new GrAF document dialog, minus the fields for the standoff annotations, and you fill it in the same way. However, you <strong>must</strong> specify the encoding to be UTF-8. Once the text has been loaded follow the instructions below to load any standoff annotations.</p>
+<h2><img decoding="async" src="../../../images/gate-document2.jpg" alt="" width="708" height="292" /></h2>
+<h2>Loading Additional Standoff Annotations</h2>
+<p>Before loading additional standoff annotations some initial set up will have to be done. However, this typically only has to be done once.</p>
+<p><strong>1. Create a Processing Resource (PR)</strong>. Select New Processing Resource -&gt; GrAF Load Standoff to load an individual annotation file, or  Select New Processing Resource -&gt; GrAF Load All Standoff to load all standoff annotations for a document. Enter a name for the PR (Load Standoff say) and click the OK button. The Load Standoff (or Load All Standoff) PR should appear in the left hand panel under Processing Resources.</p>
+<p><strong>2. Create a GATE Application.</strong></p>
+<ul>
+<li>To load annotations for a single document, select New Application -&gt; Pipeline. Enter a name for the application (say, Load Standoff) and click the OK button. The new pipeline should appear in the left hand panel under Applications.</li>
+<li>To load annotations for a set of documents that are part of a GATE Corpus, select New Application -&gt; Corpus Pipeline and then follow the same procedure.</li>
+</ul>
+<p><strong>3. Configure and run the application. </strong></p>
+<ol>
+<li>Double click on the <em>Load Standoff</em> application in the left panel. This will open the Application Editor in the main window.</li>
+<li>Select the Load Standoff PR in the list of Loaded Processing Resources and click on the right arrow to move it to the list of Selected Processing resources.</li>
+<li>Click on the <em>Load Standoff</em> PR in the list of Selected Processing Resources to open the PR parameter editor in the bottom of the main window.</li>
+<li>Select the document (or corpus, if applicable) you would like to add the standoff annotations to.</li>
+<li>In the <strong>annotationType</strong> box, enter the <a href="../../../tools/using-gate.html#annotation-types">annotation type</a> that you want to load. <em>Note that annotation files that are required for another annotation type are automatically loaded when the dependent annotation type is give.</em> <em>For example, the ptb (Penn Treebank Syntax) annotations require the ptbtok (Penn Treebank tokens with part of speech); if ptb is specified as the annotation type to load, ptbtok annotations are automatically loaded as well.</em></li>
+<li>Click the folder icon next to the <strong>sourceUrl</strong> field and navigate to the standoff annotation file you would like to add. Unlike opening an GrAF Document, where you select the .hdr header file, when loading standoff annotations separately you must select the XML standoff annotation file directly. Each annotation file name includes a -xx.xml suffix, where &#8220;xx&#8221; (may be longer than two characters) is the annotation type indicator for the contained annotation type.</li>
+<li>Set the <em>standoffASName</em> (optional). This is the name of the annotation set that the standoff annotations will be added to. In the image below, the tokens with lemma and Penn part of speech tags annotations (-penn.xml suffix) are added to the <em>Standoff markups</em> annotation set. If an annotation set with the specified name already exists, the new annotations will be added to the existing set; otherwise a new annotation set with that name will be created.</li>
+<li>Steps 4 &#8211; 7 can be repeated as desired.</li>
+</ol>
+<div><img decoding="async" src="../../../images/gate3.jpg" alt="" width="722" height="451" /></div>
+<div></div>
+</div>
+<div>
+<h2>Saving GrAF Standoff Annotations</h2>
+<p>The procedure for saving standoff annotations in GrAF format is the same as the procedure for loading standoff annotations:</p>
+<ol>
+<li>Create a processing resource. This time you will create an GrAF <em>Save Standoff</em> processing resource.</li>
+<li>Create a GATE application and add the <em>Save Standoff</em> PR to the new application.</li>
+<li>Configure the processing resource and run the application. The following fields need to be completed in the<em> Save Standoff</em>processing resource.</li>
+<li><strong>annotationType: </strong>Enter the <a href="../../../tools/using-gate.html#annotation-types">annotation type</a> that you want to save. The name in this field will appear as a suffix to the name of the resulting GrAF XML file. In the example below, the resulting filename will be <em>bartok-standoff.xml. </em></li>
+<li><strong>destination</strong> &#8211; This is the location where the standoff annotation file will be saved. If the file does not exist, navigate to and choose the folder in which you want the file to be written. Otherwise, choose an existing file as the destination.</li>
+<li><strong>document</strong> &#8211; Name of the document containing the annotations to be saved. The drop down box will contain a list of all the open documents.</li>
+<li><strong>inputASName</strong> &#8211; Name of the annotation set containing the annotations to be saved.</li>
+<li><strong>standoffTags</strong> &#8211; A list of the annotations that will be saved. If left blank all the annotations in the selected annotation set will be saved.</li>
+</ol>
+<p><img loading="lazy" decoding="async" src="../../../images/gate4.jpg" alt="" width="738" height="462" /></p>
+</div>
+<div>
+<h2>Gate Tips</h2>
+<ol>
+<li>Be sure to specify UTF-8 as the encoding type when opening the text files directly.</li>
+<li>When exiting GATE, be sure to select <em>Exit Gate</em> from the File menu. Otherwise, GATE will not save its current state information andrestore open applications, documents, or processing resources the next time it i started up.</li>
+<li>Do not use files in a location with a space anywhere in the path, as GATE has problems with this format.</li>
+<li>If something does not work, check for error messages in GATE&#8217;s Message tab.</li>
+<li>If you get an error stating that no standoff annotations were found when running the <em>SaveStandoff</em> processing resource, the most likely causes are that you specified the name of the annotation set incorrectly, or you specified the standoff tags incorrectly. Both values are case sensitive.</li>
+</ol>
+</div>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

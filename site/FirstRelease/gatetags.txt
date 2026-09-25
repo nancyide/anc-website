@@ -1,0 +1,56 @@
+Part-of-Speech Tags used in the Hepple Tagger 
+
+NN - noun - singular or mass 
+NNP - proper noun - singular 
+NNPS - proper noun - plural 
+NNS - noun - plural 
+NP - proper noun - singular 
+NPS - proper noun - plural 
+JJ - adjective 
+JJR - adjective - comparative 
+JJS - adjective - superlative 
+JJSS - -unknown-, but probably a variant of JJS 
+RB - adverb 
+RBR - adverb - comparative 
+RBS - adverb - superlative 
+VB - verb - base form 
+VBD - verb - past tense 
+VBG - verb - gerund or present participle 
+VBN - verb - past participle 
+VBP - verb - non-3rd person singular present 
+VBZ - verb - 3rd person singular present 
+FW - foreign word 
+CD - cardinal number 
+CC - coordinating conjunction 
+DT - determiner 
+EX - existential "there" 
+IN - preposition or subordinating conjunction 
+LS - list item marker 
+MD - modal 
+PDT - predeterminer 
+POS - possesive ending 
+PP - personal pronoun 
+PRP - -unknown-, but probably possesive pronoun 
+PRP$ - -unknown-, but probably possesive pronoun 
+PRPR$ - -unknown-, but probably possesive pronoun 
+RP - particle 
+TO - literal "to" 
+UH - interjection 
+WDT - "wh"-determiner 
+WP - "wh"-pronoun 
+WP$ - possesive "wh"-pronoun 
+WRB - "wh"-adverb 
+SYM - symbol 
+" - literal double quotes 
+# - literal pound sign 
+$ - literal dollar sign 
+' - literal single quote or apostrophe 
+( - literal left parenthesis 
+) - literal right parenthesis 
+, - literal comma 
+- - literal double-dash 
+-LRB- - -unknown- 
+. - literal period 
+:: - literal colon 
+` - literal grave 
+STAART - start state marker (used internally by Gate software) 

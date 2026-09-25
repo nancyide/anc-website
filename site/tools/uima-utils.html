@@ -1,0 +1,134 @@
+<!--#include virtual="/templates/header.html" -->
+<title>ANC UIMA-utils</title>
+<style type="text/css">
+	/**
+	.license {
+		font-family: courier, monospace;
+		font-size: 110%;
+		background-color: black;
+		margin: 20px;
+		padding: 20px;
+		color: #00CC00;
+	}
+	
+	.license a:link, .license a:visited, .license a:visited {
+		text-decoration: underline;
+		color: #00CC00;
+		font-weight: normal;
+	}
+	
+	.license a:hover {
+		color: #00FF00;
+	}
+	**/
+	.license {
+		border: 1px groove black;
+		padding: 20px;
+		margin: 20px;
+	}
+	
+	
+.style1 {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+}
+.style4 {
+	font-size: large
+}
+</style>
+<!--#include virtual="/templates/menu.html" -->
+<div>
+
+	    <h2>&nbsp;</h2>
+	    <h1 align="center">ANC UIMAUtils</h1>
+    <p>ANC provides tools to convert ANC standoff annotation files in GrAF  to the Common Analysis Structure File (CAS) used by the <a href="http://uima.apache.org/">Unstructured Information Management Architecture (UIMA)</a>,  and to export annotations in UIMA CAS format to GrAF. The tools can be accessed through the UIMAUtils API or by running an executable jar file. Both methods are described in the following sections. Familiarity with UIMA and Java is assumed.</p>
+  <ul><li><a href="#using"> ANC UIMAUtils API</a></li>
+	      <li><a href="#running" target="running">Using UIMAUtils.jar</a></li>
+          <li><a href="#view" target="view">Running the UIMA Annotation Viewer</a></li>
+    </ul>
+
+  <p>&nbsp;</p>
+  <h2><a name="using"></a>Using the ANC's UIMAUtils API</h2>
+  <p>The UIMAUtils package contains classes to convert annoations in GrAF format to a CAS (UIMA Common Analysis System format). The class <em>org.exces.graf.uima.example.Example</em> shows how this can be done.</p>
+  <p>The following steps are required to create a CAS from GrAF annotations:</p>
+  <ul>
+    <li>A UIMA type system must be derived from the graph annotations from which a type system description can be extracted.<br>
+      </li>
+    <li>A description of the indices to be used in the CAS must be created.<br>
+      </li>
+    <li>Type priorities must be created.<br>
+      </li>
+    <li>The createCas() method in the CASFactory class must be called with the objects obtained above as arguments.</li>
+  </ul>
+  <p>The following classes in the UimaUtils package perform the conversion:</p>
+  <p><strong>TypeSystemFactory</strong><br>
+  </p>
+  <p>This class performs steps 1 and 2 of the conversion described above. A type system is converted to a type system description using the UimaUtils.getTypeSystemDescription() method which wraps around the UIMA method org.apache.uima.util.TypeSystemUtil.typeSystem2TypeSystemDescription().</p>
+  <p>Three base types are created:</p>
+  <ul>
+    <li><em>grafAnnotationType</em> is derived from the UIMA Annotation type (<em>uima.tcas.Annotation</em>). Features &quot;id&quot;, &quot;n&quot; and &quot;lang&quot; are added to this type. </li>
+    <li><em>grafListType</em> is an array type with component type as <em>grafAnnotationType</em></li>
+    <li><em>uimaStringType</em> is derived from the UIMA String type (<em>uima.cas.String</em>). It is used as the type for every feature that is added to a type. </li>
+  </ul>
+  <p>The nodes of the graph passed to the <em>createTypeSystem()</em> method are iterated over and a type is created for each annotation encountered. Every new type is derived from the <em>grafAnnotationType</em>. The name of a type is controlled by an <em>ILabelMaker</em> object (using the <em>DefaultAnnotationLabelMaker</em> implementation). The label maker makes sure that type names conform to UIMA specifications (type and feature names cannot contain special characters other than underscore). It records changed names within an altered-type-name-map (an <em>org.xces.graf.util.NameMap</em> object). This map can be written to disk in XML format. </p>
+  <p>Next, the features encountered in an annotation are added to the corresponding new type. Feature names are derived from the annotation and feature structure names within which they are nested. Feature names  are post-processed to conform to UIMA specifications. A feature whose name is  changed is recorded within an altered-feature-name-map (an org.xces.graf.util.NameMap object). This map can be written to disk in XML format. </p>
+  <p>A feature called &quot;children&quot; of type <em>grafListType</em> is added to a type corresponding to an annotation that annotates a node with children in the graph. The type system factory also creates the <em>FsIndexDescription</em> array as it generates the type system. Every feature (including those inherited) within a type is added as a key to its index. After a type system has been generated, the index array can be retrieved with a call to <em>getIndices</em>(). </p>
+  <p><strong>TypePrioritiesFactory</strong></p>
+  <p>Types corresponding to annotations are assigned priority in one of two ways: </p>
+  <ol>
+    <li>From the order in which they are encountered when a DFS is performed over the graph. Nodes that appear earlier are assigned higher priority. For each annotation &quot;A&quot; the relation <em>comes_before(P, A)</em> is recorded for each ancestor P of A.</li>
+    <li>From an exhaustive ordering defined on the annotations (<em>IAnnotationOrder</em> object). The user should derive type priorities this way when the graph contains multiple annotations per node or when many nodes point to the same region. </li>
+  </ol>
+  <p><strong>CASFactory</strong></p>
+  <p>This class performs step 4 of the conversion, by creating a CAS given a graph, a UIMA type system, and an index description. Once the type system has been created for a graph, the actual annotations within it must be instantiated as UIMA feature structures (for the CAS). The feature values must also be set. </p>
+  <p>The <em>org.xces.graf.util.Flattener</em> is used to set the &quot;user object&quot; of every node in the graph as a region. This region is used to store the 'begin' and 'end' anchors (offsets in the case of text) that the node spans. In the case of text, these are calculated from the offsets of the regions that the children of the node annotate. The 'begin' offset is the minimum of the 'begin' offsets among all children, and the 'end' offset is the maximum of the 'end' offsets among all children. For instance, if a graph consists of 3 nodes (annotations) -- a node &quot;sentence&quot; with children &quot;noun&quot; and &quot;verb&quot; -- with the children annotating regions 0 to 10 and 11 to 20 respectively, the 'begin' and 'end' for &quot;sentence&quot; will be calculated as 0 and 20 respectively. These values are then be used to set the values of the corresponding features for each annotation.</p>
+  <p><br>
+    The nodes of the graph are iterated over and each annotation encountered is instantiated as a feature structure in the CAS. Feature values are also set.  Further, the children, if any, of a node (annotation) are added as components in the &quot;children&quot; feature array. </p>
+  <h2><a name="running"></a>Using UIMAUtils.jar</h2>
+  <p>The UIMAUtils package  provides a command line executable jar file that performs the steps listed above to convert ANC GrAF Stand off files to UIMA CAS Files. </p>
+  <p class="alert"><a href="http://www.anc.org/tools/org.xces.graf.uima-utils-1.0.0.jar" class="alert">&gt;Download the UIMAUtils jar file here&lt;</a></p>
+  <p>The jar file can be run with the command:</p>
+  <p align="center" class="style1">java -jar UimaUtils.jar -in=&lt;path&gt; -out=&lt;path&gt; [-help] -type=&lt;string&gt;</p>
+  <p>The command line parameters are : <br>
+    </p>
+  <ul>
+    <li>-in        : specifies the input directory or file.<br>
+    </li>
+    <li>-out       : specifies the output directory.<br>
+    </li>
+    <li>-help      : prints this usage message.<br>
+    </li>
+    <li>-type      : specifies the input Stand-Off Types: ptb|fn|logical|s|nc|vc|ne|fntok|ptbtok</li>
+  </ul>
+  <p>The standoff File types (all in GrAF) supported are :</p>
+  <ul>
+    <li>ptb 		: Penn Tree Bank</li>
+    <li>fn		: Frame Net<br>
+      </li>
+    <li>logical 	              : The logical structure of the document (down to the paragraph level)<br>
+      </li>
+    <li>s		: Sentence boundary annotations<br>
+      </li>
+    <li>nc		: Noun chunks<br>
+      </li>
+    <li>vc		: Verb chunks<br>
+      </li>
+    <li>ne		: Named entities<br>
+      </li>
+    <li>ptbtok		:Penn Tree Bank token annotations<br>
+      </li>
+    <li>fntok		: Frame Net token annotations</li>
+  </ul>
+  <p>Once completed, UIMAUtils.jar will produce two file types, a UIMA Type System descriptor file and the CAS File. If run over a directory of GrAF files, it will produce one CAS file for each input file and one comprehensive Type System Descriptor file compiled from all the input files. Note: Large files may require an increase of java heap space (option -Xmx1000m ).</p>
+  <h2><a name="view"></a>Running the UIMA Annotation Viewer</h2>
+  <p>To verify the conversion, use the UIMA Annotation Viewer (annotationviewer.bat) located in the UIMA distribution directory uimaj-distr\src\main\scripts.  For complete documentation on the use of the tools and examples provided by UIMA please review <a href="http://uima.apache.org/documentation.html">UIMA documentation</a>.</p>
+  <p>The annotation viewer will pop up the following window. Type in  the input directory where the CAS files are located and the type system descriptor file, then click view:</p>
+  <p>&nbsp;</p>
+  <p align="center"><img src="../images/uima-annotation-viewer1.jpg" alt="Uima annotation viewer" width="635" height="266" /></p>
+  <p align="left">In the next window double click a CAS file :</p>
+  <p align="center"><img src="../images/uima-annotation-viewer2.jpg" alt="UIma Annotation viewer " width="425" height="263" /></p>
+  <p align="left">View the annotations:</p>
+  <p align="center"><img src="../images/uima-annotation-viewer3.jpg" alt="UIMA Annotation Viewer" width="677" height="460" /></p>
+  <h2>&nbsp;</h2>
+</div>
+<!--#include virtual="/templates/footer.html" -->

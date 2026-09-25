@@ -1,0 +1,149 @@
+<!--#include virtual="/templates/header.html" -->
+<title>ANC Encoding</title>
+<style type="text/css">
+<!--
+.table {
+background-color: #FFFFCC;
+border-width: thin;
+border-style: solid;
+width: 85%;
+}
+.center {
+text-align:center;
+}
+-->
+</style>
+<!--#include virtual="/templates/menu.html" -->
+  <div class="one-column"> 
+    <h2>Document Encoding</h2>
+    <p>The ANC Second Release uses the proposed <a href="http://www.xces.org/schema/2003/">XCES 
+      Markup for Standoff Annotations</a>. Each <i>logical</i> document in the 
+      ANC is conceptually a single XML document that conforms to the XCES xcesDoc.xsd 
+      schema. Physically, the primary data and its annotations are stored in multiple 
+      XML documents that form a directed graph referencing regions of primary 
+      data (and potentially, regions defined over other annotations as well). 
+      The nodes of the graph are virtual, located between each character in the 
+      primary data. Edges defined over the nodes in the graph are labeled with 
+      feature structures containing annotation information associated with the 
+      data region defined by the edge.</p>
+    <p>Each logical document in the ANC Second Release consists of the following 
+      files:</p>
+<table align="center" bgcolor="#FFFFCC" cellspacing="2" width="85%" border="1">
+<!--
+<table align="center" bgcolor="#FFFFCC" cellspacing="2" width="85% border="1">
+    <div class="center"> 
+      <table border="1" cellpadding="2" bgcolor="#FFFFCC">
+	  -->
+        <tr> 
+          <td>filename.anc</td>
+          <td>An XCES header that specifies the location of the content and standoff 
+            annotation files.</td>
+        </tr>
+        <tr> 
+          <td>filename.txt</td>
+          <td>The primary data (content) of the document.</td>
+        </tr>
+		<tr>
+	        <td>filename-logical.xml</td>
+    	    <td>Standoff markup for the logical structure of the document</td>
+        </tr>
+        <tr> 
+          <td>filename-s.xml</td>
+          <td>Standoff markup for sentence boundaries</td>
+        </tr>
+        <tr> 
+          <td>filename-hepple.xml</td>
+          <td>Standoff markup for Hepple (Penn) part of speech tags.</td>
+        </tr>
+        <tr> 
+          <td>filename-biber.xml</td>
+          <td>Standoff markup for Biber part of speech tags.</td>
+        </tr>
+        <tr> 
+          <td>filename-np.xml</td>
+          <td>Standoff markup for noun chunks.</td>
+        </tr>
+        <tr> 
+          <td>filename-vp.xml</td>
+          <td>Standoff markup for verb chunks.</td>
+        </tr>
+      </table>
+    
+    <p>Primary data is encoded in UTF-16; all other information, including the 
+      header and all annotations, are encoded in UTF-8.</p>
+    <p>The representation format that separates primary data and annotations offers 
+      considerable flexibility for ANC use; in particular:</p>
+
+<ul>
+  <li>users can create a single XML document containing 
+        the primary data with the user's choice of annotations in-line (often 
+        needed for use with existing tools)--see<a href="#"> below</a><a href="../tools/"> 
+        </a>for more information
+  </li>
+  <li>the primary text can be used with no markup or annotations 
+        if desired (which is commonly the case for concordance generation, etc.)
+  </li>
+  <li>the user can choose to deal with a particular annotation 
+        set independent of the text (e.g to generate statistics for POS taggers 
+        or parsers)
+  </li>
+  <li>the ANC can include annotations of many different 
+        types, or several versions of a single annotation type (e.g., multiple 
+        part of speech taggings) without encountering compatibility problems
+  </li>
+  <li>The ANC project can distribute annotations independent 
+        of the text via download from the ANC site; because the annotations contain 
+        links to the original data, any user who has obtained the ANC from the 
+        LDC can use the annotations with the corpus.
+  </li>
+</ul>
+    <h2><a name="merge" id="merge"></a>Creating a single XML document containing 
+      text and annotations</h2>
+    <p>The ANC stand-off format provides flexibility for the creators and users 
+      of the ANC, but in many cases users will want to use the corpus with annotations 
+      in-line. We provide the &quot;ANC Merge Tool&quot; that enableds users to 
+      easily generate a single XML document containing the primary data and any 
+      of the user's choice of the annotations contained in the variousstand-off 
+      documents.The tool can be downloaded from the <a href="../tools/">ANC 
+      tools</a> page, which also provides a description of its use. </p>
+    <h2>Standoff Annotations</h2>
+    <p>The edge set(s) of an annotation graph are represented in one or more standoff 
+      annotation files. Each standoff annotation file includes a series of annotations 
+      consisting of one or more features, represented in XML with <tt>&lt;struct&gt;</tt> 
+      and <tt>&lt;feat&gt;</tt> tags respectively. Each <tt>&lt;struct&gt;</tt> 
+      specifies an edge (i.e., range of primary data) with <em>from</em> and <em>to</em> 
+      attributes that reference nodes in the node set of the primary data. For 
+      example, given the following text taken from the file written/non-fiction/OUP/Berk/ch7.txt:</p>
+    <blockquote>&nbsp;&nbsp;&nbsp;&nbsp;In this chapter, I take up dilemmas that 
+      today's parents face...</blockquote>
+    <p>We have an assumed node between each character:</p>
+    <pre>
+                    1                   2                   3                   4                   5                   6
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
+| | | | |I|n| |t|h|i|s| |c|h|a|p|t|e|r|,| |I| |t|a|k|e| |u|p| |d|i|l|e|m|m|a|s| |t|h|a|t| |t|o|d|a|y|'|s| |p|a|r|e|n|t|s| |f|a|c|e| 
+</pre>
+    <p>Edges in the graph are then defined in the standoff annotation files:</p>
+    <blockquote> 
+      <p><strong>ch7-logical.xml</strong> </p>
+      <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />&lt;cesAna xmlns=&quot;http://www.xces.org/schema/2003&quot; version=&quot;1.0.4&quot;&gt;<br />   &lt;struct type=&quot;cesDoc&quot; from=&quot;0&quot; to=&quot;65865&quot;&gt;<br />      &lt;feat name=&quot;xmlns&quot; value=&quot;http://www.xces.org/schema/2003&quot;/&gt;<br />      &lt;feat name=&quot;version&quot; value=&quot;1.0.4&quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;text&quot; from=&quot;1&quot; to=&quot;65864&quot;/&gt;<br />   &lt;struct type=&quot;body&quot; from=&quot;2&quot; to=&quot;65863&quot;/&gt;<br />   &lt;struct type=&quot;div&quot; from=&quot;3&quot; to=&quot;65862&quot;&gt;<br />      &lt;feat name=&quot;type&quot; value=&quot;article&quot;/&gt;<br />      &lt;feat name=&quot;xml:lang&quot; value=&quot;en-US&quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;p&quot; from=&quot;4&quot; to=&quot;719&quot;&gt;<br />      &lt;feat name=&quot;id&quot; value=&quot;p1&quot;/&gt;<br />   &lt;/struct&gt;
+   ...
+&lt;/cesAna&gt;
+</pre>
+      <p><strong>ch7-s.xml</strong> </p>
+      <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />&lt;cesAna xmlns=&quot;http://www.xces.org/schema/2003&quot; version=&quot;1.0.4&quot;&gt;<br />   &lt;struct type=&quot;s&quot; from=&quot;4&quot; to=&quot;92&quot;&gt;<br />      &lt;feat name=&quot;id&quot; value=&quot;p1s1&quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;s&quot; from=&quot;93&quot; to=&quot;200&quot;&gt;<br />      &lt;feat name=&quot;id&quot; value=&quot;p1s2&quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;s&quot; from=&quot;201&quot; to=&quot;718&quot;&gt;<br />      &lt;feat name=&quot;id&quot; value=&quot;p1s3&quot;/&gt;<br />   &lt;/struct&gt;
+    ...
+&lt;/cesAna&gt;
+</pre>
+      <p><strong>ch7-hepple.xml</strong> </p>
+      <pre>&lt;cesAna xmlns=&quot;http://www.xces.org/schema/2003&quot; version=&quot;1.0.4&quot;&gt;<br />   &lt;struct type=&quot;tok&quot; from=&quot;4&quot; to=&quot;6&quot;&gt;<br />      &lt;feat name=&quot;base&quot; value=&quot;in&quot;/&gt;<br />      &lt;feat name=&quot;msd&quot; value=&quot;IN&quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;tok&quot; from=&quot;7&quot; to=&quot;11&quot;&gt;<br />      &lt;feat name=&quot;msd&quot; value=&quot;DT&quot;/&gt;<br />      &lt;feat name=&quot;base&quot; value=&quot;this&quot;/&gt;<br />      &lt;feat name=&quot;affix&quot; value=&quot; &quot;/&gt;<br />   &lt;/struct&gt;<br />   &lt;struct type=&quot;tok&quot; from=&quot;12&quot; to=&quot;19&quot;&gt;<br />      &lt;feat name=&quot;base&quot; value=&quot;chapter&quot;/&gt;<br />      &lt;feat name=&quot;msd&quot; value=&quot;NN&quot;/&gt;<br />   &lt;/struct&gt;
+   ...
+&lt;/cesAna&gt;</pre>
+      <p><strong>ch7-np.xml</strong> </p>
+      <pre>&lt;cesAna xmlns=&quot;http://www.xces.org/schema/2003&quot; version=&quot;1.0.4&quot;&gt;<br />   &lt;struct type=&quot;NounChunk&quot; from=&quot;7&quot; to=&quot;19&quot;/&gt;<br />   &lt;struct type=&quot;NounChunk&quot; from=&quot;21&quot; to=&quot;22&quot;/&gt;<br />   &lt;struct type=&quot;NounChunk&quot; from=&quot;31&quot; to=&quot;39&quot;/&gt;<br />   ...
+&lt;/cesAna&gt;
+
+etc.</pre>
+    </blockquote>
+    
+  </div>
+  <!--#include virtual="/templates/footer.html" -->

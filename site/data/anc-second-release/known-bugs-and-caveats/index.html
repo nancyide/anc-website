@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Known Bugs and Caveats | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor"><a href="../../" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../oanc/" alt="Open ANC">oanc</a></li>
+	<li class=""><a href="../../masc/" alt="MASC">masc</a></li>
+	<li class="current-page-ancestor current-page-parent"><a href="../" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../software/" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../../../software/anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../../../software/anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../../../software/gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../../../software/uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class=""><a href="../../oanc/" alt="Open ANC">oanc</a></li>
+<li class=""><a href="../../masc/" alt="MASC">masc</a></li>
+<li class="current-page-ancestor current-page-parent"><a href="../" alt="ANC Second Release">second release</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-175" class="post-175 page type-page status-publish hentry">
+					
+					<h1><a href="../" class="entry-title">ANC Second Release</a></h1>
+		
+					<div id="side-links">
+				<ul>
+					<li class="page_item page-item-461"><a href="../anc-second-release-contents/">Contents</a></li>
+<li class="page_item page-item-470"><a href="../encoding/">Encoding</a></li>
+<li class="page_item page-item-178"><a href="../frequency-data/">Frequency Data</a></li>
+<li class="page_item page-item-175 current_page_item"><a href="./" aria-current="page">Known Bugs and Caveats</a></li>
+				</ul>
+				<div class="lower"></div>
+			</div>
+			
+			<div id="content" class="sidelinks">
+			
+				
+		
+		
+					<h1 class="subentry-title">Known Bugs and Caveats</h1>
+				
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<h2>Conformance to standards and best practice</h2>
+<p>The ANC has been created with the intention of adhering to the extent possible to existing and emerging standards and &#8220;best practices&#8221; for markup and the representation of language resources and their annotations. These include <a href="http://www.w3.org/">W3C</a> markup and data representation standards and the recommendations of the International Standards Organization (ISO) sub-committee for language resources (<a href="http://www.tc37sc4.org/">ISO TC37 SC4</a>). While this ensures that the ANC is at the state-of-the-art and (we hope) will be processable by a wide variety of available tools and web-based applications, it also means that we are dealing with recommendations that have yet to be finalized (and therefore might change) and relying on processing capabilities that are not yet widely implemented. For this reason, a number of encoding choices have been made with an eye toward enabling immediate use of the ANC, while at the same time providing for adaptation to standards and practices that emerge in the future:</p>
+<ul>
+<li>The ANC Second Release data is provided with <em>stand-off</em> annotations. While stand-off annotation is widely accepted as the preferred format, few processors at present handle it. A <a href="../../../tools/">program</a> to produce a merged form of the corpus based on any of the additional annotations is provided.</li>
+<li>Although <a href="http://www.w3.org/TR/xinclude/">XInclude</a> is the obvious means by which to include header fragments, we have so far relied on <a href="http://www.w3.org/TR/xlink/">XLink</a> for this purpose. Later releases of the ANC may use <tt>XInclude</tt>.</li>
+<li>The files produced by the merge tool will validate with the <a href="http://www.xces.org/schema/2003/">XCES schemas</a> if the <em>logical</em> annotation set is used. The files produced by merging the other annotation sets may not validate. In particular, the tags used to annotate noun and verb chunks are not defined by the XCES.</li>
+<li>Currently, the parser that is used to merge the content and standoff annotations does not correctly handle overlapping hierarchies. However, a new parser will be released shortly that will allow you to output the overlapping hierarchies <em>as-is</em> (for importing into applications that can handle overlapping hierarchies directly, say), to convert overlapping hierarchines into properly nested elements, or to use <a href="http://www.mulberrytech.com/Extreme/Proceedings/html/2004/DeRose01/EML2004DeRose01.html">HORSE</a> milestones.</li>
+</ul>
+<h2>Validation</h2>
+<p>The ANC Second Release data has been validated using the <a href="http://xerces.apache.org/xerces2-j/">Xerces 2 Java Parser</a>. However, it is possible that a few invalid files escaped notice.</p>
+<h2>Automatic processing</h2>
+<p>All of the markup and annotation in the first release of the ANC was produced <em>entirely automatically</em> from data in a variety of formats:</p>
+<ul>
+<li>Switchboard : ASCII texts</li>
+<li>CallHome : ASCII texts</li>
+<li>Charlotte : ASCII texts</li>
+<li>Micase : XML</li>
+<li>911 Report : PDF</li>
+<li>Berlitz : Quark Express</li>
+<li>Biomed : XML</li>
+<li>Buffy : HTML</li>
+<li>Hargraves : Word file</li>
+<li>Eggan : Word file</li>
+<li>ICIC : ASCII text</li>
+<li>NY Times : SGML</li>
+<li>OUP : Quark Express</li>
+<li>PLOS : XML</li>
+<li>Slate : HTML</li>
+<li>Verbatim : SGML</li>
+<li>Web data : HTML</li>
+</ul>
+<p>For <em>gross logical structure</em> (down to the level of paragraph), text parts such as title, author, section head, footnotes, quotations, lists, etc. may or may not be marked as such, depending upon whether or not this information was differentiated in some systematic way in the original format. In general, our algorithm assumed that the presence of a carriage return signalled the beginning of a paragraph unless otherwise indicated, and therefore elements unrecognizable as any other type of element are typically encloded in &lt;p&gt; tags.</p>
+<p>All sentence markup was automatically produced by the sentence splitter included in the <a href="http://gate.ac.uk/">Gate</a> system, and there are occasional errors, usually due to the presence of unrecognized abbreviations in mid-sentence. The sentence splitter also puts punctuation appearing after the terminating period (e.g., closing quotation mark, closing parenthesis) outside the sentence boundary.</p>
+<p><em>Part-of-speech tagging</em> was done automatically at Northern Arizona University using the Biber tagger, with no hand-validation. The annotations include both<a href="../../../SecondRelease/Biber-tags.txt">Biber&#8217;s part-of-speech tags</a> and lemmas. The Biber tagger has an average accuracy similar to most taggers (95% or higher). Additional part of speech tags have also been generated with the Hepple part of speech tagger included in Gate.</p>
+<p>Due to some inconsistencies in the way clitics (e.g., &#8220;don&#8217;t&#8221;, let&#8217;s&#8221;) are treated by the Biber tagger (some treated as two separate words, some as one with extra information), a few words in the corpus are not annotated for part of speech because they were skipped during post-processing. Words that have not been tagged have not been included in the word counts for the corpus.</p>
+<h2>Gold standard sub-corpus</h2>
+<p>The ANC Project has obtained funds from the <a href="http://www.nsf.gov/">U.S. National Science Foundation</a> to hand-validate both the structural markup and part of speech annotation in a 10 million word subset of the ANC in order to create a &#8220;gold standard&#8221; corpus. The gold standard corpus will be balanced along the same lines as the entire 100 million+ words of the ANC, and will therefore not coincide exactly with the 20 million words in the second release. The remaining portion of the corpus will be corrected to the extent possible using automated means and whatever level of hand-validation can be accomplished under our budget.</p>
+<h3>Funky characters in the data</h3>
+<p>Note on the <em>OUP and Berlitz files:</em> The original Quark Express files contained characters that were encoded with numeric codes that may or may not correspond to an International Standards Organization (ISO) hexidecimal character. Where possible these values have been converted to the corresponding entity, for example 0x00E9 becomes &amp;eacute;. When the numeric values did not correspond to any known character defined in the ISO standard, the value is encoded as a numeric entity&#8211;e.g., the value 0x1A is encoded as &amp;#x001A;.</p>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

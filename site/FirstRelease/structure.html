@@ -1,0 +1,292 @@
+<!DOCTYPE html [
+<!ENTITY nbsp "&#160;"> 
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 1st September 2004), see www.w3.org" />
+
+  <title>ANC First Release</title>
+  <meta name="description" content=
+  "The American National Corpus project is developing a 100 million word corpus of American English for the pruposes of language processing research and application development, linguistic research, and the creation of dictionaries and other language reference works." />
+  <meta name="keywords" content=
+  "ANC, American National Corpus, Language Data, American English, Corpus, Information Retrieval,Parsing, Sense Disambiguation, Discourse Modeling, Language Teaching, Text Databases, Human Machine Communication, Linguistic, Language, Research, Linguistic Research" />
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=us-ascii" />
+</head>
+
+<body bgcolor="#FFFFFF" marginwidth="0" marginheight="0"
+leftmargin="0" topmargin="0" text=
+"Verdana, Arial, Helvetica, sans-serif" link="#333366" alink=
+"#000033" vlink="#000033">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td rowspan="2" bgcolor="#666666"><img src="images/flag.jpg"
+      name="image" width="110" height="70" id="image" /></td>
+
+      <td width="100%" height="40" bgcolor="#333366"><font color=
+      "#FFFFFF" size="5"><em>&nbsp;American National Corpus
+      Project</em></font></td>
+    </tr>
+
+    <tr>
+      <td bgcolor="#CCCCCC">
+        <table width="100%" border="0" cellspacing="1" cellpadding=
+        "2">
+          <tr bgcolor="#CCCCCC">
+            <td align="center" width="20%"><strong><a href=
+            "http://www.americannationalcorpus.org"><font color=
+            "#FFFFFF" size="1" face=
+            "Verdana, Arial, Helvetica, sans-serif">ANC
+            Home</font></a></strong></td>
+
+            <td align="center" width="20%"><strong><a href=
+            "http://www.americannationalcorpus.org/consortium.html"><font size="1"
+            face="Verdana, Arial, Helvetica, sans-serif">ANC
+            Consortium</font></a></strong></td>
+
+            <td width="20%" align="center"><strong><a href=
+            "http://www.ldc.upenn.edu"><font size="1" face=
+            "Verdana, Arial, Helvetica, sans-serif">Linguistic Data
+            Consortium</font></a></strong></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><br />
+
+  <table width="90%" border="2" align="center" cellpadding="2"
+  cellspacing="2" gcolor="#FFFFFF">
+    <tr bordercolor="#FF0000" border="3" bgcolor="#FF0000">
+      <td bordercolor="#FF0000" bgcolor="#FFFFFF" border="2">
+        <div align="center"></div>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing=
+        "0" bordercolor="#000066">
+          <tr>
+            <td bordercolor="#000066" bgcolor="#FFFFFF">
+              <center>
+                <font color="#333366" size="5" face=
+                "Georgia, Times New Roman, Times, serif"><b>AMERICAN
+                NATIONAL CORPUS FIRST RELEASE</b></font>
+              </center>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <h1 align="center"><font color="#000066"><strong><font color=
+  "#333366">ANC File Structure</font></strong></font></h1>
+  <hr />
+
+  <center>
+    <strong><a href="contents.html"><font size="1">THE
+    DATA</font></a> <font size="1">|&nbsp;<a href="encoding.html">ENCODING CONVENTIONS</a>&nbsp;|&nbsp;<a href="bugs.html">KNOWN BUGS</a></font></strong><font size=
+    "1">&nbsp;|&nbsp;<strong><a href="./">FIRST
+    RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href=
+    "http://AmericanNationalCorpus.org">ANC
+    HOME</a></strong></font>
+  </center>
+  <hr />
+
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <p align="justify"><font color="#000066"><a href=
+        "#structure"><font color="#000066"><strong><font color=
+        "#333366">ANC file
+        structure</font></strong></font></a><font color=
+        "#333366"><br />
+        &nbsp;&nbsp;&nbsp;<a href="#standoffStructure">File
+        structure for the stand-off version</a><br />
+        &nbsp;&nbsp;&nbsp;<a href="#merged">File structure for the
+        merged version</a><br />
+        &nbsp;&nbsp;&nbsp;<a href="#naming">Note on file naming
+        conventions</a><br />
+        &nbsp;&nbsp;&nbsp;<a href="#header">Header
+        structure</a></font></font></p>
+      </blockquote>
+    </blockquote>
+    <hr />
+
+    <h2 align="justify"><font color="#333366"><a name="structure"
+    id="structure"></a>ANC File Structure</font></h2>
+
+    <p align="justify"><font color="#333366"><i>See also the
+    <a href="README.txt">README</a> file included with the
+    distribution viaCD.</i></font></p>
+
+    <p align="justify"><font color="#333366"><font color=
+    "#333366">The ANC data is contained in two directories, each
+    containing a version of the ANC data:</font></font></p>
+
+    <div style="margin-left: 2em">
+      <ul>
+        <li><font color="#333366" align="justify"><strong>standoff
+        :</strong> contains the corpus in <em>stand-off
+        annotation</em> form, where part of speech annotations are
+        stored in documents separate from the primary
+        data</font></li>
+
+        <li><font color="#333366" align="justify"><strong>merged
+        :</strong> contains the corpus in <em>merged</em> form,
+        where part of speech annotation is included in the primary
+        data</font></li>
+      </ul>
+    </div>
+
+    <h2><font color="#333366"><strong><a name="standoffStructure"
+    id="standoffStructure"></a>File structure for the stand-off
+    version</strong></font></h2>
+
+    <p><font color="#333366">Each sub-corpus is contained in a
+    separate directory in the <strong>standoff</strong>
+    directory:</font></p>
+
+    <div style="margin-left: 2em">
+      <ul>
+        <li><font color="#333366">Switchboard : contains 30
+        sub-directories grouping data by "conversation
+        id"</font></li>
+
+        <li><font color="#333366">Callhome</font></li>
+
+        <li><font color="#333366">Charlotte</font></li>
+
+        <li><font color="#333366">Berlitz</font></li>
+
+        <li><font color="#333366">NYTimes : contains 16
+        sub-directories grouping data by day of publication in July
+        2002 (e.g., 01 for July 1)</font></li>
+
+        <li><font color="#333366">Slate</font></li>
+      </ul>
+    </div>
+
+    <p align="justify"><font color="#333366">Each of the CallHome,
+    Charlotte, Berlitz, and Slate directories, and each of the
+    sub-directories in the Switchboard and NYTimes directories,
+    contains three files for each text in the corresponding
+    sub-corpus. They are named as follows (where <em>[name]</em> is
+    the name associated with the document):</font></p>
+
+    <blockquote>
+      <ul>
+        <li><font color="#333366"><em>[name]</em>-header.xml : the
+        header file, which contains the XCES header for the
+        text</font></li>
+
+        <li><font color="#333366"><em>[name]</em>.xml :the file
+        containing the data itself</font></li>
+
+        <li><font color="#333366"><em>[name]</em>-ana.xml :the
+        annotation file</font></li>
+      </ul>
+    </blockquote>
+
+    <p><font color="#333366">See <a href="#">Encoding
+    Conventions</a> for descriptions and examples of the contents
+    of these files.</font></p>
+
+    <h3><font color="#333366"><strong><a name="merged" id=
+    "merged"></a>File structure for the merged
+    version</strong></font></h3>
+
+    <p><font color="#333366">The file structure for the merged
+    format is the same as for the stand-off format, except that no
+    annotation file is present. For each text, then, there are two
+    files:</font></p>
+
+    <ul>
+      <li><font color="#333366"><em>[name]</em>-header.xml : the
+      header file, which contains the XCES header for the
+      text</font></li>
+
+      <li><font color="#333366"><em>[name]</em>.xml :the file
+      containing the data and the part of speech and lemma
+      annotations</font></li>
+    </ul>
+
+    <h3><font color="#333366"><a name="naming" id=
+    "naming"></a><strong>Note on file naming
+    conventions</strong></font></h3>
+
+    <p align="justify"><font color="#333366">We have retained the
+    file names of the data as received by the ANC for the
+    Switchboard, CallHome, Charlotte, New York Times, and Slate
+    data. Filenames for the Berlitz and OUP data were created by
+    the ANC. Berlitz filenames reflect the section type</font>
+    <font color="#333366">(e.g., "HandR" for "Hotels and
+    Restaurants") and the geographic region that is the subject of
+    the document. OUP data file names consist of the author's name
+    followed by the chapter number.</font></p>
+
+    <p><font color="#333366">For the final release of the ANC,
+    filenames will be normalized across all sub-corpora.</font></p>
+
+    <h3><font color="#333366"><a name="header" id=
+    "header"></a>Header Structure</font></h3>
+
+    <p align="justify"><font color="#333366">The ANC First Release
+    includes a header for the entire corpus, as well as headers for
+    each text in the corpus.</font></p>
+
+    <p align="justify"><font color="#333366">The individual text
+    headers contain much redundant information; for this reason,
+    the common portions of the header (the
+    <strong>respStmt</strong> and <strong>publicationStmt</strong>)
+    have been provided only once in separate files. Within the
+    individual headers, XLINK is used to point to the relevant
+    files at the point where the information in them should appear.
+    (Note: According to W3C standards, XINCLUDE is the appropriate
+    mechanisms for this type of inclusion. However, very few XML
+    processors currently support XINCLUDE and we have therefore
+    relied on XLINK for this release.)</font></p>
+
+    <p align="justify"><font color="#333366">The following shows
+    the first few lines of a typical header. Links to the common
+    portions are highlighted.</font></p>
+
+    <p align="left">&nbsp;</p>
+
+    <blockquote>
+      <pre>
+<font size="2" face=
+"Courier New, Courier, mono">&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+&lt;header </font><font size="2" face=
+"Courier New, Courier, mono">xmlns="http://www.xces.org/schema/2003"         xmlns:xlink="http://www.w3.org/1999/xlink"         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"         creator="KBS"         version="1.0"         date.created="2003-09-12"         xsi:schemaLocation="http://www.xces.org/schema/2003                /ANC/xcesHeader.xsd"&gt;<br />
+   &lt;fileDesc&gt;<br />
+     &lt;titleStmt&gt;<br />
+       &lt;title&gt;A Stitch in Time : Chapter 1&lt;/title&gt;<br />
+         <font color=
+"#FF0000">&lt;respStmtLink xlink:href="/ANC/respStmt.xml" /&gt;</font><br />
+     &lt;/titleStmt&gt;<br />
+     <font color=
+"#CC0000">&lt;publicationStmtLink xlink:href="/ANC/publicationStmt.xml" /&gt;</font><br />
+     &lt;sourceDesc&gt;     ...</font>
+</pre>
+    </blockquote>
+  </blockquote>
+  <hr />
+
+  <center>
+    <font color="#333366"><strong><a href="contents.html"><font size="1">THE DATA</font></a> <font size=
+    "1">|&nbsp;<a href="encoding.html">ENCODING
+    CONVENTIONS</a>&nbsp;|&nbsp;<a href="bugs.html">KNOWN
+    BUGS</a></font></strong><font size=
+    "1">&nbsp;|&nbsp;<strong><a href="./">FIRST
+    RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href=
+    "http://www.americannationalcorpus.org">ANC
+    HOME</a></strong></font></font>
+  </center>
+  <hr />
+
+  <center>
+    <font color="#333366" size="1">Copyright 2003American National
+    Corpus Project. All rights reserved.</font>
+  </center>
+  <hr />
+</body>
+</html>

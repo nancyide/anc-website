@@ -1,0 +1,64 @@
+<!--#include virtual="/templates/header" -->
+<title>ANC Tool</title>
+<!--#include virtual="/templates/menu" -->
+      <div class="one-column">
+        <h1>The ANC Tool</h1>
+        <p>The ANC Tool application is still in beta testing stages. Before processing the entire ANC you should first process a small portion of the corpus to determine if the program is doing what you need.</p>
+        <h1>Standoff annotations to XML with inline annotatinons</h1>
+        <p>The ANC Tool  can be used to generate  files with inline annotations from the ANC files. The generated files may be:</p>
+	      <ul>
+	        <li><a href="http://www.xces.org">XCES</a> XML files. <strong>Note:</strong> If you include the noun chunk or verb chunk annotations the generated XML documents will not validate with the XCES schemas.</li>
+            <li>Text files with the part of speech tags embedded in the files. There are currently two methods of embedding the part of speech tags in the text. They are (for lack of better terms):
+			<ul>
+				<li>Monoconc compatible.  The part of speech tag is appended to the word and separated with an underscore.  For example:
+				  <pre>Tuesday_NNP, September_NNP 11_CD, 2001_CD, dawned_JJ temperate_NN and_CC 
+nearly_RB cloudless_JJ in_IN the_DT eastern_JJ United_NNP States_NNPS.</pre>
+				</li>
+				<li>Wordsmith compatible (although Monoconc/MonoConc Pro understands this format as well). The part of speech tag appears inside a <em>W</em> tag before the word in the text.  For example:
+				  <pre>&lt;W NNP&gt;Tuesday, &lt;W NNP&gt;September &lt;W CD&gt;11, &lt;W CD&gt;2001, &lt;W JJ&gt;dawned 
+&lt;W NN&gt;temperate &lt;W CC&gt;and &lt;W RB&gt;nearly &lt;W JJ&gt;cloudless &lt;W IN&gt;in &lt;W DT&gt;the 
+&lt;W JJ&gt;eastern &lt;W NNP&gt;United &lt;W NNPS&gt;States.</pre></li>
+			</ul>
+			</li>
+        </ul>
+		<p>If you want to use the ANC text files without the part of speech tags, but your application does not support UTF character encodings (i.e. MonoConc Pro) you can process the corpus with <a href="./#character-conversion">ANC File Conversion</a> program which can be used to change the character encoding and linefeeds/carriage returns used in the text files. However, if you change the character encoding you may end up with "garbage" characters in your file if that character is not present in the selected character encoding. There is not much to do in this case other than to use a character encoding that can represent all the characters used in the corpus.</p>
+	      <h2>Download</h2>
+<!--
+	  <ul>
+	  <li>Download the <a href="ANCTool-win.zip">Windows</a> executable</li>
+	  <li>Download the <a href="ANCTool-mac.zip">OS X</a> executable</li>
+	  <li>Download the Java jar file (<a href="ANCTool-jar.zip">zip</a>) </li>
+	  </ul>
+	  -->
+	  <p>The ANC Tool can be downloaded from the <a href="./#anc-tool">ANC Downloads</a> page.</p>
+	  <h2>Usage</h2>
+	  <h3>The XML Tab</h3>
+	  <div class="center">
+	    <p><img src="xml-tab.jpg" alt="Screenshot" width="394" height="401"/>
+</p>
+	  </div>
+	  <ol>
+	  <li>Select an input directory containing the ANC files to process. The program will recurse through all directories rooted at the input directory and process all the ANC files found.</li>
+	  <li>Select an output directory. The XML files that are created will be placed in the output directory. If the <em>Copy directory structure</em> check box is selected  the directory structure of the input directory will be mirrored and directories will be created as needed. Otherwise all files will be created in the output directory. The default is to copy the directory structure. It is possible to select the the input directory as the output directory, but it is highly recommended that the input and output directories be separate directories.</li>
+	  <li>Select the annotations to include. </li>
+	  <li> Click the Process button.</li>
+	  </ol>
+      <h3>The MonoConc Tab</h3>
+	  <div class="center">
+      <p><img src="monoconc-tab.jpg" width="394" height="401"/></p></div>
+	  <ol>
+	  <li>Select the input and output directory as above.</li>
+	  <li>Select the part of speech tags to include.  The part of speech tags are the only annotations that can be included when generating text files.</li>
+	  <li>Select a separator character. This is the character that will be used to separate a word from its part of speech tag. The default character is the underscore. It is possible to use more than one character as the separator.</li>
+	  <li>Click the Process button.</li>
+	  </ol>
+      <h3>The WordSmith Tab</h3>
+	  <div class="center">
+      <p><img src="wordsmith-tab.jpg" width="394" height="401"/></p></div>
+	  <ol>
+	  <li>Select the input and output directory as above.</li>
+	  <li>Select the part of speech tags to include.  The part of speech tags are the only annotations that can be included when generating text files.</li>
+	  <li>Click the Process button.</li>
+	  </ol>
+      </div>
+<!--#include virtual="../templates/footer" -->

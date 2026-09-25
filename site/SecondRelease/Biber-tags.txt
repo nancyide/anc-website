@@ -1,0 +1,346 @@
+
+Tag descriptions 
+Doug Biber
+15 June, 1993
+
+   There are five tag fields, separated by a plus sign (+).  For most words,
+only one or two of the fields are used.  The primary grammatical category of
+a word is usually marked in the first tag field; many of these first-field
+tags are identical to tags used in the LOB tag set.
+   In the case of adjectives (TAG = JJ), nouns (TAG = NN), and verbs 
+(TAG = VB), the tag ?? can appear in Tag Field 4 to mark words that were not in
+the dictionary; in these cases, the grammatical category is assigned 
+based on morphology and the surrounding context.
+   The tags xvbn and xvbnx in Field 4 mark a word as being a past participle
+form, regardless of function.  Thus, some adjectives, nouns, and base verb forms
+are marked as xvbn.  All past tense verbs, perfect aspect verbs, and
+passive verbs have this tag.  The tag xvbnx is used to mark cases where
+the grammatical function (e.g., perfect or passive) has been identified with
+a very high degree of accuracy from the context; the tag xvbn is used for cases
+where the assigned grammatical function is less certain.
+   The tags xvbg and xvbgx in Field 4 mark a word as being a present 
+participle form, regardless of function.  Thus, some adjectives and nouns
+are marked as xvbg.  All present progressive verbs have this tag.  The tag xvbgx
+is used to mark cases where the grammatical function has been identified with a
+very high degree of accuracy; the tag xvbg is used for 
+cases where the assigned grammatical function is less certain.
+
+
+
+--------------------------------------------------------------------------
+              Field 1  +     Field 2   +    Field 3  + Field 4 + Field 5
+Tag
+Sequence
+:+clp+++  colon        + clause punctuation
+;+clp+++  semi-colon   + clause punctuation
+?+clp+++  question mark + clause punctuation
+!+clp+++  exclamation mark + clause punctuation
+,++++     comma  
+-++++     dash   
+"++++     double quote mark 
+'++++     single quote mark 
+(++++     left parenthesis
+)++++     right parenthesis 
+$++++     dollar sign   
+%++++     percent sign  
+&fo++++   formula symbols  
+
+&fw++++   foreign word   
+
+
+abl++++   pre-qualifier (rather, such)  
+abn++++   pre-quantifier (all, half)    
+abx++++   pre-quantifier/double conjunction (both) 
+ap++++    post-determiner (many, more, most, only, other, own, same, ...)
+aps++++   (others)
+at++++    singular indefinite article (a, an) 
+ati++++   singular definite article (the, no) 
+
+cc++++      coordinating conjunction (and, but, or) 
+cc+cls+++   coordinating conjunction + clausal connector
+cc+phrs+++  coordinating conjunction + phrasal connector
+cc"++++     multi-word coordinating conjunction (as well as)
+cc++neg++   coordinating conjunction + + negation  (nor)
+
+cd++++      cardinal number (2, 3, 4, two, three, four, hundred, ...)
+cd+date+++  cardinal number + date (year only)
+cd1++++     cardinal number:  1, one 
+cd1s++++    cardinal number:  ones 
+cds++++     cardinal plural (tens, hundreds, thousands)
+od++++      ordinal number (1st, 2nd, first, second, ...)
+
+cs+cnd+++   subordinating conjunction + conditional (if, unless)
+cs+con+++   subordinating conjunction + concessive (although, though)
+cs+cos+++   subordinating conjunction + causative (because)
+cs+who+++   subordinating conjunction + WH word (whether) 
+cs+sub+++   subordinating conjunction + other (as, except, until, ...)
+cs"++++     multi-word subordinating conjunction (in that, so that, ...)
+
+dt+dem+++   determiner + demonstrative (this,that,these,those modifying N)
+dt+pdem+++  determiner + demonstrative pronoun (this, that, these, those) 
+dti++++     singular or plural determiner (any, enough, some)
+dt++++      other singular determiner (another, each)
+dtx++++     determiner/double conjunction (either)
+
+ex+pex+++   existential there
+
+in++++      preposition
+in+ppvb+++  preposition + prepositional verb (account for, join in, ...)
+in+pl+++    preposition + place marker (above, behind, beside, ...)
+in"++++     multi-word perposition (as to, away from, instead of, ...)
+in+strn+++  preposition + stranded
+
+jj+atrb+++      adjective + attributive function
+jj+atrb++xvbg+  adjective + attributive function + + -ing form
+jj+atrb++xvbn+  adjective + attributive function + + past participle form
+jj+pred+++      adjective + predicative function
+jj++++          adjective + indeterminate function
+jjb+atrb+++     attributive-only adjective + attributive (chief, entire)
+jjr+atrb+++     comparative adjective + attributive function
+jjr+pred+++     comparative adjective + predicative function
+jjt+atrb+++     superlative adjective + attributive function
+
+
+-----------------------------------------------------------------------
+All modal forms can be marked as 0 in Field 5 (e.g., md+prd+++0) to show that they
+are contracted forms (e.g., 'll, 've)
+
+md+nec+++      modal + necessity (ought, should, must)
+md+pos+++      modal + possibility (can, may, might, could)
+md+prd+++      modal + prediction (will, would, shall)
+md"++pmd"++    modal + + multi-word periphrastic modal (e.g., be going to)
+
+
+nn++++        singular common noun
+nn+nom+++     singular noun + nominalization
+nvbg+++xvbg+  singular noun + + + -ing form 
+nn+++xvbn+    singular noun + + + past participle form
+nns++++       plural common noun
+nns+nom+++    plural noun + nominalization 
+nnu++++       unit of measurement (lb, kg, ...)
+np++++        singular proper noun
+nps++++       plural proper noun
+npl++++       locative noun
+npt++++       singular titular noun
+npts++++      plural titular noun
+nr++++        singular adverbial noun (east, west, today, home, ...)
+nrs++++       plural adverbial noun 
+
+
+----------------------------------------------------------------------
+NB:  In the following pronoun tags, be careful of the difference between the
+number 1, used to mark first person, and the letter l (i.e. lower case L), used
+to mark reflexives.  
+
+pp1a+pp1+++   first person subject pronoun + first person pronoun
+pp1a+pp1+++0  first person subject pronoun + 1st person pro. + contracted   
+pp1o+pp1+++   first person object pronoun + first person pronoun
+pp$+pp1+++    possessive determiner + first person pronoun (my, our)
+ppl+pp1+++    singular reflexive pronoun + first person pronoun (myself)
+ppls+pp1+++   plural reflexive pronoun + first person pronoun (ourselves)
+pp2+pp2+++    second person pronoun + second person pronoun
+pp$+pp2+++    possessive determiner + second person pronoun (your)
+ppl+pp2+++    singular reflexive pronoun + second person pronoun (yourself)
+pp3a+pp3+++   third person subject pronoun + third person personal pronoun
+pp3o+pp3+++   third person object pronoun + third person personal pronoun
+pp3+pp3+++0   third person pronoun + 3rd person personal pro. + contracted
+pp$+pp3+++    possessive + 3rd pers. personal pro. (his, her, their)
+ppl+pp3+++    sg. reflexive pronoun + 3rd pers. personal pro. (her/himself)
+ppls+pp3+++   pl. reflexive pronoun + 3rd pers. personal pro. (themselves)
+pp3+it+++     third person pronoun + third person impersonal pronoun (it)
+pp$+it+++     possessive determiner + third person impersonal pronoun (its)
+pp$$++++      possessive pronoun (mine, yours, ...)
+pn"++++       multi-word nominal pronoun (no one, ...)
+pn++++        nominal pronoun (someone, everything, ...)
+
+ql++++        qualifier + (as, less, more, too)
+ql+amp+++     qualifier + amplifier (very)
+ql+emph+++    qualifier + emphatic (most)
+qlp++++       post-qualifier (enough, indeed)
+
+
+All adverb forms can be marked as splt in Field 3 (e.g., rb+amp+splt++) 
+to indicate that the adverb occurs within the auxiliary 
+(e.g., they've probably been looking...).
+
+rb++++        general adverb
+rb"++++       multi-word adverb (at last, in general)
+rb+cnj+++     adverb + conjunct (however, therefore, thus, ...)
+rb++neg++     neither
+rb+amp+++     adverb + amplifier (absolutely, completely, entirely, ...)
+rb+down+++    adverb + downtoner (nearly, only, merely, ...)
+rb+emph+++    adverb + emphatic (just, really, so, ...)
+rb+hdg+++     adverb + hedge (almost, maybe, ...) 
+rb"+hdg"+++   multi-word adverb + hedge (kind of, sort of)
+rb+phrv+++    adverb + phrasal verb (get in, wrap up, ...)
+rb+pl+++      adverb + place marker (abroad, ahead, far, upstream, ...)
+rb+tm+++      adverb + time marker (afterwards, again, immediately, ...)
+rb+dspt+++    adverb + discourse particle (anyway, well, ...)
+rbr++++       comparative adverb (better, quicker)
+rbr+tm+++     comparative adverb + time marker (earlier, later, sooner, ...)
+rn+pl+++      nominal adverb + place marker (here, there)  
+rn+tm+++      nominal adverb + time marker (now, then)  
+rn+dspt+++    nominal adverb + discourse particle (now)  
+rp++++        adverbial particle (back, in, round, up, ...)
+rp+pl+++      adverbial particle + place marker (away, behind, out, ...)
+
+---------------------------------------------------------------------
+tht+jcmp+++   that as dependent clause head + adjective complement
+tht+ncmp+++   that as dependent clause head + noun complement
+tht+vcmp+++   that as dependent clause head + verb complement
+
+tht+rel+++     that as dependent clause head + relative clause 
+tht+rel+obj++  that as dep. clause head + relative clause + object position
+tht+rel+subj++ that as dep. clause head + relative clause + subject position
+
+--------------------------------------------------------------------------
+to++++       infinitive marker 
+to"++++      multi-word infinitive marker (in order to)
+
+uh++++       interjection/filler (hey, oh, ok, yes, erm ...)
+
+vb++++         base form of verb, excluding verbs in infinitive clauses
+                 (uninflected present tense, imperative)
+vb+++xvbn+     base form of verb + + + past participle form 
+                 (e.g., cut, hit, hurt, ...)
+vb+be+aux++    base form of verb + be + auxiliary verb 
+vb+be+vrb++    base form of verb + be + main verb 
+vb+bem+aux++   verb + am + auxiliary verb 
+vb+bem+aux++0  verb + am + auxiliary verb + + contracted ('m)
+vb+bem+vrb++   verb + am + main verb     
+vb+bem+vrb++0  verb + am + main verb + + contracted ('m)   
+vb+ber+aux++   verb + are + auxiliary verb     
+vb+ber+aux++0  verb + are + auxiliary verb + + contracted ('re)
+vb+ber+vrb++   verb + are + main verb     
+vb+ber+vrb++0  verb + are + main verb + + contracted ('re)   
+vb+do+aux++    verb + do + auxiliary verb 
+vb+do+vrb++    verb + do + main verb     
+vb+hv+aux++    verb + have + auxiliary verb 
+vb+hv+aux++0   verb + have + auxiliary verb + + contracted ('ve)
+vb+hv+vrb++    verb + have + main verb     
+vb+hv+vrb++0   verb + have + main verb + + contracted ('ve)   
+vb+seem+++     base form of verb + seem / appear 
+vb+vprv+++     base form of verb + private verb (believe, feel, think, ...)
+vb+vprv+tht0++ base form of verb + private verb + that deletion **
+vb+vpub+++     base form of verb + public verb (assert, complain, say, ...)
+vb+vpub+tht0++ base form of verb + public verb + that deletion **
+vb+vsua+++     base form of verb + suasive verb (ask, command, insist, ...)
+
+----------------------------------------------------------------------
+All past tense verb forms (excluding were, was, did, had) are marked as
+either xvbn or xvbnx; only the sequences with xvbn are listed below.
+
+vbd+++xvbn+          past tense verb + + + past participle form
+vbd+bed+aux++        past tense verb + were + auxiliary verb
+vbd+bed+vrb++        past tense verb + were + main verb
+vbd+bedz+aux++       past tense verb + was + auxiliary verb
+vbd+bedz+vrb++       past tense verb + was + main verb
+vbd+dod+aux++        past tense verb + did + auxiliary verb
+vbd+dod+vrb++        past tense verb + did + main verb
+vbd+hvd+aux++        past tense verb + had + auxiliary verb
+vbd+hvd+vrb++        past tense verb + had + main verb
+vbd+seem++xvbn+      past tense verb + seem/appear 
+vbd+vprv++xvbn+      past tense + private verb (believe, feel, think, ...)
+vbd+vprv+tht0+xvbn+  past tense + private verb + that deletion **
+vbd+vpub++xvbn+      past tense + public verb (assert, complain, say, ...)   
+vbd+vpub+tht0+xvbn+  past tense + public verb + that deletion **
+vbd+vsua++xvbn+      past tense + suasive verb (ask, command, insist, ...)     
+
+** the tag tht0 marks the occurrence of a following that complement clause
+   when the complmentizer that has been deleted.
+
+All present progressive verb forms are marked as either xvbg or xvbgx; 
+only the sequences with xvbg are listed below.
+
+vbg+++xvbg+          present progressive verb + + + -ing form
+vbg+beg++xvbg+       present progressive verb + being
+vbg+beg+aux+xvbg+    present progressive verb + being + auxiliary verb
+vbg+hvg++xvbg+       present progressive verb + having
+vbg+vprv++xvbg+      pres. prog. + private verb (believe, feel, think, ...)
+vbg+vprv+tht0+xvbg+  present progressive + private verb + that deletion **
+vbg+vpub++xvbg+      pres. prog. + public verb (assert, complain, say, ...)
+vbg+vpub+tht0+xvbg+  present progressive + public verb + that deletion **
+vbg+vsua++xvbg+      pres. prog. + suasive verb (ask, command, insist, ...)  
+
+vwbg+++xvbg+         present progressive postnominal modifier
+vwbg+beg++xvbg+      present progressive postnominal modifier + being
+vwbg+hvg++xvbg+      present progressive postnominal modifier + having
+vwbg+vprv++xvbg+     present prog. postnom. modifier + private verb
+vwbg+vpub++xvbg+     present prog. postnom. modifier + public verb
+
+
+--------------------------------------------------------------------------
+vbi++++          base form of verb in infinitive clause 
+vbi+vprv+++      infinitive verb + private verb (believe, feel, think, ...) 
+vbi+vprv+tht0++  infinitive verb + private verb + that deletion **
+vbi+vpub+++      infinitive verb + public verb (assert, complain, say, ...)
+vbi+vpub+tht0++  infinitive verb + public verb + that deletion **
+vbi+vsua+++      infinitive verb + suasive verb (ask, command, insist, ...)   
+
+
+
+---------------------------------------------------------------------------
+vbz++++          3rd person singular verb
+vbz+bez+aux++    3rd person sg. verb + is + auxiliary verb 
+vbz+bez+aux++0   3rd person sg. + is + auxiliary verb + + contracted ('s)
+vbz+bez+vrb++    3rd person sg. verb + is + main verb 
+vbz+bez+vrb++0   3rd person sg. + is + main verb + + contracted ('s)  
+vbz+doz+aux++    3rd person sg. verb + does + auxiliary verb 
+vbz+doz+vrb++    3rd person sg. verb + does + main verb   
+vbz+hvz+aux++    3rd person sg. verb + has + auxiliary verb   
+vbz+hvz+vrb++    3rd person sg. verb + has + main verb   
+vbz+seem+++      3rd person sg. verb + seem/appear
+vbz+vprv+++      3rd person sg. + private verb (believe, feel, think, ...) 
+vbz+vprv+tht0++  3rd person sg. + private verb + that deletion **
+vbz+vpub+++      3rd person sg. + public verb (assert, complain, say, ...)
+vbz+vpub+tht0++  3rd person sg. + public verb + that deletion **
+vbz+vsua+++      3rd person sg. + suasive verb (ask, command, insist, ...)   
+
+
+
+
+** the tag tht0 marks the occurrence of a following that complement clause
+   when the complmentizer that has been deleted.
+
+All perfect aspect verb forms and passive verb forms are marked as 
+either xvbn or xvbnx; only the sequences with xvbn are listed below.
+
+vprf+++xvbn+        perfect aspect verb + + + past participle form
+vprf++tht0+xvbn+    perfect aspect verb + + that deletion **  
+vprf+ben+aux+xvbn+  perfect aspect verb + been + auxiliary verb
+vprf+ben+vrb+xvbn+  perfect aspect verb + been + main verb
+
+vpsv++agls+xvbn+    main clause passive verb + + agentless passive 
+vpsv++by+xvbn+      main clause passive verb + + by passive 
+
+vwbn+++xvbn+        passive postnominal modifier + + + past participle form
+vwbn+vprv++xvbn+    passive postnominal modifier + private verb
+vwbn+vpub++xvbn+    passive postnominal modifier + public verb
+vwbn+vsua++xvbn+    passive postnominal modifier + suasive verb
+
+
+---------------------------------------------------------------------
+wdt+who+++          WH determiner + WH word (what, whatever, whichever, ...)
+wdt+who+whcl++      WH determiner + WH word + WH clause
+wdt+who+whq++       WH determiner + WH word + WH question 
+
+whp+rel+obj++       WH pronoun + relative clause + object position 
+whp+rel+pied++      WH pronoun + relative clause + object position with
+                      prepositional fronting ('pied piping')
+whp+rel+subj++      WH pronoun + relative clause + subject position 
+
+whp+who+++          WH pronoun + WH word (not a relative clause)
+whp+who+whq++       WH pronoun + WH word + WH question
+
+wrb+who+++          WH adverb (how, when, where, ...) + WH word
+wrb+who+whcl++      WH adverb + WH word + WH clause
+wrb+who+whq++       WH adverb + WH word + WH question
+
+xnot++not++         not + + negation
+xnot++not++0        not + + negation + + contracted form (n't)
+
+xvbn+++xvbn+   past participle form -- indeterminate grammatical function
+xvbg+++xvbg+   present participle form -- indeterminate grammatical function
+
+zz++++         letter of the alphabet
+

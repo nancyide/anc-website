@@ -1,0 +1,3330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Corpus and annotation overview | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor"><a href="../../../" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../../oanc/" alt="Open ANC">oanc</a></li>
+	<li class="current-page-ancestor"><a href="../../" alt="MASC">masc</a></li>
+	<li class=""><a href="../../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../../software/" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../../../../software/anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../../../../software/anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../../../../software/gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../../../../software/uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class=""><a href="../../../oanc/" alt="Open ANC">oanc</a></li>
+<li class="current-page-ancestor"><a href="../../" alt="MASC">masc</a></li>
+<li class=""><a href="../../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-577" class="post-577 page type-page status-publish hentry">
+					
+					<h1><a href="../../" class="entry-title">MASC</a></h1>
+		
+					<div id="side-links">
+				<ul>
+					<li class="page_item page-item-113"><a href="../../about/">About</a></li>
+<li class="page_item page-item-120 page_item_has_children current_page_ancestor current_page_parent"><a href="../">The Corpus</a>
+<ul class='children'>
+	<li class="page_item page-item-839"><a href="../annotations/">Annotations</a></li>
+	<li class="page_item page-item-135"><a href="../masc-structure/">Corpus Format and Structure</a></li>
+	<li class="page_item page-item-577 current_page_item"><a href="./" aria-current="page">Corpus and annotation overview</a></li>
+	<li class="page_item page-item-526"><a href="../browse-masc-data/">Browse MASC Data</a></li>
+</ul>
+</li>
+<li class="page_item page-item-143"><a href="../../wordnet-framenet-annotations/">MASC Sentence Corpus</a></li>
+<li class="page_item page-item-920"><a href="../../masc-amt-word-sense-annotation/">MASC AMT Word Sense Annotation</a></li>
+<li class="page_item page-item-148"><a href="../../contribute/">Contribute Data and Annotations</a></li>
+<li class="page_item page-item-152 page_item_has_children"><a href="../../downloads/">Downloads</a>
+<ul class='children'>
+	<li class="page_item page-item-514"><a href="../../downloads/data-download/">Data Download</a></li>
+	<li class="page_item page-item-518"><a href="../../downloads/tool-downloads/">Tool Downloads</a></li>
+</ul>
+</li>
+				</ul>
+				<div class="lower"></div>
+			</div>
+			
+			<div id="content" class="sidelinks">
+			
+				
+		
+		
+					<h1 class="subentry-title">Corpus and annotation overview</h1>
+				
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<h1 style="text-align: left;"><strong><span style="font-size: large;">CHART LEGEND</span></strong></h1>
+<p>DOCUMENT NAME is the base name used for the primary data file and all of its associated standoff annotation files and headers</p>
+<p>WORD COUNT is the number of words in the document</p>
+<p>TYPE is spoken or written</p>
+<p>GENRE indicates the genre of the data, drawn from the ANC controlled vocabulary for text categorization</p>
+<p>SUB-CATEGORY provides an additional classification of the data, where one exists; these classifications reflect the MASC directory structure</p>
+<p>ANNOTATIONS lists annotations for the document beyond the basic set, which includes logical structure (body, paragraph, headings, etc.); sentence boundaries; token and part of speech (ptbtok and fntok); token, part of speech, and lemma (penn); noun chunks; verb chunks; named entities (person, location, date, organization), and Penn Treebank Syntax. Other annotations are indicated in the chart below as follows:</p>
+<p style="padding-left: 30px;"><strong>FN</strong> = FrameNet<br />
+<strong>MPQA</strong> = Opinion Annotation (Pittsburgh)<br />
+<strong>CB</strong>= Committed Belief (CMU)<br />
+<strong>EV</strong> = Event (CMU)<br />
+<strong>PB</strong> = PropBank (PropBank annotations are currently available in their original format only)</p>
+<p>Each text is viewable by clicking on its file name.</p>
+<table style="width: 90%;" border="0" cellspacing="1" cellpadding="1">
+<colgroup>
+<col width="234" />
+<col span="3" width="85" />
+<col width="215" />
+<col width="163" /></colgroup>
+<tbody>
+<tr style="background-color: #d6fefe;">
+<td style="background-color: #e0fdfe;"><strong>DOCUMENT NAME</strong></td>
+<td style="background-color: #92e6fb; width: 120px; text-align: center;"><strong>WORD COUNT</strong></td>
+<td style="background-color: #e0fdfe; width: 100px; text-align: center;"><strong>TYPE</strong></td>
+<td style="background-color: #92e6fb; width: 120px;"><strong>GENRE</strong></td>
+<td style="background-color: #e0fdfe;"><strong>SUB-CATEGORY</strong></td>
+<td style="background-color: #92e6fb;"><strong>+ANNOTATIONS</strong></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Day3PMSession.txt">Day3PMSession</a></td>
+<td style="background-color: #92e6fb;" align="right">20817</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">court-transcript</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Lessig-court-transcript.txt">Lessig-court-transcript</a></td>
+<td style="background-color: #92e6fb;" align="right">9235</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">court-transcript</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/2nd_Gore-Bush.txt">2nd_Gore-Bush</a></td>
+<td style="background-color: #92e6fb;" align="right">16001</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">debate-transcript</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/3rd_Bush-Kerry.txt">3rd_Bush-Kerry</a></td>
+<td style="background-color: #92e6fb;" align="right">15416</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">debate-transcript</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Bed012.txt">Bed012</a></td>
+<td style="background-color: #92e6fb;" align="right">6870</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Bmr021.txt">Bmr021</a></td>
+<td style="background-color: #92e6fb;" align="right">7512</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/interview_nathan_hole.txt">interview_nathan_hole</a></td>
+<td style="background-color: #92e6fb;" align="right">3371</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NapierDianne.txt">NapierDianne</a></td>
+<td style="background-color: #92e6fb;" align="right">2258</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/PolkMaria.txt">PolkMaria</a></td>
+<td style="background-color: #92e6fb;" align="right">502</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ReidSandra.txt">ReidSandra</a></td>
+<td style="background-color: #92e6fb;" align="right">1863</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/RindnerBonnie.txt">RindnerBonnie</a></td>
+<td style="background-color: #92e6fb;" align="right">340</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">face-to-face</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sw2014-ms98-a-trans.txt">sw2014-ms98-a-trans</a></td>
+<td style="background-color: #92e6fb;" align="right">744</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">telephone</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sw2015-ms98-a-trans.txt">sw2015-ms98-a-trans</a></td>
+<td style="background-color: #92e6fb;" align="right">1260</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">telephone</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sw2025-ms98-a-trans.txt">sw2025-ms98-a-trans</a></td>
+<td style="background-color: #92e6fb;" align="right">1376</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">telephone</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sw2071-ms98-a-trans.txt">sw2071-ms98-a-trans</a></td>
+<td style="background-color: #92e6fb;" align="right">938</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">telephone</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sw2078-ms98-a-trans.txt">sw2078-ms98-a-trans</a></td>
+<td style="background-color: #92e6fb;" align="right">2106</td>
+<td style="background-color: #e0fdfe;">spoken</td>
+<td style="background-color: #92e6fb;">telephone</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Acephalous-Cant-believe.txt">Acephalous-Cant-believe</a></td>
+<td style="background-color: #92e6fb;" align="right">651</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Acephalous-Internet.txt">Acephalous-Internet</a></td>
+<td style="background-color: #92e6fb;" align="right">793</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Anti-Terrorist.txt">Anti-Terrorist</a></td>
+<td style="background-color: #92e6fb;" align="right">857</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/blog-jet-lag.txt">blog-jet-lag</a></td>
+<td style="background-color: #92e6fb;" align="right">1073</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/blog-monastery.txt">blog-monastery</a></td>
+<td style="background-color: #92e6fb;" align="right">984</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/blog-new-year&#x27;s-resolutions.txt">blog-new-year&#8217;s-resolutions</a></td>
+<td style="background-color: #92e6fb;" align="right">981</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/blog-varsity-athletics.txt">blog-varsity-athletics</a></td>
+<td style="background-color: #92e6fb;" align="right">963</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/detroit.txt">detroit</a></td>
+<td style="background-color: #92e6fb;" align="right">3067</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Effing-Idiot.txt">Effing-Idiot</a></td>
+<td style="background-color: #92e6fb;" align="right">5138</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Fermentation_Eminent-Domain.txt">Fermentation_Eminent-Domain</a></td>
+<td style="background-color: #92e6fb;" align="right">2338</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Fermentation_HR5034.txt">Fermentation_HR5034</a></td>
+<td style="background-color: #92e6fb;" align="right">2366</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/How_soon-Fans.txt">How_soon-Fans</a></td>
+<td style="background-color: #92e6fb;" align="right">692</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/How_soon-Lebron-James.txt">How_soon-Lebron-James</a></td>
+<td style="background-color: #92e6fb;" align="right">567</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Italy.txt">Italy</a></td>
+<td style="background-color: #92e6fb;" align="right">963</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lessig_blog-carbon.txt">lessig_blog-carbon</a></td>
+<td style="background-color: #92e6fb;" align="right">1490</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Seedbombing.txt">Seedbombing</a></td>
+<td style="background-color: #92e6fb;" align="right">1166</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/sucker.txt">sucker</a></td>
+<td style="background-color: #92e6fb;" align="right">475</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Tupelo-Honey-Cafe.txt">Tupelo-Honey-Cafe</a></td>
+<td style="background-color: #92e6fb;" align="right">684</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Uprooted_Bike.txt">Uprooted_Bike</a></td>
+<td style="background-color: #92e6fb;" align="right">1222</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Uprooted_Farming-on-Sand.txt">Uprooted_Farming-on-Sand</a></td>
+<td style="background-color: #92e6fb;" align="right">932</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/vampires.txt">vampires</a></td>
+<td style="background-color: #92e6fb;" align="right">797</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">blog</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/8885.txt">8885</a></td>
+<td style="background-color: #92e6fb;" align="right">282</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/9066.txt">9066</a></td>
+<td style="background-color: #92e6fb;" align="right">206</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/9085.txt">9085</a></td>
+<td style="background-color: #92e6fb;" align="right">215</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/9159.txt">9159</a></td>
+<td style="background-color: #92e6fb;" align="right">262</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/9191.txt">9191</a></td>
+<td style="background-color: #92e6fb;" align="right">95</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/12030.txt">12030</a></td>
+<td style="background-color: #92e6fb;" align="right">234</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/12174.txt">12174</a></td>
+<td style="background-color: #92e6fb;" align="right">151</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/12176.txt">12176</a></td>
+<td style="background-color: #92e6fb;" align="right">1459</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/21257.txt">21257</a></td>
+<td style="background-color: #92e6fb;" align="right">348</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/23559.txt">23559</a></td>
+<td style="background-color: #92e6fb;" align="right">295</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/49059.txt">49059</a></td>
+<td style="background-color: #92e6fb;" align="right">322</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/50307.txt">50307</a></td>
+<td style="background-color: #92e6fb;" align="right">200</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/52201.txt">52201</a></td>
+<td style="background-color: #92e6fb;" align="right">122</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/52555.txt">52555</a></td>
+<td style="background-color: #92e6fb;" align="right">229</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/52713.txt">52713</a></td>
+<td style="background-color: #92e6fb;" align="right">52</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/52998.txt">52998</a></td>
+<td style="background-color: #92e6fb;" align="right">401</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/52999.txt">52999</a></td>
+<td style="background-color: #92e6fb;" align="right">319</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/53536.txt">53536</a></td>
+<td style="background-color: #92e6fb;" align="right">465</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/53555.txt">53555</a></td>
+<td style="background-color: #92e6fb;" align="right">138</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/54261.txt">54261</a></td>
+<td style="background-color: #92e6fb;" align="right">350</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/54262.txt">54262</a></td>
+<td style="background-color: #92e6fb;" align="right">348</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/54263.txt">54263</a></td>
+<td style="background-color: #92e6fb;" align="right">294</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/54536.txt">54536</a></td>
+<td style="background-color: #92e6fb;" align="right">607</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/54537.txt">54537</a></td>
+<td style="background-color: #92e6fb;" align="right">93</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/173252.txt">173252</a></td>
+<td style="background-color: #92e6fb;" align="right">704</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/173906.txt">173906</a></td>
+<td style="background-color: #92e6fb;" align="right">153</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/174124.txt">174124</a></td>
+<td style="background-color: #92e6fb;" align="right">214</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/175448.txt">175448</a></td>
+<td style="background-color: #92e6fb;" align="right">295</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/175814.txt">175814</a></td>
+<td style="background-color: #92e6fb;" align="right">223</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/175816.txt">175816</a></td>
+<td style="background-color: #92e6fb;" align="right">214</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/175841.txt">175841</a></td>
+<td style="background-color: #92e6fb;" align="right">3738</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/176581.txt">176581</a></td>
+<td style="background-color: #92e6fb;" align="right">373</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/210343.txt">210343</a></td>
+<td style="background-color: #92e6fb;" align="right">128</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/211401.txt">211401</a></td>
+<td style="background-color: #92e6fb;" align="right">44</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/211402.txt">211402</a></td>
+<td style="background-color: #92e6fb;" align="right">201</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/218920.txt">218920</a></td>
+<td style="background-color: #92e6fb;" align="right">120</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/219122.txt">219122</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/219123.txt">219123</a></td>
+<td style="background-color: #92e6fb;" align="right">257</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/219257.txt">219257</a></td>
+<td style="background-color: #92e6fb;" align="right">51</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/221197.txt">221197</a></td>
+<td style="background-color: #92e6fb;" align="right">189</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/230685.txt">230685</a></td>
+<td style="background-color: #92e6fb;" align="right">244</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/234267.txt">234267</a></td>
+<td style="background-color: #92e6fb;" align="right">142</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/234783.txt">234783</a></td>
+<td style="background-color: #92e6fb;" align="right">52</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ENRON-pearson-email-25jul02.txt">ENRON-pearson-email-25jul02</a></td>
+<td style="background-color: #92e6fb;" align="right">80</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/enron-thread-159550.txt">enron-thread-159550</a></td>
+<td style="background-color: #92e6fb;" align="right">388</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">enron</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111344.txt">111344</a></td>
+<td style="background-color: #92e6fb;" align="right">92</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111348.txt">111348</a></td>
+<td style="background-color: #92e6fb;" align="right">480</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111349.txt">111349</a></td>
+<td style="background-color: #92e6fb;" align="right">328</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111359.txt">111359</a></td>
+<td style="background-color: #92e6fb;" align="right">412</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111363.txt">111363</a></td>
+<td style="background-color: #92e6fb;" align="right">714</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111364.txt">111364</a></td>
+<td style="background-color: #92e6fb;" align="right">313</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111367.txt">111367</a></td>
+<td style="background-color: #92e6fb;" align="right">341</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111369.txt">111369</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111371.txt">111371</a></td>
+<td style="background-color: #92e6fb;" align="right">328</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111373.txt">111373</a></td>
+<td style="background-color: #92e6fb;" align="right">152</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111375.txt">111375</a></td>
+<td style="background-color: #92e6fb;" align="right">139</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111377.txt">111377</a></td>
+<td style="background-color: #92e6fb;" align="right">133</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111380.txt">111380</a></td>
+<td style="background-color: #92e6fb;" align="right">396</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111381.txt">111381</a></td>
+<td style="background-color: #92e6fb;" align="right">1445</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111382.txt">111382</a></td>
+<td style="background-color: #92e6fb;" align="right">261</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111393.txt">111393</a></td>
+<td style="background-color: #92e6fb;" align="right">140</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111394.txt">111394</a></td>
+<td style="background-color: #92e6fb;" align="right">113</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111399.txt">111399</a></td>
+<td style="background-color: #92e6fb;" align="right">95</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111400.txt">111400</a></td>
+<td style="background-color: #92e6fb;" align="right">779</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111404.txt">111404</a></td>
+<td style="background-color: #92e6fb;" align="right">107</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111406.txt">111406</a></td>
+<td style="background-color: #92e6fb;" align="right">78</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111410.txt">111410</a></td>
+<td style="background-color: #92e6fb;" align="right">211</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111414.txt">111414</a></td>
+<td style="background-color: #92e6fb;" align="right">629</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111422.txt">111422</a></td>
+<td style="background-color: #92e6fb;" align="right">125</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111424.txt">111424</a></td>
+<td style="background-color: #92e6fb;" align="right">96</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111425.txt">111425</a></td>
+<td style="background-color: #92e6fb;" align="right">302</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/111428.txt">111428</a></td>
+<td style="background-color: #92e6fb;" align="right">280</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114423.txt">114423</a></td>
+<td style="background-color: #92e6fb;" align="right">722</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114424.txt">114424</a></td>
+<td style="background-color: #92e6fb;" align="right">176</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114428.txt">114428</a></td>
+<td style="background-color: #92e6fb;" align="right">90</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114433.txt">114433</a></td>
+<td style="background-color: #92e6fb;" align="right">199</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114435.txt">114435</a></td>
+<td style="background-color: #92e6fb;" align="right">220</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114439.txt">114439</a></td>
+<td style="background-color: #92e6fb;" align="right">97</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114440.txt">114440</a></td>
+<td style="background-color: #92e6fb;" align="right">167</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114441.txt">114441</a></td>
+<td style="background-color: #92e6fb;" align="right">172</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114442.txt">114442</a></td>
+<td style="background-color: #92e6fb;" align="right">251</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114445.txt">114445</a></td>
+<td style="background-color: #92e6fb;" align="right">400</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114446.txt">114446</a></td>
+<td style="background-color: #92e6fb;" align="right">131</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114447.txt">114447</a></td>
+<td style="background-color: #92e6fb;" align="right">150</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114448.txt">114448</a></td>
+<td style="background-color: #92e6fb;" align="right">706</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114450.txt">114450</a></td>
+<td style="background-color: #92e6fb;" align="right">152</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114452.txt">114452</a></td>
+<td style="background-color: #92e6fb;" align="right">147</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Apply.txt">Apply</a></td>
+<td style="background-color: #92e6fb;" align="right">183</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Cartoonist_services.txt">Cartoonist_services</a></td>
+<td style="background-color: #92e6fb;" align="right">215</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Dear_e-mail_user.txt">Dear_e-mail_user</a></td>
+<td style="background-color: #92e6fb;" align="right">89</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Earnings_Season_Underway.txt">Earnings_Season_Underway</a></td>
+<td style="background-color: #92e6fb;" align="right">173</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Fastest_Reader.txt">Fastest_Reader</a></td>
+<td style="background-color: #92e6fb;" align="right">676</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/FBI_urgent.txt">FBI_urgent</a></td>
+<td style="background-color: #92e6fb;" align="right">694</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Global_Professional_Directory.txt">Global_Professional_Directory</a></td>
+<td style="background-color: #92e6fb;" align="right">375</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Laptop_Bags.txt">Laptop_Bags</a></td>
+<td style="background-color: #92e6fb;" align="right">591</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Mailbox_Upgrade.txt">Mailbox_Upgrade</a></td>
+<td style="background-color: #92e6fb;" align="right">89</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/new_clients.txt">new_clients</a></td>
+<td style="background-color: #92e6fb;" align="right">663</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="http://www.anc.org/MASC/texts/Re_JobOffer.txt">Re_JobOffer</a></td>
+<td style="background-color: #92e6fb;" align="right">586</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/record_volume.txt">record_volume</a></td>
+<td style="background-color: #92e6fb;" align="right">128</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Secret_Shopper.txt">Secret_Shopper</a></td>
+<td style="background-color: #92e6fb;" align="right">80</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/SEO.txt">SEO</a></td>
+<td style="background-color: #92e6fb;" align="right">225</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/SgtCassandra.txt">SgtCassandra</a></td>
+<td style="background-color: #92e6fb;" align="right">350</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb1.txt">ucb1</a></td>
+<td style="background-color: #92e6fb;" align="right">166</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb10.txt">ucb10</a></td>
+<td style="background-color: #92e6fb;" align="right">48</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb11.txt">ucb11</a></td>
+<td style="background-color: #92e6fb;" align="right">172</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb12.txt">ucb12</a></td>
+<td style="background-color: #92e6fb;" align="right">95</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb14.txt">ucb14</a></td>
+<td style="background-color: #92e6fb;" align="right">200</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb15.txt">ucb15</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb2.txt">ucb2</a></td>
+<td style="background-color: #92e6fb;" align="right">173</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb20.txt">ucb20</a></td>
+<td style="background-color: #92e6fb;" align="right">96</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb21.txt">ucb21</a></td>
+<td style="background-color: #92e6fb;" align="right">70</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb22.txt">ucb22</a></td>
+<td style="background-color: #92e6fb;" align="right">106</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb23.txt">ucb23</a></td>
+<td style="background-color: #92e6fb;" align="right">90</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb24.txt">ucb24</a></td>
+<td style="background-color: #92e6fb;" align="right">77</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb25.txt">ucb25</a></td>
+<td style="background-color: #92e6fb;" align="right">109</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb26.txt">ucb26</a></td>
+<td style="background-color: #92e6fb;" align="right">121</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb27.txt">ucb27</a></td>
+<td style="background-color: #92e6fb;" align="right">99</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb28.txt">ucb28</a></td>
+<td style="background-color: #92e6fb;" align="right">111</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb29.txt">ucb29</a></td>
+<td style="background-color: #92e6fb;" align="right">59</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb3.txt">ucb3</a></td>
+<td style="background-color: #92e6fb;" align="right">151</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb30.txt">ucb30</a></td>
+<td style="background-color: #92e6fb;" align="right">95</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb31.txt">ucb31</a></td>
+<td style="background-color: #92e6fb;" align="right">754</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb4.txt">ucb4</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb40.txt">ucb40</a></td>
+<td style="background-color: #92e6fb;" align="right">113</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb41.txt">ucb41</a></td>
+<td style="background-color: #92e6fb;" align="right">191</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb42.txt">ucb42</a></td>
+<td style="background-color: #92e6fb;" align="right">108</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb43.txt">ucb43</a></td>
+<td style="background-color: #92e6fb;" align="right">96</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb44.txt">ucb44</a></td>
+<td style="background-color: #92e6fb;" align="right">241</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb45.txt">ucb45</a></td>
+<td style="background-color: #92e6fb;" align="right">73</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb46.txt">ucb46</a></td>
+<td style="background-color: #92e6fb;" align="right">102</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb47.txt">ucb47</a></td>
+<td style="background-color: #92e6fb;" align="right">74</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb48.txt">ucb48</a></td>
+<td style="background-color: #92e6fb;" align="right">311</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb49.txt">ucb49</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb50.txt">ucb50</a></td>
+<td style="background-color: #92e6fb;" align="right">89</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb51.txt">ucb51</a></td>
+<td style="background-color: #92e6fb;" align="right">120</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb52.txt">ucb52</a></td>
+<td style="background-color: #92e6fb;" align="right">181</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb53.txt">ucb53</a></td>
+<td style="background-color: #92e6fb;" align="right">83</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb54.txt">ucb54</a></td>
+<td style="background-color: #92e6fb;" align="right">97</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb6.txt">ucb6</a></td>
+<td style="background-color: #92e6fb;" align="right">179</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb8.txt">ucb8</a></td>
+<td style="background-color: #92e6fb;" align="right">340</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ucb9.txt">ucb9</a></td>
+<td style="background-color: #92e6fb;" align="right">173</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">spam</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2114716.txt">lists-003-2114716</a></td>
+<td style="background-color: #92e6fb;" align="right">667</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2121270.txt">lists-003-2121270</a></td>
+<td style="background-color: #92e6fb;" align="right">170</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2125109.txt">lists-003-2125109</a></td>
+<td style="background-color: #92e6fb;" align="right">289</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2129640.txt">lists-003-2129640</a></td>
+<td style="background-color: #92e6fb;" align="right">122</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2133315.txt">lists-003-2133315</a></td>
+<td style="background-color: #92e6fb;" align="right">180</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2137010.txt">lists-003-2137010</a></td>
+<td style="background-color: #92e6fb;" align="right">809</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2144868.txt">lists-003-2144868</a></td>
+<td style="background-color: #92e6fb;" align="right">51</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2148080.txt">lists-003-2148080</a></td>
+<td style="background-color: #92e6fb;" align="right">297</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2152883.txt">lists-003-2152883</a></td>
+<td style="background-color: #92e6fb;" align="right">106</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2171003.txt">lists-003-2171003</a></td>
+<td style="background-color: #92e6fb;" align="right">95</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2173878.txt">lists-003-2173878</a></td>
+<td style="background-color: #92e6fb;" align="right">753</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2180740.txt">lists-003-2180740</a></td>
+<td style="background-color: #92e6fb;" align="right">103</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2183485.txt">lists-003-2183485</a></td>
+<td style="background-color: #92e6fb;" align="right">89</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-003-2205935.txt">lists-003-2205935</a></td>
+<td style="background-color: #92e6fb;" align="right">1175</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10062451.txt">lists-034-10062451</a></td>
+<td style="background-color: #92e6fb;" align="right">307</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10066763.txt">lists-034-10066763</a></td>
+<td style="background-color: #92e6fb;" align="right">126</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10069772.txt">lists-034-10069772</a></td>
+<td style="background-color: #92e6fb;" align="right">175</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10073419.txt">lists-034-10073419</a></td>
+<td style="background-color: #92e6fb;" align="right">303</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10077455.txt">lists-034-10077455</a></td>
+<td style="background-color: #92e6fb;" align="right">427</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-034-10082707.txt">lists-034-10082707</a></td>
+<td style="background-color: #92e6fb;" align="right">343</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-11485666.txt">lists-046-11485666</a></td>
+<td style="background-color: #92e6fb;" align="right">230</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-11489622.txt">lists-046-11489622</a></td>
+<td style="background-color: #92e6fb;" align="right">401</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-11493928.txt">lists-046-11493928</a></td>
+<td style="background-color: #92e6fb;" align="right">1539</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-11506817.txt">lists-046-11506817</a></td>
+<td style="background-color: #92e6fb;" align="right">115</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12119260.txt">lists-046-12119260</a></td>
+<td style="background-color: #92e6fb;" align="right">126</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12122969.txt">lists-046-12122969</a></td>
+<td style="background-color: #92e6fb;" align="right">793</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12130258.txt">lists-046-12130258</a></td>
+<td style="background-color: #92e6fb;" align="right">122</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12133410.txt">lists-046-12133410</a></td>
+<td style="background-color: #92e6fb;" align="right">333</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12139072.txt">lists-046-12139072</a></td>
+<td style="background-color: #92e6fb;" align="right">124</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12142206.txt">lists-046-12142206</a></td>
+<td style="background-color: #92e6fb;" align="right">241</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12146425.txt">lists-046-12146425</a></td>
+<td style="background-color: #92e6fb;" align="right">421</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12151335.txt">lists-046-12151335</a></td>
+<td style="background-color: #92e6fb;" align="right">286</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12155427.txt">lists-046-12155427</a></td>
+<td style="background-color: #92e6fb;" align="right">179</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12158926.txt">lists-046-12158926</a></td>
+<td style="background-color: #92e6fb;" align="right">297</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lists-046-12162937.txt">lists-046-12162937</a></td>
+<td style="background-color: #92e6fb;" align="right">387</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">email</td>
+<td style="background-color: #e0fdfe;">w3c</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/A_defense_of_Michael_Moore.txt">A_defense_of_Michael_Moore</a></td>
+<td style="background-color: #92e6fb;" align="right">4861</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Ant_Robot.txt">Ant_Robot</a></td>
+<td style="background-color: #92e6fb;" align="right">7400</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/anth_essay_4.txt">anth_essay_4</a></td>
+<td style="background-color: #92e6fb;" align="right">3191</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Bartok.txt">Bartok</a></td>
+<td style="background-color: #92e6fb;" align="right">4239</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Black_and_white.txt">Black_and_white</a></td>
+<td style="background-color: #92e6fb;" align="right">3190</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Homosexuality.txt">Homosexuality</a></td>
+<td style="background-color: #92e6fb;" align="right">2923</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Madame_White_Snake.txt">Madame_White_Snake</a></td>
+<td style="background-color: #92e6fb;" align="right">1961</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Ohio_Steel.txt">Ohio_Steel</a></td>
+<td style="background-color: #92e6fb;" align="right">3269</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">essays</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1399.txt">1399</a></td>
+<td style="background-color: #92e6fb;" align="right">5321</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">ficlets</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1400.txt">1400</a></td>
+<td style="background-color: #92e6fb;" align="right">5258</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">ficlets</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1401.txt">1401</a></td>
+<td style="background-color: #92e6fb;" align="right">4806</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">ficlets</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1402.txt">1402</a></td>
+<td style="background-color: #92e6fb;" align="right">5491</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">ficlets</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1403.txt">1403</a></td>
+<td style="background-color: #92e6fb;" align="right">5423</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">ficlets</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/cable_spool_fort.txt">cable_spool_fort</a></td>
+<td style="background-color: #92e6fb;" align="right">1644</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/captured_moments.txt">captured_moments</a></td>
+<td style="background-color: #92e6fb;" align="right">5409</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/easy_money.txt">easy_money</a></td>
+<td style="background-color: #92e6fb;" align="right">2925</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/hotel-california.txt">hotel-california</a></td>
+<td style="background-color: #92e6fb;" align="right">5984</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/lw1.txt">lw1</a></td>
+<td style="background-color: #92e6fb;" align="right">730</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Nathans_Bylichka.txt">Nathans_Bylichka</a></td>
+<td style="background-color: #92e6fb;" align="right">10466</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/The_Black_Willow.txt">The_Black_Willow</a></td>
+<td style="background-color: #92e6fb;" align="right">3874</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/chapter-10.txt">chapter-10</a></td>
+<td style="background-color: #92e6fb;" align="right">6064</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">govt-docs</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Env_Prot_Agency-nov1.txt">Env_Prot_Agency-nov1</a></td>
+<td style="background-color: #92e6fb;" align="right">4804</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">govt-docs</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/fcic_final_report_conclusions.txt">fcic_final_report_conclusions</a></td>
+<td style="background-color: #92e6fb;" align="right">6788</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">govt-docs</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/LSC-Protocol_Regarding_Access.txt">LSC-Protocol_Regarding_Access</a></td>
+<td style="background-color: #92e6fb;" align="right">2075</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">govt-docs</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Postal_Rate_Comm-ReportToCongress2002WEB.txt">Postal_Rate_Comm-ReportToCongress2002WEB</a></td>
+<td style="background-color: #92e6fb;" align="right">4874</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">govt-docs</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes1.txt">jokes1</a></td>
+<td style="background-color: #92e6fb;" align="right">3513</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes10.txt">jokes10</a></td>
+<td style="background-color: #92e6fb;" align="right">1230</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes11.txt">jokes11</a></td>
+<td style="background-color: #92e6fb;" align="right">1424</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes12.txt">jokes12</a></td>
+<td style="background-color: #92e6fb;" align="right">836</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes13.txt">jokes13</a></td>
+<td style="background-color: #92e6fb;" align="right">1120</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes14.txt">jokes14</a></td>
+<td style="background-color: #92e6fb;" align="right">1304</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes15.txt">jokes15</a></td>
+<td style="background-color: #92e6fb;" align="right">1054</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes16.txt">jokes16</a></td>
+<td style="background-color: #92e6fb;" align="right">1870</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes2.txt">jokes2</a></td>
+<td style="background-color: #92e6fb;" align="right">2594</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes3.txt">jokes3</a></td>
+<td style="background-color: #92e6fb;" align="right">2511</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes4.txt">jokes4</a></td>
+<td style="background-color: #92e6fb;" align="right">2281</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes5.txt">jokes5</a></td>
+<td style="background-color: #92e6fb;" align="right">1818</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes6.txt">jokes6</a></td>
+<td style="background-color: #92e6fb;" align="right">1338</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes7.txt">jokes7</a></td>
+<td style="background-color: #92e6fb;" align="right">1075</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes8.txt">jokes8</a></td>
+<td style="background-color: #92e6fb;" align="right">1343</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/jokes9.txt">jokes9</a></td>
+<td style="background-color: #92e6fb;" align="right">1003</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">jokes</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_327.txt">Article247_327</a></td>
+<td style="background-color: #92e6fb;" align="right">782</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_328.txt">Article247_328</a></td>
+<td style="background-color: #92e6fb;" align="right">473</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_3500.txt">Article247_3500</a></td>
+<td style="background-color: #92e6fb;" align="right">706</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_400.txt">Article247_400</a></td>
+<td style="background-color: #92e6fb;" align="right">709</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_500.txt">Article247_500</a></td>
+<td style="background-color: #92e6fb;" align="right">734</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/Article247_66.txt">Article247_66</a></td>
+<td style="background-color: #92e6fb;" align="right">636</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ArticleIP_1059.txt">ArticleIP_1059</a></td>
+<td style="background-color: #92e6fb;" align="right">903</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ArticleIP_1060.txt">ArticleIP_1060</a></td>
+<td style="background-color: #92e6fb;" align="right">974</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/VOL15_3.txt">Vol15-3</a></td>
+<td style="background-color: #92e6fb;" align="right">14779</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">journal</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL067.txt">110CYL067</a></td>
+<td style="background-color: #92e6fb;" align="right">505</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL068.txt">110CYL068</a></td>
+<td style="background-color: #92e6fb;" align="right">449</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL069.txt">110CYL069</a></td>
+<td style="background-color: #92e6fb;" align="right">565</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL070.txt">110CYL070</a></td>
+<td style="background-color: #92e6fb;" align="right">193</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL071.txt">110CYL071</a></td>
+<td style="background-color: #92e6fb;" align="right">424</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL072.txt">110CYL072</a></td>
+<td style="background-color: #92e6fb;" align="right">144</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/110CYL200.txt">110CYL200</a></td>
+<td style="background-color: #92e6fb;" align="right">401</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/112C-L012.txt">112C-L012</a></td>
+<td style="background-color: #92e6fb;" align="right">280</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/112C-L013.txt">112C-L013</a></td>
+<td style="background-color: #92e6fb;" align="right">357</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/112C-L014.txt">112C-L014</a></td>
+<td style="background-color: #92e6fb;" align="right">248</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/112C-L015.txt">112C-L015</a></td>
+<td style="background-color: #92e6fb;" align="right">311</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/112C-L016.txt">112C-L016</a></td>
+<td style="background-color: #92e6fb;" align="right">195</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/113CWL017.txt">113CWL017</a></td>
+<td style="background-color: #92e6fb;" align="right">258</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/113CWL018.txt">113CWL018</a></td>
+<td style="background-color: #92e6fb;" align="right">213</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114CUL057.txt">114CUL057</a></td>
+<td style="background-color: #92e6fb;" align="right">260</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114CUL058.txt">114CUL058</a></td>
+<td style="background-color: #92e6fb;" align="right">352</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114CUL059.txt">114CUL059</a></td>
+<td style="background-color: #92e6fb;" align="right">297</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/114CUL060.txt">114CUL060</a></td>
+<td style="background-color: #92e6fb;" align="right">415</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/115CVL035.txt">115CVL035</a></td>
+<td style="background-color: #92e6fb;" align="right">331</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/115CVL036.txt">115CVL036</a></td>
+<td style="background-color: #92e6fb;" align="right">354</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/115CVL037.txt">115CVL037</a></td>
+<td style="background-color: #92e6fb;" align="right">404</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/116CUL032.txt">116CUL032</a></td>
+<td style="background-color: #92e6fb;" align="right">385</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/116CUL033.txt">116CUL033</a></td>
+<td style="background-color: #92e6fb;" align="right">295</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/116CUL034.txt">116CUL034</a></td>
+<td style="background-color: #92e6fb;" align="right">666</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/117CWL008.txt">117CWL008</a></td>
+<td style="background-color: #92e6fb;" align="right">227</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/117CWL009.txt">117CWL009</a></td>
+<td style="background-color: #92e6fb;" align="right">242</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/118CWL048.txt">118CWL048</a></td>
+<td style="background-color: #92e6fb;" align="right">241</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/118CWL049.txt">118CWL049</a></td>
+<td style="background-color: #92e6fb;" align="right">345</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/118CWL050.txt">118CWL050</a></td>
+<td style="background-color: #92e6fb;" align="right">629</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/119CWL041.txt">119CWL041</a></td>
+<td style="background-color: #92e6fb;" align="right">231</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/602CZL285.txt">602CZL285</a></td>
+<td style="background-color: #92e6fb;" align="right">301</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">philanthropic-fundraising</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/alumnifund1.txt">alumnifund1</a></td>
+<td style="background-color: #92e6fb;" align="right">282</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/AMC2.txt">AMC2</a></td>
+<td style="background-color: #92e6fb;" align="right">531</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/appalachian1.txt">appalachian1</a></td>
+<td style="background-color: #92e6fb;" align="right">1270</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/aspca1.txt">aspca1</a></td>
+<td style="background-color: #92e6fb;" align="right">706</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/att2.txt">att2</a></td>
+<td style="background-color: #92e6fb;" align="right">392</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/audubon1.txt">audubon1</a></td>
+<td style="background-color: #92e6fb;" align="right">1100</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/audubon2.txt">audubon2</a></td>
+<td style="background-color: #92e6fb;" align="right">662</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/defenders5.txt">defenders5</a></td>
+<td style="background-color: #92e6fb;" align="right">1170</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/guidedogs1.txt">guidedogs1</a></td>
+<td style="background-color: #92e6fb;" align="right">599</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/hsus4.txt">hsus4</a></td>
+<td style="background-color: #92e6fb;" align="right">1023</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/IFAW1.txt">IFAW1</a></td>
+<td style="background-color: #92e6fb;" align="right">790</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/littleshelter2.txt">littleshelter2</a></td>
+<td style="background-color: #92e6fb;" align="right">254</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/marine1.txt">marine1</a></td>
+<td style="background-color: #92e6fb;" align="right">784</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NWF1.txt">NWF1</a></td>
+<td style="background-color: #92e6fb;" align="right">826</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/united1.txt">united1</a></td>
+<td style="background-color: #92e6fb;" align="right">363</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/warner1.txt">warner1</a></td>
+<td style="background-color: #92e6fb;" align="right">369</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wildelifewatch1.txt">wildelifewatch1</a></td>
+<td style="background-color: #92e6fb;" align="right">672</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wwf12.txt">wwf12</a></td>
+<td style="background-color: #92e6fb;" align="right">657</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">letters</td>
+<td style="background-color: #e0fdfe;">solicitation-brochures</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/JurassicParkIV-INT.txt">JurassicParkIV-INT</a></td>
+<td style="background-color: #92e6fb;" align="right">1109</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/JurassicParkIV-Scene_1.txt">JurassicParkIV-Scene_1</a></td>
+<td style="background-color: #92e6fb;" align="right">524</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/JurassicParkIV-Scene_3.txt">JurassicParkIV-Scene_3</a></td>
+<td style="background-color: #92e6fb;" align="right">1775</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/JurassicParkIV-Scene_4.txt">JurassicParkIV-Scene_4</a></td>
+<td style="background-color: #92e6fb;" align="right">130</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/JurassicParkIV-Scene_5.txt">JurassicParkIV-Scene_5</a></td>
+<td style="background-color: #92e6fb;" align="right">2768</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/pirates.txt">pirates</a></td>
+<td style="background-color: #92e6fb;" align="right">16582</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">movie-script</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/20000410_nyt-NEW.txt">20000410_nyt-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">227</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/20000415_apw_eng-NEW.txt">20000415_apw_eng-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">275</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/20000419_apw_eng-NEW.txt">20000419_apw_eng-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">221</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/20000424_nyt-NEW.txt">20000424_nyt-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">43</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/20020731-nyt.txt">20020731-nyt</a></td>
+<td style="background-color: #92e6fb;" align="right">7902</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire1.txt">NYTnewswire1</a></td>
+<td style="background-color: #92e6fb;" align="right">747</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire2.txt">NYTnewswire2</a></td>
+<td style="background-color: #92e6fb;" align="right">1865</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire3.txt">NYTnewswire3</a></td>
+<td style="background-color: #92e6fb;" align="right">894</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire4.txt">NYTnewswire4</a></td>
+<td style="background-color: #92e6fb;" align="right">698</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire5.txt">NYTnewswire5</a></td>
+<td style="background-color: #92e6fb;" align="right">400</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire6.txt">NYTnewswire6</a></td>
+<td style="background-color: #92e6fb;" align="right">1498</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire7.txt">NYTnewswire7</a></td>
+<td style="background-color: #92e6fb;" align="right">1165</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire8.txt">NYTnewswire8</a></td>
+<td style="background-color: #92e6fb;" align="right">805</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/NYTnewswire9.txt">NYTnewswire9</a></td>
+<td style="background-color: #92e6fb;" align="right">1855</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">nyt</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/A1.E1-NEW.txt">A1.E1-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">188</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">unknown</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/A1.E2-NEW.txt">A1.E2-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">232</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">unknown</td>
+<td style="background-color: #92e6fb;">FN,MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0006.txt">wsj_0006</a></td>
+<td style="background-color: #92e6fb;" align="right">39</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0026.txt">wsj_0026</a></td>
+<td style="background-color: #92e6fb;" align="right">215</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0027.txt">wsj_0027</a></td>
+<td style="background-color: #92e6fb;" align="right">237</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0032.txt">wsj_0032</a></td>
+<td style="background-color: #92e6fb;" align="right">79</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0068.txt">wsj_0068</a></td>
+<td style="background-color: #92e6fb;" align="right">82</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0073.txt">wsj_0073</a></td>
+<td style="background-color: #92e6fb;" align="right">119</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0106.txt">wsj_0106</a></td>
+<td style="background-color: #92e6fb;" align="right">101</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0120.txt">wsj_0120</a></td>
+<td style="background-color: #92e6fb;" align="right">831</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0124.txt">wsj_0124</a></td>
+<td style="background-color: #92e6fb;" align="right">159</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0127.txt">wsj_0127</a></td>
+<td style="background-color: #92e6fb;" align="right">169</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0132.txt">wsj_0132</a></td>
+<td style="background-color: #92e6fb;" align="right">176</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0135.txt">wsj_0135</a></td>
+<td style="background-color: #92e6fb;" align="right">90</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0136.txt">wsj_0136</a></td>
+<td style="background-color: #92e6fb;" align="right">144</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">MPQAPB,</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0144.txt">wsj_0144</a></td>
+<td style="background-color: #92e6fb;" align="right">178</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0150.txt">wsj_0150</a></td>
+<td style="background-color: #92e6fb;" align="right">133</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0151.txt">wsj_0151</a></td>
+<td style="background-color: #92e6fb;" align="right">184</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0152.txt">wsj_0152</a></td>
+<td style="background-color: #92e6fb;" align="right">126</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0157.txt">wsj_0157</a></td>
+<td style="background-color: #92e6fb;" align="right">163</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0158.txt">wsj_0158</a></td>
+<td style="background-color: #92e6fb;" align="right">325</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0159.txt">wsj_0159</a></td>
+<td style="background-color: #92e6fb;" align="right">177</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0160.txt">wsj_0160</a></td>
+<td style="background-color: #92e6fb;" align="right">120</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0161.txt">wsj_0161</a></td>
+<td style="background-color: #92e6fb;" align="right">125</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0165.txt">wsj_0165</a></td>
+<td style="background-color: #92e6fb;" align="right">158</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0167.txt">wsj_0167</a></td>
+<td style="background-color: #92e6fb;" align="right">130</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0168.txt">wsj_0168</a></td>
+<td style="background-color: #92e6fb;" align="right">147</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0169.txt">wsj_0169</a></td>
+<td style="background-color: #92e6fb;" align="right">123</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0171.txt">wsj_0171</a></td>
+<td style="background-color: #92e6fb;" align="right">164</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0172.txt">wsj_0172</a></td>
+<td style="background-color: #92e6fb;" align="right">153</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0173.txt">wsj_0173</a></td>
+<td style="background-color: #92e6fb;" align="right">183</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0175.txt">wsj_0175</a></td>
+<td style="background-color: #92e6fb;" align="right">130</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0176.txt">wsj_0176</a></td>
+<td style="background-color: #92e6fb;" align="right">163</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0184.txt">wsj_0184</a></td>
+<td style="background-color: #92e6fb;" align="right">314</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0187.txt">wsj_0187</a></td>
+<td style="background-color: #92e6fb;" align="right">252</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_0189.txt">wsj_0189</a></td>
+<td style="background-color: #92e6fb;" align="right">269</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">PB,MPQA</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_1640.mrg-NEW.txt">wsj_1640.mrg-NEW</a></td>
+<td style="background-color: #92e6fb;" align="right">531</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/wsj_2465.txt">wsj_2465</a></td>
+<td style="background-color: #92e6fb;" align="right">752</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">newspaper</td>
+<td style="background-color: #e0fdfe;">wsj</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/chZ.txt">ChZ</a></td>
+<td style="background-color: #92e6fb;" align="right">900</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">non-fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/CUP1.txt">CUP1</a></td>
+<td style="background-color: #92e6fb;" align="right">6142</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">non-fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/CUP2.txt">CUP2</a></td>
+<td style="background-color: #92e6fb;" align="right">5445</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">non-fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/ch5.txt">kaufman3 (ch5)</a></td>
+<td style="background-color: #92e6fb;" align="right">4408</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">non-fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">MPQA,CB,EV,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/rybczynski-ch3.txt">rybczynski-ch3</a></td>
+<td style="background-color: #92e6fb;" align="right">8064</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">non-fiction</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1468-6708-3-1.txt">1468-6708-3-1</a></td>
+<td style="background-color: #92e6fb;" align="right">3380</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1468-6708-3-3.txt">1468-6708-3-3</a></td>
+<td style="background-color: #92e6fb;" align="right">2166</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1471-2091-2-9.txt">1471-2091-2-9</a></td>
+<td style="background-color: #92e6fb;" align="right">7970</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1471-213X-1-1.txt">1471-213X-1-1</a></td>
+<td style="background-color: #92e6fb;" align="right">2235</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/1471-230X-2-21.txt">1471-230X-2-21</a></td>
+<td style="background-color: #92e6fb;" align="right">2228</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/journal.pbio.0020001.txt">journal.pbio.0020001</a></td>
+<td style="background-color: #92e6fb;" align="right">2469</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/pmed.0010029.txt">pmed00129</a></td>
+<td style="background-color: #92e6fb;" align="right">412</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/rr166.txt">rr166</a></td>
+<td style="background-color: #92e6fb;" align="right">7035</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">technical</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/HistoryGreek.txt">HistoryGreek</a></td>
+<td style="background-color: #92e6fb;" align="right">2713</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/HistoryJerusalem.txt">HistoryJerusalem</a></td>
+<td style="background-color: #92e6fb;" align="right">2664</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/HistoryLasVegas.txt">HistoryLasVegas</a></td>
+<td style="background-color: #92e6fb;" align="right">4992</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">FN,MPQA,PB</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/IntroDublin.txt">IntroDublin</a></td>
+<td style="background-color: #92e6fb;" align="right">2094</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">FN</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/IntroHongKong.txt">IntroHongKong</a></td>
+<td style="background-color: #92e6fb;" align="right">824</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;">FN</td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/WhatToHongKong.txt">WhatToHongKong</a></td>
+<td style="background-color: #92e6fb;" align="right">3604</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/WhereToHongKong.txt">WhereToHongKong</a></td>
+<td style="background-color: #92e6fb;" align="right">9817</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">travel-guides</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/tweets1.txt">tweets1</a></td>
+<td style="background-color: #92e6fb;" align="right">11102</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">twitter</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+<tr>
+<td style="background-color: #e0fdfe;"><a href="../../../../MASC/texts/tweets2.txt">tweets2</a></td>
+<td style="background-color: #92e6fb;" align="right">13078</td>
+<td style="background-color: #e0fdfe;">written</td>
+<td style="background-color: #92e6fb;">twitter</td>
+<td style="background-color: #e0fdfe;"> &#8212;</td>
+<td style="background-color: #92e6fb;"></td>
+</tr>
+</tbody>
+</table>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

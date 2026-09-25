@@ -1,0 +1,313 @@
+<!DOCTYPE html [
+<!ENTITY nbsp "&#160;">]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 1st September 2004), see www.w3.org" />
+
+  <title>ANC First release</title>
+  <meta name="description" content=
+  "The American National Corpus project is developing a 100 million word corpus of American English for the pruposes of language processing research and application development, linguistic research, and the creation of dictionaries and other language reference works." />
+  <meta name="keywords" content=
+  "ANC, American National Corpus, Language Data, American English, Corpus, Information Retrieval,Parsing, Sense Disambiguation, Discourse Modeling, Language Teaching, Text Databases, Human Machine Communication, Linguistic, Language, Research, Linguistic Research" />
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=us-ascii" />
+<style type="text/css">
+/*<![CDATA[*/
+ body {
+  background-color: #FFFFFF;
+  color: Verdana, Arial, Helvetica, sans-serif;
+ }
+ :link { color: #333366 }
+ :visited { color: #333366 }
+ div.c19 {color: #333366; font-size: 70%; text-align: center}
+ span.c18 {color: #FF0000}
+ strong.c17 {color: #FF0000}
+ h3.c16 {color: #000066; text-align: justify}
+ h3.c15 {color: #333366}
+ p.c14 {color: #333366}
+ span.c13 {color: #333366}
+ span.c12 {font-family: Courier New, Courier, mono; font-size: 80%}
+ a.c11 {font-family: Courier New, Courier, mono; font-size: 80%}
+ p.c10 {color: #333366; text-align: justify}
+ h3.c9 {color: #333366; text-align: justify}
+ span.c8 {font-size: 70%}
+ a.c7 {font-size: 70%}
+ h1.c6 {color: #333366; text-align: center}
+ div.c5 {color: #333366; font-family: Georgia, Times New Roman, Times, serif; font-size: 150%; font-weight: bold; text-align: center}
+ div.c4 {text-align: center}
+ a.c3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 70%}
+ a.c2 {color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 70%}
+ td.c1 {color: #FFFFFF; font-size: 150%}
+/*]]>*/
+</style>
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin=
+"0">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td rowspan="2" bgcolor="#666666"><img src="images/flag.jpg"
+      name="image" width="110" height="70" id="image" /></td>
+
+      <td class="c1" width="100%" height="40" bgcolor="#333366">
+      <em>&nbsp;American National Corpus Project</em></td>
+    </tr>
+
+    <tr>
+      <td bgcolor="#CCCCCC">
+        <table width="100%" border="0" cellspacing="1" cellpadding=
+        "2">
+          <tr bgcolor="#CCCCCC">
+            <td align="center" width="20%"><strong><a class="c2"
+            href="http://www.americannationalcorpus.org">ANC
+            Home</a></strong></td>
+
+            <td align="center" width="20%"><strong><a class="c3"
+            href="http://www.americannationalcorpus.org/consortium.html">ANC
+            Consortium</a></strong></td>
+
+            <td width="20%" align="center"><strong><a class="c3"
+            href="http://www.ldc.upenn.edu">Linguistic Data
+            Consortium</a></strong></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><br />
+
+  <table width="90%" border="2" align="center" cellpadding="2"
+  cellspacing="2" gcolor="#FFFFFF">
+    <tr bordercolor="#FF0000" border="3" bgcolor="#FF0000">
+      <td bordercolor="#FF0000" bgcolor="#FFFFFF" border="2">
+        <div class="c4"></div>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing=
+        "0" bordercolor="#000066">
+          <tr>
+            <td bordercolor="#000066" bgcolor="#FFFFFF">
+              <div class="c5">
+                AMERICAN NATIONAL CORPUS FIRST RELEASE
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <h1 class="c6">Known Bugs and Caveats</h1>
+  <hr />
+
+  <div class="c4">
+    <strong><a class="c7" href="contents.html">THE
+    DATA</a><span class="c8">&nbsp;|&nbsp;<a href="encoding.html">ENCODING CONVENTIONS</a> |&nbsp;<a href="structure.html">FILE
+    STRUCTURE</a>&nbsp;|&nbsp;</span></strong><span class=
+    "c8"><strong><a href="./">FIRST
+    RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href=
+    "http://www.americannationalcorpus.org">ANC
+    HOME</a></strong></span>
+  </div>
+  <hr />
+
+  <blockquote>
+    <h3 class="c9">Conformance to standards and best practice</h3>
+
+    <p class="c10">The ANC has been created with the intention of
+    adhering to the extent possible to existing and emerging
+    standards and "best practices" for markup and the
+    representation of language resources and their annotations.
+    These include <a href="http://www.w3.org">W3C</a> markup and
+    data representation standards and the recommendations of the
+    International Standards Organization (ISO) sub-committee for
+    language resources (<a href="http://www.tc37sc4.org">ISO TC37
+    SC4</a>). While this ensures that the ANC is at the
+    state-of-the-art and (we hope) will be processable by a wide
+    variety of available tools and web-based applications, it also
+    means that we are dealing with recommendations that have yet to
+    be finalized (and therefore might change) and relying on
+    processing capabilities that are not yet widely implemented.
+    For this reason, a number of encoding choices have been made
+    with an eye toward enabling immediate use of the ANC, while at
+    the same time providing for adaptation to standards and
+    practices that emerge in the future:</p>
+
+    <ul>
+      <li>The ANC First Release data is provided in both a
+      <em>stand-off</em> and <em>merged</em> format. While
+      stand-off annotation is widely accepted as the preferred
+      format, few processors at present handle it. Note that the
+      stand-off format allows for multiple part-of-speech
+      annotations of the ANC data, several of which will be
+      provided in the near future. A script to produce a merged
+      form of the corpus based on any one of the additional
+      annotations will be provided.<br /></li>
+
+      <li>Although <a class="c11" href=
+      "http://www.w3.org/TR/xinclude/">XInclude</a> is the obvious
+      means by which to include header fragments, we have so far
+      relied on <a class="c11" href=
+      "http://www.w3.org/TR/xlink/">XLink</a> for this purpose
+      because <span class="c12">XInclude</span> is not yet a final
+      recommendation and is therefore not implemented in XML
+      processing software. Later releases of the ANC may use
+      <span class="c12">XInclude</span>.<br /></li>
+
+      <li><span class="c13">S</span><span class="c13">chema
+      locations in the ANC data are currently explicitly specified
+      to assume the schemas exist in /ANC (an ANC directory
+      directly contained within the root directory), rather than
+      using a relative URI. This was done to avoid problems
+      resulting from the fact that XML processors differ in their
+      determination of the location a relative URI is considered to
+      be relative to: when validating a document against a schema
+      <em>s</em> that includes or imports other schemas with a
+      relative URI, some processors will take that URI to be
+      relative to the location of the XML document, and others will
+      take it to be relative to the location of schema
+      <em>s</em>.<br /></span></li>
+
+      <li>At the time the XCES schemas were developed, there was
+      inconsistent support for <span class=
+      "c12">xsd:redefine</span> among XML validators, and it was
+      impossible to specify a set of schemas that all, or even
+      most, XML validators would accept. Therefore, the current set
+      of schemas use the "cut and paste" method of inheritance;
+      that is, when redefining a model group, a copy of the schema
+      is made and the relevant groups are modified.</li>
+    </ul>
+
+    <blockquote>
+      <p class="c14">The original goal when creating the schemas
+      was to define a series of model groups, use these groups to
+      define types, and then declare elements using these types.
+      Schemas would then be modified and customized by redefining
+      the models groups, which would change the types and,
+      therefore, the element definitions. For example, the only
+      real difference between the xcesDoc.xsd schema and the
+      xcesMerged.xsd schema is that xcesMerged.xsd allows
+      &lt;tok&gt; elements in the model group for sentence level
+      content. Using <span class="c12">xsd:redefine</span>, the
+      <span class="c12">xcesMerged</span> schema should only need
+      to add a defintion of the <span class=
+      "c12">&lt;tok&gt;</span> element and redefine the model group
+      for sentence level content, rather than copying the entire
+      <span class="c12">xcesDoc</span> schema.</p>
+
+      <p class="c14">It is expected that the next version, the XCES
+      schemas will use <span class="c12">xsd:redefine.</span></p>
+    </blockquote>
+
+    <h3 class="c15">Validation</h3>
+
+    <p class="c14">The ANC First Release data has been validated
+    using the <a href="http://www.w3.org/XML/Schema#Tools">XSV
+    schema validator</a>. However, it is possible that a few
+    invalid files escaped notice.</p>
+
+    <h3 class="c16">Automatic processing</h3>
+
+    <p class="c10">All of the markup and annotation in the first
+    release of the ANC was produced <em>entirely automatically</em>
+    from data in a variety of formats:</p>
+
+    <ul>
+      <li>Switchboard : ASCII texts</li>
+
+      <li>CalHome : ASCII texts</li>
+
+      <li>Charlotte : ASCII texts</li>
+
+      <li>Berlitz : Quark Express</li>
+
+      <li>Slate : XML generated automatically from HTML</li>
+
+      <li>OUP texts: Quark Express</li>
+    </ul>
+
+    <p class="c14">For <strong class="c17">gross logical
+    structure</strong> (down to the level of paragraph), text parts
+    such as title, author, section head, footnotes, quotations,
+    lists, etc. may or may not be marked as such, depending upon
+    whether or not this information was differentiated in some
+    systematic way in the original format. In general, our
+    algorithm assumed that the presence of a carriage return
+    signalled the beginning of a paragraph unless otherwise
+    indicated, and therefore elements unrecognizable as any other
+    type of element are typically encloded in &lt;p&gt; tags.</p>
+
+    <p class="c14">At this time, <strong class="c17">sentence
+    markup</strong> is included in the primary texts (although this
+    maybe changed in the final version of the corpus). All sentence
+    markup was automatically produced by the sentence splitter
+    included in the <a href="http://gate.ac.uk">Gate</a> system,
+    and there are occasional errors, usually due to the presence of
+    abbreviations in mid-sentence. The sentence splitter also puts
+    punctuation appearing after the terminating period (e.g.,
+    closing quotation mark, closing parenthesis) outside the
+    sentence boundary.</p>
+
+    <p class="c14"><strong class="c17">Part-of-speech
+    tagging</strong> was done automatically at Northern Arizona
+    University using the Biber tagger, with no hand-validation. The
+    annotations include both <a href="Biber-tags.txt">Biber's
+    part-of-speech tags</a> and lemmas. The Biber tagger has an
+    average accuracy similar to most taggers (95% or higher).</p>
+
+    <p><span class="c13">Due to some inconsistencies in the way
+    clitics (e.g., "don't", let's") are treated by the Biber tagger
+    (some treated as two separate words, some as one with extra
+    information), a few words in the corpus are not annotated for
+    part of speech because they were skipped during
+    post-processing.</span> <span class="c13">Words that have not
+    been tagged have not been included in the word counts for the
+    corpus.</span></p>
+
+    <h3 class="c15">Gold standard sub-corpus</h3>
+
+    <p class="c14">The ANC Project has obtained funds from the
+    <a href="http://www.nsf.gov">U.S. National Science
+    Foundation</a> to hand-validate both the structural markup and
+    part of speech annotation in a 10 million word subset of the
+    ANC in order to create a "gold standard" corpus. The gold
+    standard corpus will be balanced along the same lines as the
+    entire 100 million+ words of the ANC, and will therefore not
+    coincide exactly with the 10 million words in the first
+    release. The remaining portion of the corpus will be corrected
+    to the extent possible using automated means and whatever level
+    of hand-validation can be accomplished under our budget.</p>
+
+    <h3 class="c15">Funky characters in the data</h3>
+
+    <p><span class="c13">Note on the <strong><span class="c18">OUP
+    and Berlitz files</span>:</strong> The original Quark Express
+    files contained characters that were encoded with numeric codes
+    that may or may not correspond to an International Standards
+    Organization (ISO) hexidecimal character. Where possible these
+    values have been converted to the corresponding entity, for
+    example 0x00E9 becomes &amp;eacute;.</span> <span class=
+    "c13">When the numeric values did not correspond to any known
+    character defined in the ISO standard, the value is encoded as
+    a numeric entity--e.g., the value 0x1A is encoded as
+    &amp;#x001A;.</span></p>
+  </blockquote>
+  <hr />
+
+  <div class="c4">
+    <strong><a class="c7" href="contents.html">THE
+    DATA</a><span class="c8">&nbsp;|&nbsp;<a href="encoding.html">ENCODING CONVENTIONS</a> |&nbsp;<a href="structure.html">FILE
+    STRUCTURE</a>&nbsp;</span></strong><span class=
+    "c8">|&nbsp;<strong><a href="./">FIRST
+    RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href=
+    "http://www.americannationalcorpus.org">ANC
+    HOME</a></strong></span>
+  </div>
+  <hr />
+
+  <div class="c19">
+    Copyright 2003 American National Corpus Project. All rights
+    reserved.
+  </div>
+  <hr />
+</body>
+</html>

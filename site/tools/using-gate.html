@@ -1,0 +1,145 @@
+<!--#include virtual="/templates/header" -->
+<title>Using Gate</title>
+<!--#include virtual="/templates/menu" -->
+<div class="one-column">
+	<h1>GATE and the ANC Tools</h1>
+	<h3>Contents</h3>
+		<ul>
+			<li><a href="#install-gate">Installing Gate</a></li>
+			<li><a href="#install-anc-tools">Installing the ANC tools for GATE</a></li>
+			<li><a href="#annotation-types">Annotations Types in the ANC</a></li>
+			<li><a href="#load-document">Loading an ANC document</a></li>
+			<li><a href="#load-standoff">Loading additional standoff annotations</a></li>
+			<li><a href="#save-standoff">Saving standoff annotations</a></li>
+		<li><a href="#gate-tips">Gate Tips</a> </li>
+		</ul>
+		<a name="install-gate"></a>
+		<h2>Installing Gate</h2>
+		<p>First <a href="http://gate.ac.uk/download/index.html">download GATE</a>.  It is recommeneded that you use either the Windows or MAC OSX installers or the generic installer (an executable jar file).  Run the installer and follow the on screen instructions. The remainder of this page uses the symbol <i><b>$GATE_HOME</b></i> to refer to the directory where you installed GATE.</p>
+		<p>GATE requires that you have Java installed.  <b>NOTE:</b> Most Windows computers do <b>not</b> come with Java pre-installed.  If you are not sure what version of Java is installed on your computer open a command prompt (shell) and type the command:</p>
+		<pre><tt>java -version</tt></pre>
+		<p>If you get a command not found error, or if the version of Java installed is 1.4 or older you will need to download the latest Java version from <a href="http://java.sun.com">Sun Microsystems</a>. Be sure to download the Java JDK and not the Java JRE. </p>
+		<p class="right"><a href="#top-of-page">Back to the top</a></p>
+		<a name="install-anc-tools"></a>
+		<h2>Installing the ANC tools for GATE</h2>
+		<p><a href="https://anc.org/tools/ANC.zip">Download the ANC GATE Tools</a>. Create a directory called <i>ANC</i> in GATE's plugins directory and unzip the contents of the ANC.zip archive to that directroy. After you are done the <b><i>$GATE_HOME</i></b>/plugins/ANC directory should contain two files, ANC.jar and creole.xml.</p>
+		<p>Start GATE and select <i>Manage creole plugins</i> from the <i>File</i> menu. The <i>Plugin Management Console</i> will appear.  Click on the <i>Add new CREOLE repository</i> button.  Click the <i>Select a directory</i> button and select the <i><b>$GATE_HOME</b></i>/plugins/ANC directory.  Click OK to select the directory.  In the <i>Plugin Management Console</i> make sure that <i>Load now</i> and <i>Load always</i> boxes are checked and click on the OK button to close the <i>Plugin Management Console</i>.</p>
+		<p>More information on the Gate tools can be found <a href="./#gate-tools">here</a>.</p>
+<!--
+
+		<h3>Add an Annotation Schema </h3>
+		<p>Download the <a href="https://anc.org/tools/NounChunk.xsd">NounChunk.xsd</a> schema (right click and select Save as...) and save to your hard drive. Saving it in the <em><strong>$GATE_HOME</strong></em>/plugins/ANC directory is likely a good place.  Create a new Language Resource and select <em>Annotation schema</em>. Click the folder icon next to the xmlFileUrl and select the NounChunk.xsd file. Click the OK button. </p>
+		<p class="right"><a href="#top-of-page">Back to the top</a></p>
+		-->
+		<a name="annotation-types"></a>
+		<h2>Annotation Types</h2>
+		<p>There are six annotation types provided with the second release of the ANC.</p>
+		<table>
+			<tr><th>&nbsp;</th><th>Type</th><th>Description</th></tr>
+			<tr><td>1.</td><td>logical</td><td>The logical structure of the document down to the paragraph level. These annotations are required to convert the document into a well-formed XML file.</td></tr>
+			<tr>
+			  <td>2.</td>
+			  <td>s</td>
+			  <td>Sentence boundary annotations . </td>
+		  </tr>
+			<tr>
+			  <td>3.</td>
+			  <td>biber</td>
+			  <td>Biber part of speech tags . </td>
+		  </tr>
+			<tr>
+			  <td>4.</td>
+			  <td>hepple</td>
+			  <td>Hepple part of speech tags. </td>
+		  </tr>
+			<tr>
+			  <td>5.</td>
+			  <td>np</td>
+			  <td>Noun chunks. </td>
+		  </tr>
+			<tr>
+			  <td>6.</td>
+			  <td>vp</td>
+			  <td>Verb chunks. </td>
+		  </tr>
+		</table>
+		<p>When opening an ANC document enter the annotation type in the standoffAnnotations field (logical, s, biber, etc.) and when adding additional annotations to an ANC document select the annotation file directly. More information about the naming convention used for the ANC standoff annotation files can be found <a href="http://www.americannationalcorpus.org/SecondRelease/encoding.html">here</a>. </p>
+		<p class="right"><a href="#top-of-page">Back to the top</a></p>
+		
+		<a name="load-document"></a>
+		<h2>Loading an ANC Document</h2>
+		
+		<h3>Method 1 (preferred)</h3>
+		<p>Select <em>ANC Document</em> under <em>New Language Resource. </em>The new document dialog will open. Fill in the following fields:</p>
+		<ul>
+		  <li><strong>sourceUrl: </strong>Click the folder icon and browse to one of the ANC files and select the file with the .anc extension (these should be the only files that can be selected). </li>
+    <li><strong>Name:</strong> you can name the <em>document</em> anything you want, although using the file name is likely a good idea. This is simply a human readable name you assigned to the <em>document</em> inside GATE. A good idea is to copy the filename when selecting the file above and then simply pasting it into the Name field,</li>
+	<li><strong>standoffAnnotations: </strong>This is a list of the <a href="#annotation-types">annotation types</a> to be included in the document. Click the list icon to open the List dialog and enter the annotation types to include, click the Add button and then the Ok button to close the dialog. </li>
+	<li><strong>standoffASName:</strong> (optional) this is the name of the annotation set that the standoff annotation will be added to. You can leave this as the default or change it to something else. This is useful if you will be loading several sets of standoff annotations and want to keep them separate.</li>
+	</ul>
+	    <div align="center">
+	      <p><a href="../images/new-anc-doc.jpg"><img src="../images/new-anc-doc.jpg" width="664" height="398"/><br/>
+		      <span class="style2">click  to view full size image </span></a>
+		  </p>
+    </div>
+	      <p>Click the OK button to close the dialog and open the document. Check the message tab for error messages. If all went well you should see the document listed in the left hand pane under Lanugage Resources (you may have to expand the Language Resources tree).</p>
+	      <h3>Method 2 (alternate)</h3>
+	      <p>If, for some reason, the above method does not work you can load the text file for the document directly. Create a GATE Document (File -&gt; New language resource -&gt; Gate document) and select the text file (with the.txt extension) as the sourceUrl. The New Gate documet dialog is almost identical to the the new ANC document dialog, minus the fields for the standoff annotations, and you fill it in the same way. However, you <strong>must</strong> specify the encoding to be UTF-16. Once the text has been loaded follow the instructions below to load any standoff annotations. </p>
+	      <p align="center"><a href="../images/new-gate-doc.jpg"><img src="../images/new-gate-doc.jpg"/><br/>
+		      <span class="style2">click  to view full size image </span></a>		  
+	      </p>
+	      <p class="right"><a href="#top-of-page">Back to the top</a></p>
+
+	    <a name="load-standoff"></a>
+		<h2>Loading Additional Standoff Annotations</h2>
+		<p>Before loading additional standoff annotations some initial set up will have to be done. However, this typically only has to be done once.</p>
+		<p><strong>1. Create a Processing Resource (PR)</strong>. Select New Processing Resource -&gt; ANC Load Standoff. Enter a name for the PR (Load Standoff say) and click the OK button. The Load Standoff PR should appear in the left hand panel under Processing Resources.</p>
+		<p><strong> 2. Create a GATE Application.</strong> Select New Application -&gt; Pipeline. Enter a name for the application (say, Load Standoff) and click the OK button. The Load Standoff application should appear in the left hand panel under Applications.</p>
+		<p><strong>3. Configure and run the application. </strong><br/>
+		<b>i.</b> Double click on the Load Standoff application in the left panel. This will open the Application Editor in the main window.<br/>
+		<b>ii.</b> Select the Load Standoff PR in the list of Loaded Processing Resources and click on the right arrow to move it to the list of Selected Processing resources.<br />
+		<strong>iii.</strong> Click on the Load Standoff PR in the list of Selected Processing Resources to open the PR parameter editor in the bottom of the main window.<br />
+		<strong>iv.</strong> Select the document you would like to add the standoff annotations to.<br />
+		<strong>v.</strong> Click the folder icon next to the sourceUrl field and navigate to the standoff annotation file you would like to add. Unlike opening an ANC Document, where you select the .anc header file, when loading standoff annotations separately you must select the standoff annotation file directly. Noun chunk annotations have a -np.xml suffix. <br />
+		<strong>vi.</strong> Set the standoffASName (optional). This is the name of the annotation set that the standoff annotations will be added to. In the image below I am added the sentence annotations (-s.xml suffix) to the Sentences annotation set. If an annotation set with that name alread exists the new annotations will be added to the existing set, otherwise a new annotation set with that name will be created.</p>
+		<p align="center"><a href="../images/gate-app.jpg"><img src="../images/gate-app.jpg" width="519" height="300" /><br/>
+		<span class="style2">click  to view full size image </span></a></p>
+		
+		<p><b>4.</b> Repeat steps 3.iv to 3.vi as needed.</p>
+		<p class="right"><a href="#top-of-page">Back to the top</a></p>
+		
+		<!--
+	    <a name="annotating" id="annotating"></a>
+	    <h2>Annotating Documents </h2>
+		<p>Coming soon. </p>
+	    <p class="right"><a href="#top-of-page">Back to the top</a></p>
+		-->
+		<a name="save-standoff"></a>
+		<h2>Saving Standoff Annotations</h2>
+		<p>The procedure for saving standoff annotations is the same as the procedure for loading standoff annotations:</p>
+		<ol>
+		  <li>Create a processing resource. This time you will create an &quot;ANC Save Standoff&quot; processing resource.</li>
+    <li>Create a GATE application and add the Save Standoff PR to the new application. </li>
+	<li>Configure the processing resource and run the application. The following fields need to be completed in the Save Standoff processing resource. 
+	<ol class="sublist">
+	<li><strong>destination</strong> - This is the location where the standoff annotation file will be save. It is strongly recommended that you use the format <em>filename-np.xml</em>. It is also recommended that you keep the original annotations and the fixed annotation separate. </li>
+	<li><strong>document</strong> - This is document containing the annotations to be saved. The drop down box will contain a list of all the open documents.</li>
+	<li><strong>inputASName</strong> - This is the name of the annotation set containing the annotations to be saved. Change this to the name of the annotation set containing the fixed annotations. </li>
+	<li><strong>standoffTags</strong> - This is a list of the tags that will be saved. If left blank all the annotations in the selected annotation set will be saved.</li>
+	</ol>
+	</li>
+	</ol>
+	<p align="center"><a href="../images/save-standoff.jpg"><img src="../images/save-standoff.jpg" width="500" height="300"/></a><br/><span class="style2">click  to view full size image </span>
+	</p>
+		<p class="right"><a href="#top-of-page">Back to the top</a></p>
+		<a name="gate-tips"></a>
+		<h2>Gate Tips</h2>
+		<ol>
+		<li>When exiting Gate be sure to select <em>Exit Gate</em> from the File menu or Gate will not save its current state information and won't restore open applications, documents, or processing resources the next time you start it. </li>
+		<li>Do not put the ANC files in a location with a space anywhere in the path. For example, if you are a Windows user &quot;My Documents&quot; is not a good place for the ANC files. Not only does &quot;My Documents&quot; contain a space, but it is located in &quot;C:\Documents and Settings&quot;. <i>(This should be fixed in the latest release of the Gate tools.)</i></li>
+		<li>If something does not work check for error messages in Gate's Message tab.</li>
+		<li>Make sure to specify UTF-16 as the encoding type when opening the text files directly.</li>
+		<li>If you get an error stating that no standoff annotations were found when running the SaveStandoff processing resource the most likely causes are that you specified the name of the annotation set incorrectly, or you specified the standoffTags incorrectly.  Both values are case sensitive.</li>
+		</ol>
+</div>      
+<!--#include virtual="/templates/footer" -->

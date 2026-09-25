@@ -1,0 +1,659 @@
+<!DOCTYPE html [
+<!ENTITY nbsp "&#160;">]>
+<html>
+<head>
+<title>ANC First Release</title>
+<META name="description" content="The American National Corpus project is developing a 100 million word corpus of American English for the pruposes of language processing research and application development, linguistic research, and the creation of dictionaries and other language reference works. "/>
+
+<META name="keywords" content="ANC, American National Corpus, Language Data, American English, Corpus, Information Retrieval,Parsing, Sense Disambiguation, Discourse Modeling, Language Teaching, Text Databases, Human Machine Communication, Linguistic, Language, Research, Linguistic Research"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+</head>
+<body bgcolor="#FFFFFF" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" text="Verdana, Arial, Helvetica, sans-serif" LINK="#333366" ALINK="#000033" VLINK="#000033">
+<center>
+</center>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td rowspan="2" bgcolor="#666666"> <img src="images/flag.jpg" name="image" width="110" height="70"/></td>
+
+    <td width="100%" height="40" bgcolor="#333366"><font color="#FFFFFF" size="5"> 
+      <em>&nbsp;American National Corpus Project</em></font></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#CCCCCC"> <table width="100%" border="0" cellspacing="1" cellpadding="2">
+        <tr bgcolor="#CCCCCC"> 
+          <td align="center" width="20%"><strong><font color="#FFFFFF" size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.americannationalcorpus.org">ANC 
+            Home</a></font></strong></td>
+          <td align="center" width="20%"><strong><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.americannationalcorpus.org/consortium.html">ANC 
+            Consortium</a></font></strong></td>
+
+          <td width="20%" align="center"><strong><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><a href="http://www.ldc.upenn.edu">Linguistic 
+            Data Consortium</a></font></strong></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<br/>
+
+<table width="90%" border="2" align="center" cellpadding="2"
+cellspacing="2" gcolor="#FFFFFF">
+  <tr bordercolor="#FF0000" border="3" bgcolor="#FF0000"> 
+    <td bordercolor="#FF0000" bgcolor="#FFFFFF" border="2"> 
+      <div align="center"></div>
+
+      <table width="100%" border="0" cellpadding="0" cellspacing="0"
+  bordercolor="#000066">
+        <tr> 
+          <td bordercolor="#000066" bgcolor="#FFFFFF"><font
+        color="#333366" size="5" face="Georgia, Times New Roman,
+        Times, serif"> 
+            <center>
+              <b>AMERICAN NATIONAL CORPUS FIRST RELEASE</b> 
+            </center></font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+<h1 align="center"><font color="#000066"><strong><font color="#333366">Encoding 
+  Conventions</font></strong></font></h1>
+  <hr/>
+    <center>
+  <STRONG><a href="contents.html"><font size="1">THE DATA</font></a><font size="1"> 
+  |&nbsp;<a href="structure.html">FILE STRUCTURE</a>&nbsp;|&nbsp;<a href="bugs.html">KNOWN 
+  BUGS</a></font></STRONG><font size="1">&nbsp;|&nbsp;<strong><a href="./">FIRST 
+  RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href="http://www.americannationalcorpus.org">ANC 
+  HOME</a></strong></font> 
+
+</center>
+<hr/>
+<blockquote> 
+  <p><font color="#333366"><a href="#conventions"><strong>ANC encoding conventions</strong></a><br/>
+    &nbsp;&nbsp;&nbsp;<a href="#header">Header</a><br/>
+    &nbsp;&nbsp;&nbsp;<a href="#dataStandoff">Data (stand-off version)</a><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#written"><em>Format 
+    for written data</em></a><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spoken"><em>Format 
+    for spoken data</em></a><br/>
+
+    &nbsp;&nbsp;&nbsp;<a href="#annotation">Annotation</a><br/>
+    &nbsp;&nbsp;&nbsp;<a href="#merged">Data (merged version)</a><br/>
+    <strong><a href="#postags">Morpho-syntactic (part-of-speech) annotation</a></strong></font></p>
+  <hr/>
+  <h2><font color="#333366"><a name="conventions"></a>ANC Encoding Conventions</font></h2>
+  <p align="justify"><font color="#333366">The ANC is encoded in XML, conformant 
+    to the <a href="http://www.xces.org">XML Corpus Encoding Standard </a>(XCES) 
+    schemas for primary data and annotations. The XCES schemas are included on 
+    the CD with the ANC First Release data. The XCES is compliant with emerging 
+    standards for representing data, including various <a href="http://www.w3.org">W3C</a> 
+    standards (e.g., <a href="http://www.w3.org/TR/xptr/">XPointer</a> for inter-document 
+    linking). We expect that in the near future, the XCES and the ANC will be 
+    updated/augmented to accommodate additional emerging standards such as the 
+    <a href="http://www.w3.org/RDF/">Resource Definition Framework</a>(RDF) and 
+    the recommendations of the International Standards Organization (ISO) sub-committee 
+    for language resources (<a href="http://www.tc37sc4.org">ISO TC37 SC4</a>).</font></p>
+
+  <p align="justify"><font color="#333366">The texts in the corpus are marked 
+    to the level of the paragraph, and within paragraphs, for sentence boundaries. 
+    Following XCES recommendations, a &quot;stand-off&quot; annotation strategy 
+    is followed, meaning that annotations are contained in a separate XML document 
+    linked to the original. The associated annotation files identify word (token) 
+    boundaries and provide the morpho-syntactic description (part of speech) and 
+    lemma for each token in the corpus. Because few processors handle stand-off 
+    annotation at this time, a &quot;merged&quot; version of the corpus is also 
+    provided, in which each token is explicitly marked with &lt;tok&gt; tags, 
+    and part-of-speech and lemma are given as the values of <em>msd</em> and <em>base</em> 
+    attributes, respectively.</font></p>
+
+  <p align="justify"><font color="#333366">All primary ANC documents currently 
+    contain sentence boundary markup, which was done to make some types of processing 
+    easier. However, we realize that sentence markup is a type of linguistic annotation 
+    that may vary depending on the particular linguistic theory and/or processing 
+    software applied to the data. We are hoping for user feedback in order to 
+    determine whether or not to include sentence markup in the primary data in 
+    the final release of the ANC. </font></p>
+  <h3><font color="#333366"><a name="header"></a>Header</font></h3>
+  <p align="justify"><font color="#333366">The header contains information about 
+    the provenance of the data, the creators and distributors, tag usage, and 
+    information concerning <em>domain</em>, <em>subdomain</em>, <em>subject</em>, 
+    <em>audience</em>, and <em>medium</em>. These categories follow <a href="http://www.natcorp.ox.ac.uk/what/balance.html">the 
+    classification scheme used for the British National Corpus</a> but contain 
+    some more specific information as well. The header also contains a link to 
+    the document containing the annotations for the data, as in the following 
+    example:</font></p>
+
+  <blockquote> 
+    <p><font size="2" face="Courier New, Courier, mono">&lt;annotations&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&lt;annotation type=&quot;content&quot; ann.loc=&quot;HistoryDublin.xml&quot; 
+      /&gt;<br/>
+      &nbsp;&nbsp;&nbsp;&lt;annotation type=&quot;part of speech&quot; ann.loc=&quot;HistoryDublin-ana.xml&quot; 
+      /&gt;<br/>
+
+      &lt;/annotations&gt;</font> </p>
+  </blockquote>
+  <p align="justify"><font color="#333366">Header files for spoken data contain 
+    additional information concerning the speakers and the situation under which 
+    the dialogue occurred. This information is contained in the &lt;profileDesc&gt; 
+    element within the header; for example:</font></p>
+  <blockquote> <font size="2" face="Courier New, Courier, mono">&lt;profileDesc&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&lt;textClass&gt;<br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;subject&gt;CLOTHING AND DRESS&lt;/subject&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;audience&gt;Adult&lt;/audience&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;medium&gt;Spoken&lt;/medium&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&lt;/textClass&gt;<br/>
+
+    &nbsp;&nbsp;&nbsp;&lt;particDesc&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;person age=&quot;1956&quot; id=&quot;spkr1020&quot; 
+    role=&quot;caller&quot; sex=&quot;F&quot;&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dialect 
+    : NORTH MIDLAND, Side : A, Education : 2, <br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition 
+    : DN2&lt;/person&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;person age=&quot;1962&quot; id=&quot;spkr1044&quot; 
+    role=&quot;callee&quot; sex=&quot;F&quot;&gt;<br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dialect 
+    : SOUTH MIDLAND,Side : B, Education : 1, <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition 
+    : UNC&lt;/person&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&lt;/particDesc&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&lt;settingDesc&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;setting who=&quot;spkr1020 spkr1044&quot;&gt;<br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;time&gt;910304 1218&lt;/time&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;activity&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THE 
+    TOPIC IS CLOTHING. PLEASE FIND OUT HOW <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THE 
+    OTHER CALLER TYPICALLY DRESSES FOR WORK. <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOW 
+    MUCH VARIATION IS THERE FROM DAY TO DAY? <br/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOW 
+    MUCH VARIATION IS THERE FROM SEASON TO SEASON?<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/activity&gt;<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/setting&gt;<br/>
+    &lt;/settingDesc&gt;<br/>
+    &lt;/profileDesc&gt;</font> 
+    <p></p>
+  </blockquote>
+
+  <h3><font color="#000066"><strong><a name="dataStandoff"></a><font color="#333366">Data 
+    (stand-off version)</font></strong></font></h3>
+  <p align="justify"><font color="#333366">The data file contains the text or 
+    speech transcription, marked down to the level of paragraph and within paragraphs, 
+    for sentences. Individual words or strings may additionally be marked with 
+    information about the original font; for example, a word that was italicized 
+    in the original will be marked with <font size="2" face="Courier New, Courier, mono">&lt;hi 
+    rend=&quot;ital&quot;&gt;</font>.</font></p>
+  <h4><font color="#333366"><em><a name="written"></a>Format for written data</em></font></h4>
+  <p><font color="#333366">The following is a sample of the first few lines of 
+    a data file for written text (numbered on the left for reference):</font></p>
+  <table width="100%" border="0" align="center">
+
+    <tr> 
+      <td width="5%" valign="top" align="center"><pre><font face="Courier New, Courier, mono" size="2">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</font></pre></td>
+      <td width="95%" valign="top"> <pre><font size="2" face="Courier New, Courier, mono">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br/>&lt;doc xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; 
+     xmlns=&quot;http://www.xces.org/schema/2003&quot; 
+     version=&quot;1.0&quot; <br/>     xsi:schemaLocation=&quot;http://www.xces.org/schema/2003<br/>          /ANC/xcesDoc.xsd&quot;&gt;<br/>&lt;xcesHeader xlink:href=&quot;HistoryDublin-header.xml&quot;/&gt;<br/>&lt;text&gt;<br/>  &lt;body&gt;<br/>    &lt;div type=&quot;chapter&quot;&gt;<br/>      &lt;p id=&quot;p1&quot;&gt;<br/>        &lt;s id=&quot;p1s1&quot;&gt;A Brief History&lt;/s&gt;
+
+      &lt;/p&gt;<br/>      &lt;p id=&quot;p2&quot;&gt;<br/>        &lt;s id=&quot;p2s1&quot;&gt;Celtic Ireland&lt;/s&gt;
+      &lt;/p&gt;<br/>      &lt;p id=&quot;p3&quot;&gt;<br/>        &lt;s id=&quot;p3s1&quot;&gt;<br/>          Ireland has been inhabited since very 
+          ancient times, but Irish history really 
+          begins withthe arrival of the Celts around 
+          the 6th century b.c.&lt;/s&gt;<br/>        &lt;s id=&quot;p3s2&quot;&gt;<br/>          Ireland&amp;#8217;s first documented invasion.&lt;/s&gt;<br/>        &lt;s id=&quot;p3s3&quot;&gt;<br/>          They brought with them iron weapons and chariots and 
+          codes of custom and conduct that quickly became 
+          dominant in the country.&lt;/s&gt;
+
+        &lt;s id=&quot;p3s4&quot;&gt;This is the period of myths and legends, 
+          later romanticized by Irish writers, that 
+          still exercise their power today.&lt;/s&gt;<br/>      &lt;/p&gt; <br/> ...</font></pre>
+        <p></p></td>
+    </tr>
+  </table>
+
+  <blockquote> 
+    <p><font color="#000066"><strong><font color="#333366">Line 8</font></strong><font color="#333366"> 
+      : reference to the header file. This brings in the contents of the header 
+      file as a part of the logical document containing the data.</font></font></p>
+    <p><font color="#333366"><strong>Lines 12-14</strong>: automatic processing 
+      marks the title as a paragraph containing a single sentence. This occurs 
+      when there is no consistent identification of titles and similar elements 
+      in the original encoding. The final release will correct this sort of inaccuracy 
+      to the extent feasible.</font></p>
+    <p><font color="#333366"><strong>Line 23:</strong> incorrect sentence boundary, 
+      caused by the abbreviation in the middle of the sentence. To be corrected 
+      in later releases.</font></p>
+    <p><font color="#333366"><strong>Line 25:</strong> the entity &amp;#8217; 
+      represents the apostrophe. Most browsers will interpret the code and display 
+      the corresponding character.</font></p>
+
+  </blockquote>
+  <p><font color="#333366"><em><a name="spoken"></a>Format for spoken data</em></font></p>
+  <p align="justify"><font color="#333366">Spoken data is marked for turn (<font size="2" face="Courier New, Courier, mono">&lt;t&gt;</font>)and 
+    utterance (<font size="2" face="Courier New, Courier, mono">&lt;u&gt;</font>). 
+    Turn signifies a change in speaker; utterances are (roughly) the same as sentences. 
+    Each <font size="2" face="Courier New, Courier, mono">&lt;turn&gt;</font> 
+    element includes an attribute identifying the speaker, using the code specified 
+    in the header on the <em>side</em> attribute of the corresponding <font size="2" face="Courier New, Courier, mono">&lt;person&gt;</font> 
+    element.</font></p>
+
+  <table width="95%" height="394" border="0" align="center">
+    <tr> 
+      <td width="5%" valign="top" align="center"><pre><font face="Courier New, Courier, mono" size="2">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</font></pre></td>
+      <td width="95%" valign="top"><pre><font size="2" face="Courier New, Courier, mono">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br/>&lt;doc xsi:schemaLocation=&quot;http://www.xces.org/schema/2003 
+    /ANC/xcesSpoken.xsd&quot; 
+     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+     version=&quot;1.0&quot; 
+     xmlns=&quot;http://www.xces.org/schema/2003&quot; 
+     xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;<br/> &lt;xcesHeader xlink:href=&quot;sw2001-ms98-a-trans-header.xml&quot;/&gt;<br/>   &lt;body&gt;<br/> 	&lt;turn who=&quot;B&quot; id=&quot;b1&quot;&gt;<br/> 	  &lt;u&gt;start=&quot;0.000000&quot; end=&quot;2.655625&quot; id=&quot;sw2001B-0001&quot;&gt;
+
+          okay hi&lt;/u&gt;<br/> 	&lt;/turn&gt;<br/> 	&lt;turn who=&quot;A&quot; id=&quot;a1&quot;&gt;<br/> 	  &lt;u start=&quot;0.977625&quot; end=&quot;11.561375&quot; id=&quot;sw2001A-0002&quot;&gt;
+
+           hi um yeah i'd like to talk about how you dress 
+           for work and and um what do you normally what type 
+           of outfit do you normally have to wear&lt;/u&gt;<br/> 	&lt;/turn&gt;<br/> 	&lt;turn who=&quot;B&quot; id=&quot;b2&quot;&gt;<br/>       &lt;u start=&quot;10.166375&quot; end=&quot;22.813500&quot; id=&quot;sw2001B-0003&quot;&gt;
+
+           well i work in uh corporate control so we have to 
+           dress kind of nice so i usually wear skirts and 
+           sweaters in the winter time slacks i guess  
+           and in the summer just dresses&lt;/u&gt;<br/> 	&lt;/turn&gt;<br/> 	&lt;turn who=&quot;A&quot; id=&quot;a2&quot;&gt;<br/> 		&lt;u start=&quot;19.804875&quot; end=&quot;21.312375&quot; id=&quot;sw2001A-0004&quot;&gt;
+
+             um-hum&lt;/u&gt;<br/> 	&lt;/turn&gt;<br/> 	&lt;turn who=&quot;B&quot; id=&quot;b3&quot;&gt;<br/> 		&lt;u start=&quot;22.813500&quot; end=&quot;26.946875&quot; id=&quot;sw2001B-0004&quot;&gt;
+
+             we can't even well we're not even really supposed 
+             to wear jeans very often&lt;/u&gt;<br/> 		&lt;u start=&quot;26.946875&quot; end=&quot;34.811750&quot; id=&quot;sw2001B-0005&quot;&gt;
+             so it really doesn't vary that much from season to 
+             season since the office is kind of you know always 
+             the same temperature&lt;/u&gt;<br/> 	&lt;/turn&gt;<br/> 	&lt;turn who=&quot;A&quot; id=&quot;a3&quot;&gt;<br/> 		&lt;u start=&quot;27.362000&quot; end=&quot;28.932750&quot; id=&quot;sw2001A-0006&quot;&gt;
+
+             and is&lt;/u&gt;<br/> 		&lt;u start=&quot;33.898250&quot; end=&quot;40.123250&quot; id=&quot;sw2001A-0008&quot;&gt;
+             right right is there is there um any is there a like 
+             a code of dress where you work do they ask&lt;/u&gt;<br/> 	&lt;/turn&gt;	<br/>	  ... </font></pre> 
+      </td>
+
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <h3><font color="#000066" size="2" face="Verdana, Arial, Helvetica, sans-serif"><a name="annotation"></a></font><font color="#333366">Annotation 
+    file</font></h3>
+  <p align="justify"><font color="#333366">The annotation file contains the part-of-speech 
+    and lemma for each word in the text. Annotations are linked to the primary 
+    data using a version of the W3C <a href="http://www.w3.org/TR/xptr/">XPointer syntax</a> to 
+    identify the string to which the annotation applies. Note that XPointer syntax 
+    is not yet stable; the standard has in fact been modified since we
+    adopted its proposed syntax. Later versions of the ANC corpus will
+  adapt to further changes, and  
+   a script will be provided to make the change to earlier versions of
+  the corpus.</font></p>
+  <p align="justify"><font color="#333366">The following sample of the annotation 
+    files applies to the first few lines of the primary text <a href="#">above</a>. 
+    Note that the annotation files for spoken data are in this same format, except 
+    that &quot;chunks&quot; are indicated to refer to utterances rather than sentences.</font></p>
+
+  <blockquote> 
+    <table width="79%" border="0" align="center">
+      <tr> 
+        <td width="6%" valign="top" align="center"><pre><font face="Courier New, Courier, mono" size="2">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</font></pre></td>
+        <td width="94%" valign="top"> <pre><font size="2" face="Courier New, Courier, mono">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+&lt;ana  xmlns=&quot;http://www.xces.org/schema/2003&quot; version=&quot;1.0&quot;
+
+      xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      xsi:schemaLocation=&quot;http://www.xces.org/schema/2003 /ANC/xcesAna.xsd&quot;&gt;
+   &lt;chunklist xml:base=&quot;HistoryDublin.xml&quot;&gt;
+      &lt;chunk type=&quot;sentence&quot; xml:base=&quot;#p1s1&quot;&gt;
+
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 0, 1))&quot;&gt;
+          &lt;msd&gt;at++++&lt;/msd&gt;
+          &lt;base&gt;a&lt;/base&gt;
+        &lt;/tok&gt;
+
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 2, 7))&quot;&gt;
+          &lt;msd&gt;jj+atrb+++&lt;/msd&gt;
+          &lt;base&gt;brief&lt;/base&gt;
+        &lt;/tok&gt;
+
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 8, 15))&quot;&gt;
+           &lt;msd&gt;nn++++&lt;/msd&gt;
+           &lt;base&gt;history&lt;/base&gt; 
+        &lt;/tok&gt;
+      &lt;/chunk&gt;
+
+      &lt;chunk type=&quot;sentence&quot; xml:base=&quot;#p2s1&quot;&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 0, 6))&quot;&gt;
+           &lt;msd&gt;jj+atrb+++&lt;/msd&gt;
+           &lt;base&gt;celtic&lt;/base&gt;
+
+        &lt;/tok&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 7, 14))&quot;&gt;
+           &lt;msd&gt;np++++&lt;/msd&gt;
+           &lt;base&gt;ireland&lt;/base&gt;
+
+        &lt;/tok&gt; 
+      &lt;/chunk&gt;
+      &lt;chunk type=&quot;sentence&quot; xml:base=&quot;#p3s1&quot;&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 0, 7))&quot;&gt;
+           &lt;msd&gt;np++++&lt;/msd&gt;
+
+           &lt;base&gt;ireland&lt;/base&gt;
+        &lt;/tok&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 8, 11))&quot;&gt;
+           &lt;msd&gt;vbz+hvz+aux++&lt;/msd&gt;
+
+           &lt;base&gt;have&lt;/base&gt;
+        &lt;/tok&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 12, 16))&quot;&gt;
+           &lt;msd&gt;vprf+ben+aux+xvbnx+&lt;/msd&gt;
+
+           &lt;base&gt;be&lt;/base&gt;
+        &lt;/tok&gt;
+        &lt;tok xlink:href=&quot;xpointer(string-range('', 17, 26))&quot;&gt;
+           &lt;msd&gt;vpsv++agls+xvbnx+&lt;/msd&gt;
+
+           &lt;base&gt;inhabit&lt;/base&gt;
+        &lt;/tok&gt;
+        ...</font></pre></td>
+      </tr>
+    </table>
+    <p><font color="#000066"><strong><font color="#333366">Line 6</font></strong><font color="#333366"> 
+      : gives the URI of the primary data file. All XPointer links are assumed 
+      to have this string as a prefix. </font></font></p>
+
+    <p><font color="#333366"><strong>Lines 7</strong>: the &lt;chunk&gt; element 
+      identifies the beginning of a string marked as a sentence in the original 
+      text, and provides the id reference to the particular string.</font></p>
+    <p><font color="#333366"><strong>Line 8:</strong> the &lt;tok&gt; element 
+      identifies the beginning of a string marked as a token (word) in the original 
+      text, and provides the character offset from the beginning of the sentence 
+      for the particular string.</font></p>
+    <p><font color="#333366"><strong>Line 9:</strong> the &lt;msd&gt; element 
+      contains the <em>morpho-syntactic description</em> (part-of-speech plus 
+      other information) for the token</font></p>
+
+    <p><font color="#333366"><strong>Line 9:</strong> the &lt;base&gt; element 
+      contains the <em>base form</em> (lemma) for the token</font></p>
+    <p>&nbsp;</p>
+  </blockquote>
+  <h3><font color="#000066" size="2" face="Verdana, Arial, Helvetica, sans-serif"><a name="merged"></a></font><font color="#000066">Data 
+    file (merged version)</font></h3>
+
+  <p><font color="#000066">The merged data format includes the part-of-speech 
+    annotation within the data file itself. As in the stand-off version, there 
+    is a pointer to the corresponding header file. </font></p>
+  <p><font color="#000066">The following gives the merged version of the text 
+    shown <a href="#written">above</a>.</font></p>
+  <table width="79%" height="584"  border="0" align="center">
+    <tr> 
+      <td width="5%" valign="top" align="center"><pre><font face="Courier New, Courier, mono" size="2">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</font></pre>
+   </td>
+      <td width="95%" valign="top"> <pre><font size="2" face="Courier New, Courier, mono">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;!DOCTYPE doc SYSTEM &quot;/ANC/ISOents.dtd&quot;&gt; 
+&lt;doc xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;<br/>     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+     xmlns=&quot;http://www.xces.org/schema/2003&quot;
+     xsi:schemaLocation=&quot;http://www.xces.org/schema/2003 /ANC/xcesMerged.xsd&quot;
+
+     version=&quot;1.0&quot;&gt; &lt;xcesHeader
+     xlink:href=&quot;HistoryDublin-header.xml&quot;&gt;&lt;/xcesHeader&gt; &lt;text&gt; 
+&lt;body&gt;
+   &lt;div type=&quot;chapter&quot;&gt; 
+      &lt;p id=&quot;p1&quot;&gt; 
+         &lt;s id=&quot;p1s1&quot;&gt;
+
+           &lt;tok msd=&quot;at++++&quot; base=&quot;a&quot;&gt;A&lt;/tok&gt; 
+           &lt;tok msd=&quot;jj+atrb+++&quot; base=&quot;brief&quot;&gt;Brief&lt;/tok&gt; 
+           &lt;tok msd=&quot;nn++++&quot; base=&quot;history&quot;&gt;History&lt;/tok&gt;&lt;/s&gt; 
+      &lt;/p&gt; 
+      &lt;p id=&quot;p2&quot;&gt; 
+         &lt;s id=&quot;p2s1&quot;&gt;
+
+           &lt;tok msd=&quot;jj+atrb+++&quot; base=&quot;celtic&quot;&gt;Celtic&lt;/tok&gt; 
+           &lt;tok msd=&quot;np++++&quot; base=&quot;ireland&quot;&gt;Ireland&lt;/tok&gt;&lt;/s&gt; 
+      &lt;/p&gt;
+
+      &lt;p id=&quot;p3&quot;&gt; 
+         &lt;s id=&quot;p3s1&quot;&gt;
+           &lt;tok msd=&quot;np++++&quot; base=&quot;ireland&quot;&gt;Ireland&lt;/tok&gt; 
+           &lt;tok msd=&quot;vbz+hvz+aux++&quot; base=&quot;have&quot;&gt;has&lt;/tok&gt; 
+           &lt;tok msd=&quot;vprf+ben+aux+xvbnx+&quot; base=&quot;be&quot;&gt;been&lt;/tok&gt; 
+           &lt;tok msd=&quot;vpsv++agls+xvbnx+&quot; base=&quot;inhabit&quot;&gt;inhabited&lt;/tok&gt; 
+           &lt;tok msd=&quot;in++++&quot; base=&quot;since&quot;&gt;since&lt;/tok&gt; 
+           &lt;tok msd=&quot;ql+amp+++&quot; base=&quot;very&quot;&gt;very&lt;/tok&gt;<br/>           &lt;tok msd=&quot;jj+atrb+++&quot; base=&quot;ancient&quot;&gt;ancient&lt;/tok&gt; 
+           &lt;tok msd=&quot;nns++++&quot; base=&quot;time&quot;&gt;times&lt;/tok&gt;, 
+           &lt;tok msd=&quot;cc+cls+++&quot; base=&quot;but&quot;&gt;but&lt;/tok&gt; 
+           &lt;tok msd=&quot;jj+atrb+++&quot; base=&quot;irish&quot;&gt;Irish&lt;/tok&gt; 
+           &lt;tok msd=&quot;nn++++&quot; base=&quot;history&quot;&gt;history&lt;/tok&gt; 
+           &lt;tok msd=&quot;rb+emph+++&quot; base=&quot;really&quot;&gt;really&lt;/tok&gt; 
+           &lt;tok msd=&quot;vbz++++&quot; base=&quot;begin&quot;&gt;begins&lt;/tok&gt;<br/>           &lt;tok msd=&quot;in++++&quot; base=&quot;with&quot;&gt;with&lt;/tok&gt; 
+           &lt;tok msd=&quot;ati++++&quot; base=&quot;the&quot;&gt;the&lt;/tok&gt; 
+           &lt;tok msd=&quot;nn++++&quot; base=&quot;arrival&quot;&gt;arrival&lt;/tok&gt; 
+           &lt;tok msd=&quot;in++++&quot; base=&quot;of&quot;&gt;of&lt;/tok&gt; 
+           &lt;tok msd=&quot;ati++++&quot; base=&quot;the&quot;&gt;the&lt;/tok&gt;
+
+           &lt;tok msd=&quot;np+++??+&quot; base=&quot;celts&quot;&gt;Celts&lt;/tok&gt; 
+           &lt;tok msd=&quot;in++++&quot; base=&quot;around&quot;&gt;around&lt;/tok&gt; 
+           &lt;tok msd=&quot;ati++++&quot; base=&quot;the&quot;&gt;the&lt;/tok&gt; 
+           &lt;tok msd=&quot;cd++++&quot; base=&quot;6th&quot;&gt;6th&lt;/tok&gt; 
+           &lt;tok msd=&quot;nn++++&quot; base=&quot;century&quot;&gt;century&lt;/tok&gt; 
+           &lt;tok msd=&quot;rb++++&quot; base=&quot;b.c&quot;&gt;b.c&lt;/tok&gt;.
+        &lt;/s&gt;
+
+      ...<br/></font></pre></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <hr/>
+<a name="postags"></a>  <h2><strong><font color="#000066" size="3" face="Verdana, Arial, Helvetica, sans-serif"><a name="postags"></a></font><font color="#000066"><font color="#333366">Morpho-syntactic 
+    (part-of-speech) annotation</font></font></strong></h2>
+  <p align="justify"><font color="#333366">The morpho-syntactic tags used in this 
+    version of the ANC are those of the Biber tagger (see <a href="Biber-tags.txt">Biber 
+    Tag Descriptions</a> for a full description of the tagset). We will also provide 
+    alternative morpho-syntactic annotations used by the Brill-like tagger in 
+    the <a href="http://gate.ac.uk">GATE</a> system (see the <a href="gatetags.txt">Gate 
+    tag descriptions</a>), which are very similar to the <a href="http://www.ldc.upenn.edu/Catalog/docs/treebank2/cl93.html">Penn 
+    Treebank tags</a>, as well as annotations using the <a
+    href="http://www.comp.lancs.ac.uk/ucrel/claws5tags.html">C5</a>
+
+    and <a href="claws7tags.html">C7</a> versions of 
+    the 
+CLAWS tagset 
+    used to tag the <a href="http://www.natcorp.ox.ac.uk/">British
+    National Corpus</a>. These additional annotation files will be downloadable 
+    from this website, together with a script to create a merged tag version for 
+    these tagsets (as described above) from the annotation files and the corpus 
+    (which must first be obtained from LDC). </font></p>
+</blockquote> <br/>
+<hr/>
+    <center>
+  <STRONG><a href="contents.html"><font size="1">THE DATA</font></a><font size="1"> 
+  |&nbsp;<a href="structure.html">FILE STRUCTURE</a>&nbsp;|&nbsp;<a href="bugs.html">KNOWN 
+  BUGS</a></font></STRONG><font size="1">&nbsp;|&nbsp;<strong><a href="./">FIRST 
+  RELEASE</a></strong>&nbsp;|&nbsp;<strong><a href="http://www.americannationalcorpus.org">ANC 
+  HOME</a></strong></font> 
+
+</center>
+<hr/>
+<center>
+  <font color="#333366" size="1">
+Copyright 2003
+American National Corpus Project. All rights reserved.</font>
+</center>
+<hr/>
+</body>
+</html>

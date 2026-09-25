@@ -1,0 +1,162 @@
+<!--#include virtual="/templates/header" -->
+<title>American National Corpus</title>
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+.style2 {font-size: 16px}
+-->
+</style>
+<!--#include virtual="/templates/menu.html" -->
+	<div class="one-column">
+      <h1>Open ANC</h1>
+      <blockquote>
+        <p><font size="5"><a href="#contents">Contents</a><br/>
+          <a href="#annotations">Annotations</a><br/>
+          <a href="#using">Using ANC Annotations</a><br />
+            <a href="#download">Download</a></font></p>
+      </blockquote>
+
+
+<!--      <p class="body_new style3"><a name="contents" id="contents"></a><span class="style12">CONTENTS</span></p> -->
+		<a name="contents" id="contents"></a>
+		<h2>Contents</h2>
+		<!-- <h2 class="head">CONTENTS</h2> -->
+      <p>The Open ANC includes over 14 million words from the Second Release that can be freely distributed. Please see the <a href="license.txt">OANC license</a> for more details.</p>
+      <p>The OANC includes the following data from the ANC Second Release:</p>
+      <table width="90%" border="1" align="center" bordercolor="#ECE9D8" bgcolor="#FFFFCC">
+<tr><td colspan="4"><div align="center" class="style1">
+  <div align="left"><strong>Spoken</strong></div>
+</div></td>
+</tr>
+<tr><td><div align="center"><strong>Name</strong></div></td><td><div align="center"><strong>Domain</strong></div></td><td><div align="center"><strong>No. files</strong></div></td><td><div align="center"><strong>No. words</strong></div></td></tr>
+
+<tr><td>charlotte</td>
+  <td>face to face </td><td><div align="right">93</div></td><td><div align="right">198,295</div></td></tr>
+
+<tr><td>switchboard</td>
+  <td>telephone</td><td><div align="right">2,307</div></td><td><div align="right">3,019,477</div></td></tr>
+<tr bgcolor="#FFFF99"><td bgcolor="#FFFF99"><strong>Spoken Totals</strong></td><td>&nbsp;</td><td bgcolor="#FFFF99"><div align="right">2,410</div></td><td bgcolor="#FFFF99"><div align="right">3,217,772</div></td></tr>
+<tr><td colspan="4"><div align="left"><span class="style1">Written</span></div></td>
+</tr>
+<tr><td><div align="center"><strong>Name</strong></div></td><td><div align="center"><strong>Domain</strong></div></td><td><div align="center"><strong>No. files</strong></div></td><td><div align="center"><strong>No. words</strong></div></td></tr>
+<tr>
+  <td>911 report</td>
+      <td>government, technical</td>
+      <td><div align="right">17</div></td><td><div align="right">281,093</div></td></tr>
+<tr>
+      <td>berlitz</td>
+      <td>travel guides</td>
+      <td><div align="right">179</div></td><td><div align="right">1,012,496</div></td></tr>
+<tr></tr><tr><td>biomed</td>
+  <td>technical</td><td><div align="right">837</div></td><td><div align="right">3,349,714</div></td></tr>
+
+<tr>
+      <td>eggan</td>
+  <td>fiction</td>
+  <td><div align="right">1</div></td><td><div align="right">61,746</div></td></tr>
+<tr><td>icic</td>
+  <td>letters</td><td><div align="right">245</div></td><td><div align="right">91,318</div></td></tr>
+
+<tr><td>oup</td>
+  <td>non-fiction</td><td><div align="right">45</div></td><td><div align="right">330,524</div></td></tr>
+<tr><td>plos</td>
+  <td>technical</td><td><div align="right">252</div></td><td><div align="right">409,280</div></td></tr>
+<tr><td>slate</td>
+  <td>journal</td><td><div align="right">4,531</div></td><td><div align="right">4,238,808</div></td></tr>
+<tr><td>verbatim</td>
+  <td>journal</td><td><div align="right">32</div></td><td><div align="right">582,384</div></td></tr>
+<tr>
+  <td>web data </td>
+  <td>government</td><td><div align="right">285</div></td><td><div align="right">1,048,792</div></td></tr>
+<tr bgcolor="#FFFF99"><td bgcolor="#FFFF99"><strong>Written Totals</strong></td><td>&nbsp;</td><td bgcolor="#FFFF99"><div align="right">6424</div></td><td bgcolor="#FFFF99"><div align="right">11,406,155</div></td></tr>
+<tr>
+  <td><strong>Corpus Totals</strong></td><td>&nbsp;</td>
+  <td><div align="right">8,832</div></td><td><div align="right">14,623,927</div></td></tr>
+</table>
+
+      <p class="right">Back to the <a href="#top-of-page">top</a>. </p>
+      <h2><a name="annotations" id="annotations"></a>Annotations</h2>
+      <p>The file organization and encoding conventions for the OANC is the same as in the ANC Second Release. Please consult the <a href="../SecondRelease/encoding.html">Second Release document encoding conventions</a> for a full description.</p>
+      <p>The OANC data is distributed with the following annotations: </p>
+      <ul> 
+     <ul>
+       <li>Structural markup (sections, chapters, etc.) down to the level of paragraph</li>
+       <li>Sentence boundaries</li>
+       <li>Words (tokens) with part of speech annotations using the <a href="penn.html">Penn tagset</a></li>
+       <li>Noun chunks</li>
+       <li>Verb chunks</li>
+     </ul>
+     </ul>
+     <p>All annotations were originally produced automatically using our enhancements to <a href="http://gate.ac.uk">GATE</a>'s ANNIE system. Some of the texts in the OANC include <strong>manually validated  sentence boundaries</strong> (the list of  texts validated for sentence boundaries is <a href="validated-files.html">here</a>). Note that the validated sentence boundaries are <strong>not</strong> included in the ANC Second Release.</p>
+     
+     <p>In addition to the annotations distributed with the OANC, we distribute contributed annotations of the OANC, including BBN named entitites and several different syntactic parses. Please consult the <a href="../data/oanc/annotations/">annotations page</a>.  
+     <hr align="center" width="80%"/>
+     <h3><a name="using" id="using"></a>USING THE ANC ANNOTATIONS</h3>
+     <p>All ANC annotations are in <strong>stand-off</strong> format--that is, each annotation type is stored in a 
+     separate file and linked to the primary data, which is contained in a plain text (UTF-8) file. 
+     Annotations are represented as a graph of feature structures according to the specifications of the 
+     <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326">ISO Linguistic Annotation Format (LAF) (ISO 24612)</a>. 
+     Please download the <a href="http://www.cs.vassar.edu/~ide/papers/LAF-2012.pdf">LAF/GrAF standard specification</a>; see also <a href="http://www.cs.vassar.edu/~ide/papers/LAWVI.pdf">Ide and Suderman 2012</a>, <a href="http://www.cs.vassar.edu/~ide/papers/LAW.pdf">Ide and Suderman 2007</a>, <a href="http://www.cs.vassar.edu/%7Eide/papers/Elsnet.pdf">Ide and Romary 2007</a>, and <a href="http://www.cs.vassar.edu/%7Eide/papers/ANC-LREC06.pdf">Ide and Suderman 2006</a>. </p>
+     <p>A version of all, or part, of the ANC data with annotations merged in-line can be generated using <a href="../software/anc2go/">ANC2Go</a>. Several output options are provided, including XML and non-XML formats that can be input to a variety of other software. In addition, GrAF annotations can be loaded into annotation tools such as <a href="http://gate.ac.u>">GATE</a> and <a href="http://incubator.apache.org/uima">UIMA</a>; see the <A href="../tools/">tools</a> page for details.</p>
+
+     <p class="right">Back to the <a href="#top-of-page">top</a>. </p>
+     <hr/>
+     
+     <h2><a name="download" id="download"></a>DOWNLOAD THE CURRENT VERSION</h2>
+     <p>The OANC is a community resource that is freely available for download and use for research and development, including commercial development.
+     <p>We ask that you provide us with any of the following that may have resulted from your use of the OANC, which we will make freely available to the user community on this website:</p>
+<ul>
+             <li>found errors or problems</li>
+             <li>corrections/validations of any part of the OANC, including both text and annotations</li>
+             <li>additional annotations in any format (but see <a href="https://anc.org/representing.html">Recommendations for  Representing Annotations</a>)</li>
+             <li>derived resources, including word lists, frequency lists, bigram lists, extracted entity lists, etc. </li>
+      </ul>
+          
+<!--
+     <p class="alert">PLEASE NOTE</p>
+     <table width="200" border="1" bgcolor="#CCCCFF">
+       <tr>
+         <td><p><strong>The OANC is a community resource. In the spirit of openness and collaboration, we ask that you provide us with any of the following that may have resulted from your use of the OANC, which we will make freely available to the user community on this website:</strong></p>
+           <ul class="style7">
+             <li>found errors or problems</li>
+             <li>corrections/validations of any part of the OANC, including both text and annotations</li>
+             <li>additional annotations in any format (but see <a href="https://anc.org/representing.html">Recommendations for  Representing Annotations</a>)</li>
+             <li>derived resources, including word lists, frequency lists, bigram lists, extracted entity lists, etc. </li>
+         </ul></td>
+       </tr>
+     </table>
+	 -->
+
+     <h2>	<Strong>
+       <li>Download the Open ANC in GrAF format: <a href="https://anc.org/OANC/OANC_GrAF.zip">zip</a> | <a href="https://anc.org/OANC/OANC_GrAF.tgz">tgz</a></li>
+     </Strong></h2>
+     <blockquote>
+       <p>&nbsp;</p>
+      </blockquote>
+<hr/>
+
+     <p>PREVIOUS VERSIONS</p>
+     <p>
+       Download the <a href="https://anc.org/OANC/OANC-1.0.1-UTF8.zip">Open ANC</a> in the original XML format as a zip file. (326 MB)</p>
+     <p>Download the <a href="https://anc.org/OANC/OANC-installer.jar">Open ANC</a> in the original XML format as a self installing jar file.  (316 MB) See below for installation instructions.</p>
+     <!--
+     <h4>UTF-16 Files</h4>
+     <p>Download the <a href="https://anc.org/OANC/OANC-1.0.1-UTF16.zip">Open ANC</a> as a zip file. (475 MB), or <br />
+  Download the <a href="https://anc.org/OANC/OANC-1.0.1-UTF16.tgz">Open ANC</a> as a gzipped tar file (463 MB)</p>
+     <p></p>
+-->
+     <p>The OANC will unpack to approximately 4.8 GB. </p>
+     <h3>Installation via the Jar file </h3>
+     <p>The Java installers are executable jar files that can be used to install the Open ANC and the ANC Tool. On most operating systems you should be able double click on the .jar file. If that does not work, open a command prompt (Windows) shell (Linux), or terminal window (Max OS X) and run the command:</p>
+	 <p class="code">java -jar OANC-installer.jar</p>
+	 <p><strong>Installation Notes</strong></p>
+	 <p>File dialog boxes   in Java are implemented slightly differently on different platforms.  For instance, the "Open File" dialog box in Mac OS X does not allow the user to create a directory from within the dialog.  Therefore on Mac OS X, users must do one of the following:</p>
+  <ol>
+	 	<li>Create the installation directory before running the installer.  In this case the installer will warn you that the directory already exists when you select it.  It is ok to ignore this warning.</li>
+		<li>Select the directory where you want the OANC directory created from within the installer, and then manually append the name of the directory to be created.</li>
+		<li>Type  the full path to the installation directory manually.</li>
+	 </ol>
+	       <p class="right">Back to the <a href="#top-of-page">top</a>. </p>
+	</div>
+<!--#include virtual="/templates/footer" -->
+

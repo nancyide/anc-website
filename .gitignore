@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+*.sql
+*.sql.gz
+*.zip
+*.tgz
+*.tar.gz
+*.jar
+*.dmg
+datasets/
+wp-config.php

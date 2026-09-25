@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>ANC Tool | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class=""><a href="../../data/" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../data/oanc/" alt="Open ANC">oanc</a></li>
+	<li class=""><a href="../../data/masc/" alt="MASC">masc</a></li>
+	<li class=""><a href="../../data/anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor current-page-parent"><a href="../" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class="current-page-item"><a href="./" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class=""><a href="../anc2go/" alt="ANC2Go">ANC2Go</a></li>
+<li class="current-page-item"><a href="./" alt="ANC Tool">ANC Tool</a></li>
+<li class=""><a href="../gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+<li class=""><a href="../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-237" class="post-237 page type-page status-publish hentry">
+					
+					<h1 class="banner">ANC Tool</h1>
+		
+		
+			<div id="content">
+			
+				
+		
+		
+						
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<p>The ANC Tool is a Java program that transduces OANC and MASC texts and their GrAF standoff annotations into several different formats suitable for use with other systems and tools. <a title="ANC2Go" href="../anc2go/" target="_blank">ANC2Go</a> provides the same functionality as the ANC Tool as a web service; the ANC Tool is intended for those who wish to run the transduction processes on their own machines.</p>
+<h2>For The OANC</h2>
+<p>The ANC GrAF Tool can be downloaded in a number of formats</p>
+<ul>
+<li>Java jar file.
+<ul>
+<li>packaged as a <a href="http://www.anc.org/tools/ANCTool-2.0.0-dist.zip">.zip</a> file</li>
+<li>packaged as a <a href="http://www.anc.org/tools/ANCTool-2.0.0-dist.tar.gz">.tar.gz</a> file</li>
+</ul>
+</li>
+<li><a href="http://www.anc.org/tools/ANCTool-2.0.0-win.zip">Windows executable</a></li>
+<li><a href="http://www.anc.org/tools/ANCTool-2.0.0.dmg">Mac OS X executable</a>. Requires OS X 10.6 (Snow Leopard) or later.</li>
+<li>Source code is available from the <a href="http://www.anc.org/svn/project_anctool/trunk/">ANC Public Subversion</a> server.</li>
+</ul>
+<p><strong>Note:</strong> Generating the Mac OS X and Windows executables from the Java jar files is still experimental. If the native executables appear to hang or quit unexpectedly see the instructions below for running the jar file from the command line with increased memory settings.</p>
+<h2>For MASC 3.0.0</h2>
+<p>MASC 3 uses a slightly updated GrAF representation and requires a separate ANCTool version.  This version of the tool is only available as a Java jar file. <a title="ANCTool v3.0.2" href="http://www.anc.org/tools/ANCTool-3.0.2.zip">Download</a></p>
+<h2>Output formats</h2>
+<p>The following output formats are supported.</p>
+<ul>
+<li><strong>Inline XML</strong><br />
+Converts texts with standoff GrAF annotations into inline XML encoded according to the <a href="http://www.xces.org/">XCES</a>.</li>
+<li><strong>Word with part of speech</strong><br />
+Converts texts with token annotations in GrAF to words with part of speech tags in a format compatible with programs such as MonoConc/MonoConc Pro. The format is <em>word separator POS tag</em>, where the separator is specified by the user. For example, if an underscore is specified as the separator, the result is <em>word_NN</em>.</li>
+<li><strong>Word with part of speech</strong> (WordSmith)<br />
+Converts texts with token annotations in GrAF to word with part of speech tag using the input format for the <a href="http://www.lexically.net/wordsmith/" target="_blank">WordSmith Concordancer</a>.</li>
+<li><strong>NLTK POS tagged corpus<br />
+</strong>Converts texts with token annotations in GrAF to the format required for input to NLTK using the NLTK  <a href="http://nltk.googlecode.com/svn/trunk/doc/api/nltk.corpus.reader.tagged.TaggedCorpusReader-class.html">TaggedCorpusReader</a></li>
+<li><strong>CoNLL</strong><br />
+Converts GrAF annotations into the CoNLL IOB format</li>
+<li><strong>UIMA CAS</strong><br />
+Converts GrAF annotations into a UIMA CAS document that can be loaded directly into UIMA. See the <a title="UIMA Tools" href="../uimautils/" target="_blank">UIMA Tools page</a> for more information.</li>
+</ul>
+<div>NOTE: To import and export GrAF annotations in <a href="https://gate.ac.uk/" target="_blank">GATE</a>, use the GATE plugins available from  the <a title="GATE Tools" href="../gate-tools/" target="_blank">GATE Tools page</a>.</div>
+<p>&nbsp;</p>
+<h2>Installation</h2>
+<p>Download the ANCTool and unzip the file to any convenient location.</p>
+<h2>Running</h2>
+<p>The ANCTool is an executable Java application that can be executed on most operating system by double clicking on the jar file. However, it is recommended that the jar file be started from the command line with the following command:</p>
+<pre>    java -Xmx500M -jar ANCTool-x.y.z-jar.jar</pre>
+<p>Where x.y.z is the version number (i.e. 1.2.6). The <tt>-Xmx500M</tt> option increases the amount of memory Java will make available to the ANC Tool. If the ANC Tool appears to <em>hang</em> or quits abruptly run the jar file from the command line and increase the memory size.</p>
+<p>The first time you run the ANC Tool you will be asked to select the ANC home directory. This is the root directory of your ANC installation and should include (at least) the ANC&#8217;s data directory.</p>
+<h2>Using</h2>
+<p style="text-align: left;"><strong>The XML Tab</strong></p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter" title="ANC Tool XML Tab" src="../../tools/xml-tab.jpg" alt="" width="394" height="401" /></p>
+<ol>
+<li>Select an input directory containing the ANC files to process. The program will recurse through all directories rooted at the input directory and process all the ANC files found.</li>
+<li>Select an output directory. The XML files that are created will be placed in the output directory. If the <em>Copy directory structure</em> check box is selected the directory structure of the input directory will be mirrored and directories will be created as needed. Otherwise all files will be created in the output directory. The default is to copy the directory structure. It is possible to select the the input directory as the output directory, but it is highly recommended that the input and output directories be separate directories.</li>
+<li>Select the annotations to include.</li>
+<li>Click the Process button.</li>
+</ol>
+<div>
+<p><strong>The MonoConc Tab</strong></p>
+<p><img decoding="async" class="aligncenter" title="ANC Tool MonoConc Tab" src="../../tools/monoconc-tab.jpg" alt="" width="394" height="401" /></p>
+<div>
+<ol>
+<li>Select the input and output directory as above.</li>
+<li>Select the part of speech tags to include. The part of speech tags are the only annotations that can be included when generating text files.</li>
+<li>Select a separator character. This is the character that will be used to separate a word from its part of speech tag. The default character is the underscore. It is possible to use more than one character as the separator.</li>
+<li>Click the Process button.</li>
+</ol>
+</div>
+</div>
+<div>
+<p><strong>The WordSmith Tab</strong></p>
+<p><img decoding="async" class="aligncenter" title="ANC Tool WordSmith Tab" src="../../tools/wordsmith-tab.jpg" alt="" width="394" height="401" /></p>
+<ol>
+<li>Select the input and output directory as above.</li>
+<li>Select the part of speech tags to include. The part of speech tags are the only annotations that can be included when generating text files.</li>
+<li>Click the Process button.</li>
+</ol>
+</div>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

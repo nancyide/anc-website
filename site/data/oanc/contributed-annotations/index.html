@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Contributed Annotations | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor"><a href="../../" alt="data">data</a>
+<ul class='children'>
+	<li class="current-page-ancestor current-page-parent"><a href="../" alt="Open ANC">oanc</a></li>
+	<li class=""><a href="../../masc/" alt="MASC">masc</a></li>
+	<li class=""><a href="../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../software/" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../../../software/anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../../../software/anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../../../software/gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../../../software/uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class="current-page-ancestor current-page-parent"><a href="../" alt="Open ANC">oanc</a></li>
+<li class=""><a href="../../masc/" alt="MASC">masc</a></li>
+<li class=""><a href="../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-491" class="post-491 page type-page status-publish hentry">
+					
+					<h1><a href="../" class="entry-title">Open ANC</a></h1>
+		
+					<div id="side-links">
+				<ul>
+					<li class="page_item page-item-69"><a href="../contents/">Contents</a></li>
+<li class="page_item page-item-358"><a href="../ngram/">Ngram Search Engine</a></li>
+<li class="page_item page-item-76"><a href="../annotations/">Annotations</a></li>
+<li class="page_item page-item-491 current_page_item"><a href="./" aria-current="page">Contributed Annotations</a></li>
+<li class="page_item page-item-100"><a href="../download/">Download</a></li>
+				</ul>
+				<div class="lower"></div>
+			</div>
+			
+			<div id="content" class="sidelinks">
+			
+				
+		
+		
+					<h1 class="subentry-title">Contributed Annotations</h1>
+				
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<div>
+<p>Annotations of the ANC data contributed by members of the community are made available in the format in which they were contributed, and also are or will be made available in GrAF format compatible with the OANC.</p>
+<h2>Contents</h2>
+<ul>
+<li>BBN Named Entities (inline format)</li>
+<li>Syntactic parses (various formats)</li>
+<li>Slate coreference (anaphora) annotations</li>
+<li>CLAWS part of speech tags</li>
+</ul>
+</div>
+<div>
+<h2>Annotations</h2>
+<h3><strong>BBN Named Entity Annotation</strong></h3>
+<p>The entire OANC has been automatically annotated for named entities using the <a href="http://www.aclweb.org/anthology-new/N/N04/N04-1043.pdf">BBN NE Tagger</a>, contributed by Sameer Pradhan. The download contains the OANC texts with entity annotation is inline; we will provide a standoff version in GrAF format so that these annoations can be merged with other OANC annotations in the near future. A document describing the <a href="http://www.ldc.upenn.edu/Catalog/docs/LDC2005T33/BBN-Types-Subtypes.html">BBN entity types</a> is also included.</p>
+<p>DOWNLOAD OANC with inline BBN NE annotations: <a href="http://www.anc.org/annotations/OANC-bbn-entities.tgz">tgz (40.5 MB) </a>| <a href="http://www.anc.org/annotations/OANC-bbn-entities.zip">zip (50.1 MB)</a></p>
+<hr />
+<h3><strong>Syntactic parses</strong></h3>
+<p>Over 11 million words of the OANC have been parsed automatically using the Charniak constituency-based parser (Charniak &amp; Johnson, 2005), the LTH dependency converter (Johansson &amp; Nugues, 2007), and MaltParser (Nivre et al., 2007). The output of the Charniak parser is in the inline Penn Treebank format, and the dependency parses are output in CONLL format. These annotations will be trasnduced to the standoff GrAF format for comaptibility with the other OANC annotations in the near future. The annotations were contributed by Rasul Kalajahi. An overview of the annotations is <a href="../../../annotations/OANC-parses.pdf">here</a>.</p>
+<p>DOWNLOAD THE PARSES : <a href="https://www.anc.org/annotations/OANC-parses.tgz">tgz (170.1 MB)</a> | <a href="https://www.anc.org/annotations/OANC-parses.zip">zip (170.5 MB)</a></p>
+<hr />
+<p><strong>Slate Coreference</strong></p>
+<p><a href="http://www.cs.ualberta.ca/people/profile.php?who=95362">Shane Bergsma</a> of the <a href="http://www.cs.ualberta.ca/">University of Alberta</a> has annotated a sub-set of the Slate data for coreference (anaphora). The annotations consist of pronoun-antecedent pairs in 118 documents (128717 words) from the <a href="../../../">Slate data</a> of the ANC/OANC. The data include a test set and a training set; there are 1398 labelled pronouns in 78 documents in the training set and 1381 labelled pronouns in 40 documents in the test set. Most of the Slate documents are &#8220;gist&#8221; articles which provide factual background information for stories currently in the news. Only pronouns that refer to noun phrases given previously in the text are annotated; pronouns referring to implicit entities not specifically mentioned are labeled and ignored, including cataphora (e.g., &#8220;After he was elected, president Clinton&#8230;&#8221;), and pleonastic pronouns without antecedent (e.g., &#8220; it is raining&#8221;). Of the 2779 total pronouns labelled, 219 are so identified.</p>
+<p>The coreference annotations are provided in standoff format. At present these annotations are provided in the <a href="../../../FirstRelease/encoding.html">standoff XCES format</a> used for the ANC First and Second releases and for the early version of the OANC. They are packaged as a separate corpus, which includes the 118 OANC texts, all annotations from the OANC corpus (in XCES format), and the co-reference annotations. If you have the ANC or OANC on your machine the coreference corpus <strong>should not</strong> be installed into the ANC home directory. When installed there will be three folders created: test (including the test set), training (including the training set), and Uninstaller (program to uninstall the download).</p>
+<p>DOWNLOAD THE<a href="https://www.anc.org/updates/slate-coref/Slate-coref-install.jar"> SLATE COREFERENCE INSTALLER</a></p>
+<p>Installation</p>
+<p>The coreference annotations are packaged in an executable jar file. To install the annotations run the jar file by double clicking on it, or by opening a command prompt (Windows) or a shell (Unix/Linux/MacOSX) and running the command:</p>
+<pre>    java -jar Slate-coref-install.jar</pre>
+<p>Once the annotations have been installed you may want to process the files with the <a href="../../../tools/#anc-tool">ANC Tool</a>.</p>
+<hr />
+<p><strong>CLAWS</strong></p>
+<p><strong>Please Note:</strong> The CLAWS part of speech annotations in the ANC Second Release may not be usable with the <a href="../../../OANC/">Open ANC</a>, since some OANC texts have been modified as a result of manual validation. Therefore, the CLAWS stand-off annotations may contain invalid offsets. These annotations can be used with the ANC Second Release available through the Linguistic Data Consortium. Versions of the CLAWS annotations may be made available for the Open ANC in the future.</p>
+<p>The written portion of the ANC has been tagged for part speech using the <a href="http://www.comp.lancs.ac.uk/ucrel/claws5tags.html">C5 tagset</a> (the tag set used in the <a href="http://www.natcorp.ox.ac.uk/">BNC</a>) and the <a href="http://www.comp.lancs.ac.uk/ucrel/claws7tags.html">C7 tagset</a> by the <a href="http://ucrel.lancs.ac.uk/claws/">University of Lancaster</a>. The two sets of annotations have been packaged separately so that users can install portions of each tag set; for example, it is possible to install in C5 tags for the Slate corpus and the C7 tags for the New York Times corpus.</p>
+<p>Each set of annotations can be installed on your system using either of two installers:</p>
+<ul>
+<li><strong>Web installer</strong> : downloads the annotations from the ANC web site at installation time. Use the web installer if you plan on installing a small subset of the available annotations, to avoid downloading the entire ANC.</li>
+<li><strong>Standalone installer</strong> : includes annotations for the entire ANC in one large file. This installer can be used without internet access.</li>
+</ul>
+<p>C5 Annotations</p>
+<ul>
+<li><a href="https://www.anc.org/updates/C5/C5-standard.jar">Standalone installer</a></li>
+<li><a href="https://www.anc.org/updates/C5/C5-web.jar">Web installer</a></li>
+</ul>
+<p>C7 Annotations</p>
+<ul>
+<li><a href="https://www.anc.org/updates/C7/C7-standard.jar">Standalone installer</a></li>
+<li><a href="https://www.anc.org/updates/C7/C7-web.jar">Web installer</a></li>
+</ul>
+<p>Installation</p>
+<p>The installation process is the same regarless of the installer you use. Each installer is an executable jar file. On most systems either installer can be run simply by double clicking on the installer&#8217;s jar file. If that does not work, open a command prompt (Windows) or a shell (Unix/Linux/MaxOSX) and run the command:</p>
+<pre>    java -jar installer.jar</pre>
+<p>where <em>installer.jar</em> is the name of the installer you downloaded. For example, to run the web installer for the C7 annotations, the command would be:</p>
+<pre>    java -jar C7-web.jar</pre>
+<p>Installation Notes</p>
+<p>1. If you use the web installer, please note that the installer displays messages indicating that it is <em>&#8220;connecting to the internet&#8221;</em> while it is downloading the various packages. For this reason it is recommended that you use the stand-alone installer unless only a small subset of the annotations will be installed.</p>
+<p>2. When you select the <em>$ANC_HOME</em> directory, the installer will warn you that the directory already exists and ask if you are sure you want to overwrite its contents. Select &#8220;Yes&#8221;.</p>
+<p>3. The installers assume that the ANC directory structure as it is on the DVD distributed by LDC has been preserved. The expected directory structure is shown below.</p>
+<pre>          \---data
+              +---spoken
+              |   +---academic-discourse
+              |   |   \---micase
+              |   +---face-to-face
+              |   |   \---charlotte
+              |   \---telephone
+              |       +---callhome
+              |       \---switchboard
+              +---written_1
+              |   +---fiction
+              |   |   +---eggan
+              |   |   \---hargrave
+              |   +---journal
+              |   |   +---slate
+              |   |   \---verbatim
+              |   +---leisure
+              |   |   \---blog
+              |   \---letters
+              |       \---icic
+              \---written_2
+                  +---newspapers
+                  |   \---nytimes
+                  +---non-fiction
+                  |   \---OUP
+                  +---technical
+                  |   +---911report
+                  |   +---biomed
+                  |   +---government
+                  |   \---plos
+                  \---travel_guides
+                      +---berlitz1
+                      \---berlitz2</pre>
+<p>Back to the <a href="./">top</a>.</p>
+</div>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

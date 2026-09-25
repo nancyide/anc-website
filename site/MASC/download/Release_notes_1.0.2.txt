@@ -1,0 +1,38 @@
+MASC-1.02   2010-07-23
+----------------------
+
+Contents 
+--------
+See http://www.anc.org/MASC/mascI_contents.html
+
+Folders
+-------
+
+data - 
+   spoken - data and annotations for spoken data
+   written - data and annotations for written data
+
+   See http://www.anc.org/MASC/MASC_Structure.html for 
+   details on the organization of MASC data and annotation files
+
+MASC-corpus-header.xml - 
+   Information about the corpus, contents, 
+   organization, domain codes, naming conventions, etc.
+
+original-annotations -
+   Contains annotations contributed to MASC in their original 
+   format, as prepared by the specific annotation project. These
+   annotations are transduced to GrAF format for inclusion in
+   MASC.
+
+ 
+Release notes
+-------------
+Nature of the changes: Minor
+
+Release 1.02 fixes a number of misaligned Penn Treebank tokens 
+and extraneous nodes in the graph. It also adds information in 
+the corpus header for opinion and committed belief annotations.
+
+Some texts still have problems with the Penn Treebank tokenizations--this
+problem is being addressed.

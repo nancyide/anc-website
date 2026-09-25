@@ -1,0 +1,679 @@
+<!--#include virtual="/templates/header" -->
+<title>Xoro: A Simple Scripting Language For Gate</title>
+<!--#include virtual="/templates/menu" -->
+<div class="one-column">
+			<hr/><h1 class="center">Welcome to the Wonderful World of Xoro</h1><hr/>
+			<h2>Introduction</h2>
+			<p>Xoro is a simple scripting language that was developed by the <a
+				href="http://americannationalcorpus.org">ANC</a> to automate tasks in <a
+				href="http://gate.ac.uk">Gate</a>. While <a
+				href="http://gate.ac.uk">Gate</a> provides <i>Pipelines</i> and
+					<i>Conditional Pipelines</i> sometimes more complex processing is
+				required. For example, different gazetteers/transducers may be needed
+				depending on some feature of the file, or only the files that match a
+				certain pattern should be processed, or etc. etc. In particular, working
+				with a corpus stored as a large number of files is awkward unless the
+				documents are first placed in a <i>"DataStore"</i>, which may not be
+				optimal in some cases.</p>
+			<p>One of the most powerful features of Xoro is the ability to import and
+				use any Java class, including Gate resources, in a simple scripting
+				environment without having to recomplie Java code. In addition, without
+				the overhead of a GUI Gate resources tend to run considerably faster in
+				Xoro than they do in Gate itself. Xoro can also be run as a processing
+				resource inside Gate.</p>
+			<h1>Getting Started</h1>
+			<h2>Requirements</h2>
+			<p>Before you are able to use Xoro you will need to have the following:</p>
+			<ol>
+			  <li>GATE installed and working correctly.</li>
+              <li>Good knowledge of Java programming and  GATE's Java API.</li>
+	          <li>Knowledge of running Java programs from the command line and editing shell (.bat) scripts. </li>
+	          <li>A good sense of humour and lots of time on your hands. Using Xoro is not for the faint of heart.</li>
+	</ol>
+			<h2>Installation</h2>
+			<p>Unfortunately, Xoro does not come with an installer or install script.
+				You will have to unpack the Xoro.zip file and manually move the files
+				to their proper locations. The first step is to download Xoro (<i>link to be added
+				later</i>) and unzip it to a temporary location on your hard drive. The
+				zip file should contain the following files:</p>
+			<ul>
+				<li>
+					<b>xoro.jar</b>: Used to launch the standalone interpreter.</li>
+				<li>
+					<b>Xoro.bat</b>: A sample start up script for the standalone interpretter.</li>
+				<li>
+					<b>hello.xoro</b>: A Xoro script so you can test your installation.</li>
+				<li><strong>process.xoro</strong>: The Xoro script used to process the ANC. Do not try to process anything with this script, it is included for example purposes only. The script will likely require extensive fixing to work in your local environment. In particular it makes use of several custom GATE processing resources that are not included (mostly because they do quirky little things that are unique to our data set). </li>
+				<li>
+					<b>plugins/Xoro</b> directory <ul>
+						<li>
+							<b>GateScript.jar</b>: GATE plugin for running Xoro scripts.</li>
+						<li>
+							<b>creole.xml</b>: GATE configuration file for the above.</li>
+					</ul>
+				</li>
+			</ul>
+			<p><strong>Installation steps:</strong></p>
+			<ol>
+			  <li>Move the plugins/Xoro directory into GATE's plugin directory (this will
+			  be GATE_HOME/plugins)</li>
+              <li>Start GATE and register the Xoro plugin. </li>
+	          <li>Copy the Xoro.jar file <em>someplace</em>, GATE's home directory is a good location.</li>
+	          <li>Copy the Xoro.bat file <em>someplace else</em>. You could place this in GATE's home directory as well, however it is handy to have this on your PATH someplace.</li>
+	          <li>Edit the xoro.bat file and change the system variables GATE_HOME and XORO as required .</li>
+	          <li>Run the included hello.xoro program to test your installation. </li>
+    </ol>
+			<p>Gate itself is not distributed with Xoro. It is assumed that you
+			already have Gate up and running.</p>
+			<h2>Limitations</h2>
+			<p>Xoro was never intended to become a full-blown scripting language, and
+				it was never intended to be released to the public. Xoro was developed
+				as an in-house hack to get a job done. Over time features have been
+				added and Xoro has evolved into something that is quite useful and worth
+				sharing with the rest of the world. However, Xoro's early roots as a
+				quick hack do show through from time to time. In particular:</p>
+			<ul>
+				<li>It is possible to access an object's methods, but not it's fields
+					(even if they are public). For example, if you have an array
+					<tt>A</tt> you can not access the <tt>length</tt> field of the array.
+					A built in <a href="#func.length">length()</a> function is provided
+					for that purpose.</li>
+				<li>Static initialization of arrays only works for some types
+					(thankfully, Gate resources are amongst those types).</li>
+				<li>Most error messages produced by the parser are rather obtuse.</li>
+				<li>The error messages produced by the runtime interpreter are even more
+					so... and often lack line numbers.</li>
+				<li>Xoro only finds one error per run, so debugging a script with a
+					multitude of errors can become tiresome.</li>
+			</ul>
+			<h2>License</h2>
+			<p>The Xoro executable (jar file) is freely distributable and free to use
+				for any purposes.</p>
+			<p>The source code for the current version of Xoro is available by request
+				only. The source code for the current version of Xoro is not
+				re-distributable. A future version of Xoro will be released as open
+				source under a BSD-like license.</p>
+			<p>Xoro is Copyright &copy; 2004, 2005 The American National Corpus
+				Project. All rights reserved.</p>
+			<h1>The Xoro Language</h1>
+			<p>The entry point for every Xoro script is the <tt>main</tt> function
+				with the signature</p>
+			<pre>
+void main(string[] args)</pre>
+			<p>The string array parameter <i>args</i> will be filled in with any
+				command line arguments. If you are not going to be using command line
+				arguments in your script you can leave the parenthesis empty. The
+				classic HelloWorld program in Xoro looks like:</p>
+			<pre> 
+void main() 
+{ 
+		println("Hello world."); 
+}
+</pre>
+			<h2>
+				<a name="comments"/>Comments</h2>
+			<p>Xoro supports both single line comments and multiple line comments.</p>
+			<pre> 
+// This is a single line comment. 
+/* 
+ * This is a multiple 
+ * line comment. 
+ */
+</pre>
+			<h2>Operators</h2>
+			<p>Only basic operators and types have been implemented (Xoro only
+				supports integer types, mostly used for loop counters) so don't expect
+				to calculate <i>pi</i> or ridiculously large prime numbers with Xoro.</p>
+			<table class="list">
+				<tbody>
+					<tr>
+						<th colspan="2">
+							Arithmetic Operators
+						</th>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>addition</td>
+					</tr>
+					<tr>
+						<td>-</td>
+						<td>subtraction</td>
+					</tr>
+					<tr>
+						<td>*</td>
+						<td>multiplication</td>
+					</tr>
+					<tr>
+						<td>/</td>
+						<td>division</td>
+					</tr>
+					<tr>
+						<td>++</td>
+						<td>increment</td>
+					</tr>
+					<tr>
+						<td>--</td>
+						<td>decrement</td>
+					</tr>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th colspan="2">Relational Operators</th>
+					</tr>
+					<tr>
+						<td>==</td>
+						<td>equal</td>
+					</tr>
+					<tr>
+						<td>!=</td>
+						<td>not equal</td>
+					</tr>
+					<tr>
+						<td>&lt;</td>
+						<td>less than</td>
+					</tr>
+					<tr>
+						<td>&lt;=</td>
+						<td>less than or equal</td>
+					</tr>
+					<tr>
+						<td>&gt;</td>
+						<td>greater than</td>
+					</tr>
+					<tr>
+						<td>&gt;=</td>
+						<td>greater than or equal</td>
+					</tr>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th colspan="2">Logical Operators</th>
+					</tr>
+					<tr>
+						<td>&amp;&amp;</td>
+						<td>and</td>
+					</tr>
+					<tr>
+						<td>||</td>
+						<td>or</td>
+					</tr>
+					<tr>
+						<td>!</td>
+						<td>not</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<b>Note:</b> Only prefix forms of the increment and decrement operators
+				are implemented. That is, use <tt>++i</tt>, do not use <tt>i++</tt>.</p>
+			<p>
+				<b>Note:</b> There are no bitwise operators.</p>
+			<h2>
+				<a name="types"/>Types</h2>
+			<h3>
+				<a name="types.built-in"/>Built-in Types</h3>
+			<p>Xoro contains four built in types:</p>
+			<table class="list">
+				<tr>
+					<td>
+						<b>int</b>
+					</td>
+					<td> an integer type represented internally by a
+						<tt>java.lang.Integer</tt> object.</td>
+				</tr>
+				<tr>
+					<td>
+						<b>boolean</b>
+					</td>
+					<td> a boolean type represented internally by a
+						<tt>java.lang.Boolean</tt> object</td>
+				</tr>
+				<tr>
+					<td>
+						<b>string</b>
+					</td>
+					<td> a string type represented internally by a
+						<tt>java.lang.String</tt> object</td>
+				</tr>
+				<tr>
+					<td>
+						<b>object</b>
+					</td>
+					<td> a generic object type represented by a <tt>java.lang.Object</tt> object</td>
+				</tr>
+			</table>
+			<p>There is no type in Xoro that corresponds to Java's primitive
+				<tt>int</tt> type. This makes it impossible to call methods such as
+				java.lang.String.substring() that expects primitive <tt>int</tt> types
+				for its parameters.</p>
+			<p>There is a pseudo <tt>void</tt> type, however it is only used as a
+				place holder in function signatures to indicate that a function does not
+				return a value. The <tt>void</tt> keyword can not be used in any other context.</p>
+			<p>Global variables are allowed, but they must be declared after the <a
+					href="#types.java">Java import</a> statements and before any <a
+				href="#functions">function</a> definitions.</p>
+			<h3>
+				<a name="types.array"/>Array Types</h3>
+			<p>Only very basic (and mostly broken) arrays are implemented. Arrays are
+				declared similar to the way arrays are declared in Java, for example: </p>
+			<pre> 
+int[10] array1; 
+object[] array2;
+		</pre>
+			<p>In addition, arrays may be initialized when they are declared.</p>
+			<pre> 
+string[] message = {"hello world", "foo bar"}; 
+object[] resources = { resource1, resource2 };
+		</pre>
+			<p>You <b>can not</b> allocate arrays at runtime with the <tt>new</tt> operator.</p>
+			<h3>
+				<a name="types.user-defined"/>User Defined Types</h3>
+			<p>There are none. If you need a user defined type then you will have to
+				write a Java class and <tt>use</tt> that.</p>
+			<h3>
+				<a name="types.java"/>Using Java Classes</h3>
+			<p>Java classes may be imported with the <tt>use</tt> keyword. Each class
+				must be imported individually, there is no mechanism to import entire
+				Java packages. All import statements must appear at the top of the
+				program, before any variable or function definitions.</p>
+			<p>To <tt>use</tt> a Java class the format is:</p>
+			<pre>
+			<b>use</b> <i>class</i> <b>as</b> <i>alias</i>;
+		</pre>
+			<p>Where <i>class</i> is the full package and class name of the Java class
+				to be imported, and <i>alias</i> is the name the class with be known as
+				internally. The <i>alias</i> and the class name are <b>not</b> required
+				to be the same.</p>
+			<p>For example:</p>
+			<pre> 
+use java.lang.String as String; 
+use java.io.File as File; 
+use java.util.LinkedList as List; 
+use gate.Document as Document;
+		</pre>
+			<p>
+				<b>Note:</b> To use a Java class you <b>must</b> import it with the
+				<tt>use</tt> statement; you can not simply specify the full package and
+				class name in the program. That is the following <b>will not</b> work.</p>
+			<pre> 
+use java.lang.String as String; 
+			
+void main(String[] args)
+{ 
+	String filename = "somefile.xml"; 
+	java.io.File file = new java.io.File(filename);   // KA-BOOM!!! 
+}
+		</pre>
+			<p>You can use any Java class as long as it can be found on the classpath.
+				The <tt>new</tt> operator is used to allocate new obejcts as it is in Java.</p>
+			<pre> 
+use java.util.Stack as Stack; 
+			
+void main(string[] args) 
+{ 
+	Stack stack = new Stack(); 
+	stack.push("foo"); 
+	... 
+}
+</pre>
+			<p>
+				<b>Note:</b> Only very basic type checking is done when the script is
+				<i>compiled</i>, full type checking does not take place until each
+				statement is evaluated. For example, the following code will run until
+				the second <tt>push</tt> statement, at which time a Java exception will
+				be thrown.</p>
+			<pre> 
+use java.io.File as File; 
+use java.util.Stack as Stack; 
+void main(string[] args) 
+{ 
+		object stack = new Stack(); // ok, a Stack is a kind of object 
+		stack.push("foo"); // ok, the stack object does have a push method 
+		stack = new File(); // ok, File is an object too.
+		stack.push("bar"); // KA-BOOM... 
+}
+</pre>
+			<p>
+				<b>Note:</b> There is no way to catch exceptions in Xoro. When an
+				exception is thrown Xoro will print an incomprehensible error message
+				and terminate.</p>
+			<h3>
+				<a name="types.resource"/>Using Gate Resources</h3>
+			<p>While it is possible to use Gate resources as you would any other Java
+				class, Xoro provides special syntactic candy for intializing resources
+				in <i>resouces blocks</i>. A resource block takes the form</p>
+			<pre> 
+resource alias = java.package.class 
+{ 
+		parameter = "value"; 
+		... 
+}
+</pre>
+			<p>For example:</p>
+			<pre> 
+resource splitter = gate.creole.splitter.SentenceSplitter 
+{ 
+		name = "Splitter"; 
+		gazetteerURL = "file:/c:/gate/gazetteer/lists.def";
+		transducerURL = "file:/c:/gate/grammar/main.jape"; 
+}
+		</pre>
+			<p>Before you can use a gate resource you need to call the built in
+				<tt>load</tt> function which invokes gate.Factory.createResource() to
+				create the resource for you. For example:</p>
+			<pre> 
+// A custom resource
+resource saveStandoff = org.xces.creole.SaveStandoff 
+{ 
+		name = "Save standoff markup"; 
+		standoffTags = [ "tok" ]; 
+		standoffASName = "Standoff markups"; 
+		namespace = "http://www.xces.org/schema/2003"; 
+		destination = "file:/c:/corpus/sample.txt"; 
+} 
+void main(string[] args) 
+{ 
+		load(saveStandoff); 
+		... 
+		saveStandoff.execute(); 
+}
+</pre>
+			<h3>
+				<a name="types.factory"/>The Factory Object</h3>
+			<p>Since the gate.Factory class is declared as abstract it can not be
+				imported like the other Gate classes and resources. So Xoro provides
+				proxy for gate.Factory class named <tt>Factory</tt> (of course).</p>
+			<pre> 
+use gate.FeatureMap as FeatureMap; 
+			
+void main(string[] args) 
+{
+		FeatureMap fm = Factory.newFeatureMap(); 
+		... 
+}
+		</pre>
+			<h2>
+				<a name="functions"/>Built-in Functions</h2>
+			<ul>
+				<li>
+					<a name="func.length"/>
+					<b>int length(object[] A)</b>
+					<br/>Returns the number of elements in the array <b>A</b>. If <b>A</b>
+					is not an array Xoro crashes...</li>
+				<li>
+					<a name="func.register"/>
+					<b>void register(string path)</b>
+					<br/>Deprecated. This function is no longer needed, but the function
+					name is still reserved.</li>
+				<li>
+					<a name="func.load"/>
+					<b>void load(resource)</b>
+					<br/>Creates a Gate resource object. The resource parameter must have
+					been declared in a <a href="#types.resource">resource</a> block.</li>
+				<li>
+					<a name="func.print"/>
+					<b>void print(string s)<br/> void println(string s)</b>
+					<br/> Prints the string s with, or without, a trailing newline.</li>
+				<li>
+					<a name="func.getenv"/>
+					<b>string getenv(string env)</b>
+					<br/> Returns the environmental value stored under the name env.
+					<b>Note:</b> the <tt>getenv</tt> returns the value of the operatin
+					system environment, NOT the Java system properties, that is, the
+					values returned by <tt>System.getProperty()</tt>. There is no
+					equivalent <i>setenv</i> function. This function may break under some
+					operating system. It has only been tested on Windows XP Professional
+					and Mac OSX v10.3</li>
+				<li>
+					<a name="func.timestamp"/>
+					<b>int timestamp()</b> Returns System.currentTimeMillis()</li>
+			</ul>
+			<h2>
+				<a name="func.user-defined"/>User Defined Functions</h2>
+			<p>Functions may be defined after the <a href="#types.java">import</a>
+				block and global variable definitions. User defined functions may appear
+				either before or after the <tt>main</tt> function. The syntax to define
+				a function is:</p>
+			<p>&lt;type&gt; &lt;identifier&gt; (
+				[&lt;parameter_list&gt; ) <a href="#flow.blocks">&lt;block&gt;</a>
+			</p>
+			<p>Where:</p>
+			<ul>
+				<li>&lt;type&gt; is one of the <a href="#types.built-in">built
+						in types</a>, an alias for an imported <a href="#types.java">Java
+					class</a>, or <tt>void</tt>.</li>
+				<li>&lt;identifier&gt; is the name of the function. It is an
+					error to have a variable and a function with the same name.</li>
+				<li>&lt;parameter_list&gt; is either empty, or a comma delimited
+					list of types and parameter names. If a function does not take any
+					parameters leave the parenthesis empty; do not use the keywork
+					<tt>void</tt> inside the parenthesis.</li>
+				<li>&lt;block&gt; is a statement block as described <a href="#flow.blocks">below</a>.</li>
+			</ul>
+			<p>For example:</p>
+			<pre> 
+void doNothing(string name, int value) 
+{ 
+		... 
+}
+		</pre>
+			<h2>
+				<a name="flow"/>Flow of Control</h2>
+			<h3>
+				<a name="flow.blocks"/>Blocks</h3>
+			<p>All statement blocks in Xoro must be enclosed in curly braces. There is
+				are no single line blocks after <tt>if</tt>, <tt>while</tt>, and
+				<tt>for</tt> statements as there is in C++, Java, etc. That is, use:</p>
+			<pre> 
+if (x == y) 
+{ 
+		do_something(); 
+}
+</pre>
+			<p>Don't use:</p>
+			<pre> 
+	if (x == y) 
+		do_something();
+</pre>
+			<h3>
+				<a name="flow.if"/>If Statements</h3>
+			<p>If statements take the form:</p>
+			<pre> if (&lt;boolean_expression&gt;) <a href="#flow.blocks">&lt;block&gt;</a>
+		</pre>
+			<p>Where &lt;boolean_expression&gt; is the expression to be
+				evaluated to determine if the statement block is executed. An
+				<tt>if</tt> statments may also have an <tt>else</tt> clause</p>
+			<pre> 
+if (&lt;boolean_expression&gt;) 
+	<a href="#flow.blocks">&lt;block&gt;</a> 
+else 
+	<a href="#flow.blocks">&lt;block&gt;</a>
+</pre>
+			<p>And multiple <tt>if-else</tt> statements can be chained together.</p>
+			<pre> 
+if (&lt;boolean_expression&gt;) 
+	<a href="#flow.blocks">&lt;block&gt;</a> 
+else if (&lt;boolean_expression&gt;) 
+	<a href="#flow.blocks">&lt;block&gt;</a> 
+else ...
+</pre>
+			<h3>
+				<a name="flow.for"/>For Loops</h3>
+			<p>The for statement takes the form</p>
+			<pre> 
+for (&lt;init&gt;; &lt;boolean_expression&gt;;&lt;step&gt;) 
+	<a href="#flow.blocks">&lt;block&gt;</a>
+</pre>
+			<p>Where:</p>
+			<ul>
+				<li>&lt;init&gt; is the loop initializer</li>
+				<li>&lt;boolean_expression&gt; is the expression evaluated to
+					determine when the loop should be terminated.</li>
+				<li>&lt;step&gt; is the expression that will be evaluated after
+					each iteration of the statement block.</li>
+			</ul>
+			<p>For example:</p>
+			<pre> 
+for (int i = 0; i &lt; 10; ++i)  // remember, no post-fix increment operator... 
+{ 
+	... 
+}
+</pre>
+			<p>
+				<b>Note:</b> multiple expressions can not be used in <tt>for</tt>
+				statements. That is, the following <b>will not</b> work:</p>
+			<pre> 
+for (int i = 0, int j = 10; i &lt; 10; ++i, --i) 
+{ 
+	... 
+}
+</pre>
+			<h3>
+				<a name="flow.while"/>While Loops</h3>
+			<p>The while statement takes the form:</p>
+			<pre> 
+while ( &lt;boolean_expression&gt; ) 
+	<a href="#flow.blocks">&lt;block&gt;</a>
+</pre>
+			<p>Where &lt;boolean_expression&gt; is the expression that will be
+				evaluated to determine if an iteration of the statement block should be performed.</p>
+			<h3>
+				<a name="flow.statements"/>Flow of control Statements</h3>
+			<p>
+				<b>exit</b>
+				<br/>Can be used to cause the early termination of the script.</p>
+			<p>
+				<b>break</b>
+				<br/>
+				<b>continue</b>
+				<br/>Coming soon. Using them won't cause a syntax error in the scipt...
+				they just don't do anything yet.</p>
+			<h1>
+				<a name="examples"/>Examples</h1>
+			<p>Below are some example scripts to show how to perform various tasks
+				with Xoro.</p>
+			<h2>Check the syntax of a Jape Grammar</h2>
+			<p>There are several factors that can make debugging a Jape grammar a
+				daunting task. Not the least of which is simply making sure your grammar
+				is syntactically correct. A Jape grammar that contains syntax errors
+				with causes whatever processing resource that tries to use throw an
+				exception. Depending on what threw the exception, and where, restarting
+				Gate may be required to reload the resource. For example, if you are
+				developing a custom processing resource that uses a
+				gate.creole.Transducer resource internally and you want Gate to reload
+				your jar file.</p>
+			<p>Below is a script that tries to instantiate a gate.creole.Transducer
+				with a specified Jape grammar. If the grammar is syntactically correct
+				the script with print an appropriate message and exit. If the grammar is
+				not syntactically correct a Gate exception will be throw and the
+				corresponding error message and stack trace will be displayed.</p>
+			<pre> 
+use gate.FeatureMap as FeatureMap; 
+use java.io.File as File; 
+void
+main(string[] args) 
+{
+	// Check the args 
+	if (length(args) == 0) 
+	{
+		println("No grammar file specified."); 
+		exit; 
+	} 
+	// Test for the existence of the grammar file. 
+	File file = new File(args[0]); 
+	if (!file.exists()) 
+	{
+		println("Could not find " + file.getPath()); 
+		exit; 
+	} 
+	FeatureMap fm = Factory.newFeatureMap(); 
+	fm.put("grammarURL", "file:" + file.getPath());
+	object transducer = Factory.createResource("gate.creole.Transducer", fm);
+	// If we made it this far the grammer was ok! 
+	println("Success! The grammar appears to be syntactically correct."); 
+}
+</pre>
+			<h2>Run several resources on a directory of files</h2>
+			<p>This script is similar to a pipeline application in Gate. This example
+				runs Gate's default tokenizer, sentence splitter, and POS tagger on all
+				the files in a given directory and saves the resulting XML files in
+				another directory.</p>
+			<pre> 
+use gate.Document as Document; 
+use java.io.File as File; 
+use java.net.URL as URL; 
+
+// Use the default values for all the resources
+resource tokenizer = gate.creole.tokeniser.DefaultTokeniser { } 
+resource splitter = gate.creole.splitter.SentenceSplitter { } 
+resource tagger = gate.creole.POSTagger { } 
+resource saver = org.xces.creole.SaveMarkup { }
+	
+// Put our resources in an array for easy access. This is the order in which they will 
+// be executed as well. 
+object[] resources = { tokenizer, splitter, tagger, saver } 			
+int nResources = length(resources); 
+
+// Where we will write the processed files. 
+File outputDir; 
+
+void main(string[] args) 
+{ 
+	String xces = getenv("XCES_HOME"); 
+	LoadResources(); 
+	// Error checking omitted for brevity... we'll assume the args are correct... 
+	File inputDir = new File(args[0]); 
+	File outputDir = new File(args[1]); 
+	File[] files = inputDir.listFiles(); 
+	int nFiles = length(files); 
+	for (int i = 0; i &lt; nFiles; ++i) 
+	{ 
+		Process(files[i]); 
+	}
+	println("Done."); 
+}
+			
+void LoadResources() 
+{ 
+	for (int i = 0; i &lt; nResources; ++i) 
+	{
+		load(resources[i]); 
+	} 
+} 
+			
+void Process(File file) 
+{ 
+	Document doc = Factory.newDocument(new URL("file:" + file.getPath())); 
+	// Set the destination file. 
+	File dest = new File(outputDir, file.getName());
+	saver.setDestination(new URL("file:" + dest.getPath())); 
+	// Now processs the document with all the resources. 
+	for (int i = 0; i &lt; nResourse; ++i) 
+	{ 
+		object res = resources[i]; 
+		res.setDocument(doc); 
+		res.execute();
+		// make sure no resource keeps hanging onto the document. 
+		res.setDocument(null); 
+	} 
+	// Clean up the document 
+	Factory.deleteResource(doc); 
+	doc = null; 
+}
+			</pre>
+	<div class="item">
+			<h1>Acknowlegements</h1>
+			<ul>
+				<li>Xoro was developed as a part of the <a
+						href="http://americannationalcorpus.org">American National
+					Corpus Project</a>. If it weren't for the ANC and its consortium
+					members, Xoro would not exist.</li>
+				<li>The ANC development team (me) would like to thank the Gate
+					developers. If it weren't for Gate and the Gate development team, 
+					the ANC would not exist.</li>
+			</ul>
+	</div>
+</div>
+<!--#include virtual="/templates/footer" -->

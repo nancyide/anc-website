@@ -1,0 +1,170 @@
+<!--#include virtual="/templates/header.html" -->
+<script type="text/javascript" src="../js/subdomains.js"></script>
+<title>ANC Document Submission</title>
+<!--#include virtual="/templates/menu.html" -->
+<style type="text/css">
+<!--
+.style1 {font-family: "Courier New", Courier, monospace}
+-->
+</style>
+<div class="one-column">
+<h1>ANC Document Submissions</h1>
+  <p>Before uploading your document, please supply the following information. Note 
+    that if no attribution is desired, the Last Name field can be filled with &quot;anonymous&quot;. 
+    If you are uploading several texts one by one, the information from the previous upload will be filled in. If you are contributing multiple documents of the same type (for example, several college essays, a group of texts from a blog, etc.) you can upload them together in a folder that has been put in a compressed format such as zip, gz, tar, etc. In this case, fill in the Title field with a descriptive title (e.g., &quot;Various academic essays&quot;, &quot;Blog data from ...&quot;).</p>
+  <form method="post" action="upload.cgi" enctype="multipart/form-data" id="form" onsubmit="return validateForm()">		    
+    <table class="form">
+      <tr><td colspan="2"><h3>Author</h3></td></tr>
+      <tr><td align="right">First name : </td><td><input name="fname" style="width:50" id="fname"/></td></tr>
+      <tr><td align="right">Middle initial(s) : </td><td><input name="initials"/></td></tr>
+      <tr><td align="right">Last name : </td><td><input name="lname" id="lname"/></td></tr>
+      <!--
+      <tr><td align="right">Region : </td><td><select name="region" id="select-region">
+        <option value="bad">Select a region</option>
+        <option>New England</option>
+        <option>New York</option>
+        <option>Great Lakes</option>
+        <option>Midland</option>
+        <option>Mountain Southern</option>
+        <option>Coastal Southern</option>
+        <option>Upper Midwest</option>
+        <option>Western</option>
+      </select> (See a <a href="/dialect-map.html">map</a> of the regions.)</td></tr>
+      -->
+      <tr><td align="right">Gender : </td><td>
+        <select name="gender">
+          <option label="M">Male</option>
+          <option label="F">Female</option>
+        </select>
+      </td></tr>
+      <tr><td align="right">Age : </td><td>
+        <select name="age">
+         <option value="&lt; 15">under 15</option>
+          <option value="15-24">15-24</option>
+          <option value="25-29">25-29</option>
+          <option value="30-39">30-39</option>
+          <option value="40-49">40-49</option>
+          <option value="50-59">50-59</option>
+          <option value="60-69">60-69</option>
+          <option value="70-79">70-79</option>
+          <option value="80+">80 yrs or older</option>
+        </select>
+      </td></tr>
+      <tr>
+        <td colspan="2"><p>The age supplied should be the age of the author at the time the document was written.</p></td>
+      </tr>
+    <!-- </table> -->
+    <tr><td colspan="2"><h3>Publisher Information</h3></td></tr>
+    
+    <tr><td colspan="2"><p>If the document has been previously published (including publication as a web document), please fill in the relevant fields in the following.</p></td></tr>
+    <!-- <table class="form"> -->
+      <tr><td align="right">Publication medium : </td><td><select name="medium">
+        <option selected="selected" value="unknown">Select a medium</option>
+        <option>Book</option>
+        <option>Journal</option>
+        <option>Periodical</option>
+        <option>Magazine (print)</option>
+        <option>Magazine (online)</option>
+        <option>Blog</option>
+        <option>Other</option>
+      </select></td>
+        </tr>
+        <tr><td align="right">URL (if applicable) : </td><td><input name="url"/></td></tr>
+      <tr><td align="right">Publication name : </td><td><input name="pubname"/></td></tr>
+      <tr><td align="right">Publisher : </td><td><input name="publisher"/></td></tr>
+        <tr><td align="right">ISBN : </td><td><input name="isbn>"/></td></tr>
+      <tr><td align="right"><b>Publisher address</b></td><td>&nbsp;</td></tr>
+      <tr><td align="right">Address : </td><td><input name="pubaddress"/></td></tr>
+      <tr><td align="right">City : </td><td><input name="pubcity"/></td></tr>
+      <tr><td align="right">State : </td><td><input name="pubstate"/></td></tr>
+      <tr><td align="right">Zip : </td><td><input name="pubzip"/></td></tr>
+      <tr><td align="right">Country : </td><td><input name="pubcountry"/></td></tr>
+      <tr><td align="right"><b>Publication date</b></td><td>&nbsp;</td></tr>
+      <tr><td align="right">Year : </td><td><input name="pubyear"/></td></tr>
+      <tr><td align="right">Month : </td><td><input name="pubmonth"/></td></tr>
+      <tr><td align="right">Day : </td><td><input name="pubday"/></td></tr>
+      <!--
+    </table>
+    <h3>Document Information</h3>
+    <table class="form">
+      -->
+      <tr><td colspan="2"><h3>Document Information</h3></td></tr>
+      <tr><td align="right">Title : </td><td><input name="title" id="title"/></td></tr>
+<!--      <tr><td align="right">Subject : </td><td><input name="subject" id="subject"/></td></tr> -->
+      <tr><td colspan="2"><h3>Text Type</h3></td></tr>
+      <tr><td align="right"><input type="radio" name="category" value="non-fiction" onclick="non_fiction()" id="radio-non-fiction" checked="checked"/>Non-fiction : </td>
+        <td>
+          <select name="domain" id="select-domain" onchange="selectSubdomain()">
+            <option selected="selected" value="bad">Select a domain</option>
+            <option>Applied Science</option>
+            <option>Arts</option>
+            <option>Beliefs</option>
+            <option>Commerce</option>
+            <option>Leisure</option>
+            <option>Natural Science</option>
+            <option>Social Science</option>
+            <option>World Affairs</option>
+             <option>Other</option>
+          </select>					
+          <select name="subdomain" id="select-subdomain">
+            <option value="bad" selected="selected">Select a sub-domain</option>
+        </select>        </td></tr>
+      <tr><td align="right"><input type="radio" name="category" value="fiction" id="radio-fiction" onclick="fiction()"/> Fiction : </td>
+        <td>
+          <select name="fiction-type" id="select-fiction" disabled="disabled">
+            <option value="bad" selected="selected">Selecte a genre</option>
+            <option>General fiction</option>
+            <option>Historical fiction</option>
+            <option>Science fiction</option>
+            <option>Romantic fiction</option>
+            <option>Mystery</option>
+            <option>Adventure</option>
+            <option>Poetry</option>
+            <option>Drama</option>
+            <option>Humor</option>
+           <option>Other</option>
+          </select>        </td>
+      </tr>
+      <!--
+      <tr><td align="right">Category : </td><td>
+      <select name="category">
+      <option label="fiction">Fiction</option>
+      <option label="nonfiction">Non-fiction</option>
+      </select>
+      </td></tr>
+      -->
+      <tr><td align="right">Upload document : </td><td><input type="file" name="document"/></td></tr>
+      <tr><td align="right">Distribution type: </td>
+        <td><select name="distribution" id="distribution">
+          <option selected="selected" value="open">Allow distribution of the complete document.</option>
+          <option value="sample">Only distribute a sample of the document.</option>
+        </select></td></tr>
+      <tr><td colspan="2" align="center"><input type="submit" value="Submit Document"/></td></tr>
+    </table>
+  </form>
+  <p><b>Note: </b> Only click the Submit button once. Your upload will begin as soon as you click the button but
+    the next page will not display until the upload is complete.  The length of time required for the upload to complete will depend on the size of the document and the speed of your internet connection.  It could be as long as several minutes. Please be patient.</p>
+  <p><b>Note: </b> We ask that all contributors permit us to distribute the entire document.  Authors also have the option of requesting that we only include a portion of their text.</p>
+  
+  <p><b> If you have any comments, questions, or additional information to provide, please <a href="mailto:anc-contrib@anc.org">contact us</a>.</b></p></div>
+  <div><br />
+   <h2>Show everyone you are an ANC author!</h2>
+  <p align="center">
+  <img src="../images/author3-button.gif" alt="ANC author button" /></p>
+  <p>To put the ANC Author button on your web page, copy and paste the following html :</p>
+<blockquote class="style1">
+   &lt;a href="../"&gt;<br/>
+   &lt;img src="../images/author3-button.gif"&gt;&lt;/a&gt;</blockquote>
+</div>
+<div>
+<h2> Encourage Others to Contribute to the ANC</h2>
+<p align="center">
+  <img src="../images/anc-contrib.gif" alt="Contribute Texts to the ANC" height="50" width="200" /></p>
+  <p>To put the ANC contribution button on your web page, copy and paste the following html :</p>
+<blockquote class="style1">
+   &lt;a href="http://www.anc.org/contribute.html"&gt;<br/>
+   &lt;img src="../images/anc-contrib.gif" height="50" width="200" &gt;&lt;/a&gt;</blockquote>
+</div>
+
+<!--#include virtual="/templates/footer.html" -->
+

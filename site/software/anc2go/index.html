@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>ANC2Go | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class=""><a href="../../data/" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../data/oanc/" alt="Open ANC">oanc</a></li>
+	<li class=""><a href="../../data/masc/" alt="MASC">masc</a></li>
+	<li class=""><a href="../../data/anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor current-page-parent"><a href="../" alt="tools">tools</a>
+<ul class='children'>
+	<li class="current-page-item"><a href="./" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class="current-page-item"><a href="./" alt="ANC2Go">ANC2Go</a></li>
+<li class=""><a href="../anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+<li class=""><a href="../gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+<li class=""><a href="../uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-560" class="post-560 page type-page status-publish hentry">
+					
+					<h1 class="banner">ANC2Go</h1>
+		
+		
+			<div id="content">
+			
+				
+		
+		
+						
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<p><span style="font-size: medium;">ANC2Go is a web service that allows users to create a &#8220;customized corpus&#8221; from OANC and MASC data and annotations.</span></p>
+<p><span style="font-size: medium;">ANC2Go allows the user to specify the following:</span></p>
+<ul>
+<li><span style="font-size: medium;"><strong>corpus content</strong>: all or a subset of texts included in either of the OANC and MASC.</span></li>
+<li><span style="font-size: medium;"><strong>annotations</strong>: all or a subset of available annotations.</span></li>
+<li><span style="font-size: medium;"><strong>output format</strong>: output format for the corpus:</span>
+<ul>
+<li><span style="font-size: medium;"><span style="color: #ff0000;"><em>XML</em></span>: Annotations with inline XML tags.</span></li>
+<li><span style="font-size: medium;"><span style="color: #ff0000;"><em>word+POS</em></span>: Produces <strong>word [separator] POS-tag (</strong>user can specify the separator) for Token annotations. Suitable for use with concordancing software and for input to tools such as the <a href="http://nlp.stanford.edu/downloads/lex-parser.shtml">Stanford Parser</a>, <a href="http://opennlp.apache.org">OpenNLP</a> tools, etc.</span></li>
+<li><span style="font-size: medium;"><span style="color: #ff0000;"><em>NLTK tagged format</em></span>: Produces <strong>word [separator] POS-tag </strong>for Token annotations, readable with the NLTK tagged corpus reader.</span></li>
+<li><span style="font-size: medium;"><span style="color: #ff0000;"><em>CoNLL</em></span>: IOB format used in shared tasks by the <a href="http://ifarm.nl/signll/conll/">Conference on Natural Language Learning</a>.</span></li>
+<li><span style="font-size: medium;"><span style="color: #ff0000;"><em>UIMA CAS</em></span>: Input to the <a href="http://uima.apache.org">UIMA</a> system.</span></li>
+<li><span style="font-size: medium;"><span style="color: #000000;">COMING SOON:</span><em><span style="color: #000000;"> </span><span style="color: #ff0000;">RDF</span></em>: <a href="http://linkeddata.org">Linked data</a> format for the Semantic Web.</span></li>
+</ul>
+</li>
+</ul>
+<h2><span style="font-size: medium;">Using ANC2Go</span></h2>
+<p><span style="font-size: medium;">To generate a custom corpus, do the following:</span></p>
+<ul>
+<li><span style="font-size: medium;">Access <a href="./">the ANC2Go interface</a></span></li>
+<li><span style="font-size: medium;">Enter your email address in the boxes provided. An email with the URI where your custom corpus is sent to this address upon completion of processing.</span></li>
+<li><span style="font-size: medium;">In the left panel, select the subset of texts you want to include in your corpus, or click<strong> <span style="color: #0000ff;">Select All </span></strong><span style="color: #000000;">at the bottom of the list for the entire corpus. <span style="color: #ff0000;">Note: currently, only MASC is available through ANC2Go&#8211;OANC will be available soon.</span></span></span></li>
+<li><span style="color: #000000; font-size: medium;">Choose the desired output format by clicking on one of the tabs across the top of the right pane. <em><br />
+</em></span></li>
+<li><span style="font-size: medium;"><span style="color: #000000;">Choose the desired annotation(s) from the provided lists.</span></span></li>
+</ul>
+<table class="aligncenter" style="border: 1px solid #f10d24; width: 900px;" border="1">
+<tbody>
+<tr>
+<td><span style="font-size: small;">Note that the MASC annotations include three different tokenizations:</span></p>
+<ul>
+<li><span style="font-size: small;">Tokens produced by GATE&#8217;s ANNIE tokenizer, which are the base for most MASC annotations.</span></li>
+<li><span style="font-size: small;">Tokens produced by the Penn Treebank project, which form the base for the Penn Treebank syntax annotations</span></li>
+<li><span style="font-size: small;">Tokens produced by the FrameNet project, which form the base of the FrameNet semantic role annotations.</span></li>
+</ul>
+<p><span style="font-size: small;"><em>The annotations you choose dictate the tokenization that will be included in the output. For example, if you choose Penn Treebank syntax you will get Penn Treebank tokens by default. Because the various annotations are dependent on the underlying tokenization, you cannot, for example,  use GATE tokens with Penn Treebank syntax, or FrameNet tokens with verb chunks.</em></span></p>
+<p><span style="font-size: small;">The NLTK and Word+POS formats allow you to choose the tokenization you prefer. If you want token and POS only in any of the other formats, you can achieve this by selecting the radio button for Tokens under the tab for that format.</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span style="font-size: medium;">Click <span style="color: #0000ff;"><strong>Start</strong></span> at the bottom left of the page.</span></li>
+<li><span style="color: #000000; font-size: medium;">You should receive an email within a few minutes (it could be longer if you request a large corpus and multiple annotations) providing a download link for obtaining your corpus.</span></li>
+</ul>
+<h3><span style="color: #000000; font-size: medium;">Caveats:</span></h3>
+<ul>
+<li><span style="color: #000000; font-size: medium;">At present, tokens are always included in the output, regardless of which additional annotations are selected.  The ability to exclude tokens will be included in a future release.</span></li>
+<li><span style="color: #000000; font-size: medium;">XML is not guaranteed to be well-formed if there are overlapping XML elements.</span></li>
+</ul>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

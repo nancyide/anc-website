@@ -1,0 +1,148 @@
+<!--#include virtual="/templates/header.html" -->
+<title>ANC Second Release</title>
+<!--#include virtual="/templates/menu.html" -->
+<div class="one-column">
+<h1>Known Bugs and Caveats</h1>
+<h2>Conformance to standards and best practice</h2>
+<p>The ANC has been created with the intention of adhering to the
+extent possible to existing and emerging standards and "best practices" for
+markup and the representation of language resources and their annotations.
+These include <a href="http://www.w3.org">W3C</a> markup and data
+representation standards and the recommendations of the International Standards
+Organization (ISO) sub-committee for language resources (<a href="http://www.tc37sc4.org">ISO TC37 SC4</a>). While this ensures that the ANC is
+at the state-of-the-art and (we hope) will be processable by a wide variety of
+available tools and web-based applications, it also means that we are dealing
+with recommendations that have yet to be finalized (and therefore might change)
+and relying on processing capabilities that are not yet widely implemented. For
+this reason, a number of encoding choices have been made with an eye toward
+enabling immediate use of the ANC, while at the same time providing for
+adaptation to standards and practices that emerge in the future:</p>
+<ul>
+<li>The ANC Second Release data is provided with <em>stand-off</em> annotations. While stand-off annotation is widely accepted as the
+preferred format, few processors at present handle it. A <a href="../tools/">program</a> to produce a merged form
+of the corpus based on any  of the additional annotations is
+provided.<br/>
+</li>
+<li>Although <a href="http://www.w3.org/TR/xinclude/">XInclude</a>
+is the obvious means by which to include header fragments, we have so far
+relied on <a href="http://www.w3.org/TR/xlink/">XLink</a> for this
+purpose.
+Later releases of the ANC may use <tt>XInclude</tt>.<br/>
+</li>
+<li>The files produced by the merge tool will validate with the <a href="http://www.xces.org/schema/2003/">XCES schemas</a> if the <i>logical</i> annotation
+set is used.  The files produced by merging the other annotation sets may not validate.  In particular, the tags
+used to annotate noun and verb chunks are not defined by the XCES.<br/></li>
+<li>Currently, the parser that is used to merge the content and standoff annotations does not
+correctly handle overlapping hierarchies.  However, a new parser will be released shortly that
+will allow you to output the overlapping hierarchies <i>as-is</i> (for importing into applications that
+can handle overlapping hierarchies directly, say), to convert overlapping hierarchines into properly nested 
+elements, or to use <a href="http://www.mulberrytech.com/Extreme/Proceedings/html/2004/DeRose01/EML2004DeRose01.html">HORSE</a>
+milestones.</li>
+<!--
+<li>Schema locations have not been specified in the second release of the ANC.<br/></li>
+<li><em>[delete]</em> Schema locations in the ANC data
+are currently explicitly specified to assume the schemas exist in /ANC (an ANC
+directory directly contained within the root directory), rather than using a
+relative URI. This was done to avoid problems resulting from the fact that XML
+processors differ in their determination of the location a relative URI is
+considered to be relative to: when validating a document against a schema
+<em>s</em> that includes or imports other schemas with a relative URI, some
+processors will take that URI to be relative to the location of the XML
+document, and others will take it to be relative to the location of schema
+<em>s</em>.<br/></li>
+<li><em>[delete]</em> At the time the XCES schemas were developed, there was inconsistent support
+for <tt>xsd:redefine</tt> among XML validators, and it was
+impossible to specify a set of schemas that all, or even most, XML validators
+would accept. Therefore, the current set of schemas use the "cut and paste"
+method of inheritance; that is, when redefining a model group, a copy of the
+schema is made and the relevant groups are modified.</li>
+-->
+</ul>
+<!--
+<p>The original goal when creating the schemas was to define a
+series of model groups, use these groups to define types, and then declare
+elements using these types. Schemas would then be modified and customized by
+redefining the models groups, which would change the types and, therefore, the
+element definitions. For example, the only real difference between the
+xcesDoc.xsd schema and the xcesMerged.xsd schema is that xcesMerged.xsd allows
+&lt;tok&gt; elements in the model group for sentence level content. Using
+<tt>xsd:redefine</tt>, the <tt>xcesMerged</tt>
+schema should only need to add a defintion of the <tt>&lt;tok&gt;</tt> element and redefine the model group for sentence
+level content, rather than copying the entire <tt>xcesDoc</tt>
+schema.</p>
+<p>It is expected that the next version, the XCES schemas will use
+<tt>xsd:redefine.</tt></p>
+-->
+<h2>Validation</h2>
+<p>The ANC Second Release data has been validated using the <a href="http://xerces.apache.org/xerces2-j/">Xerces 2 Java Parser</a>. However, it is
+possible that a few invalid files escaped notice.</p>
+<h2>Automatic processing</h2>
+<p>All of the markup and annotation in the first release of the ANC
+was produced <em>entirely automatically</em> from data in a variety of
+formats:</p>
+<ul>
+<li>Switchboard : ASCII texts</li>
+<li>CallHome : ASCII texts</li>
+<li>Charlotte : ASCII texts</li>
+<li>Micase : XML</li>
+<li>911 Report :  PDF</li>
+<li>Berlitz : Quark Express</li>
+<li>Biomed : XML</li>
+<li>Buffy : HTML</li>
+<li>Hargraves : Word file</li>
+<li>Eggan : Word file</li>
+<li>ICIC : ASCII text</li>
+<li>NY Times : SGML</li>
+<li>OUP : Quark Express</li>
+<li>PLOS : XML</li>
+<li>Slate : HTML</li>
+<li>Verbatim : SGML</li>
+<li>Web data : HTML</li>
+</ul>
+<p>For <em>gross logical structure</em> (down
+to the level of paragraph), text parts such as title, author, section head,
+footnotes, quotations, lists, etc. may or may not be marked as such, depending
+upon whether or not this information was differentiated in some systematic way
+in the original format. In general, our algorithm assumed that the presence of
+a carriage return signalled the beginning of a paragraph unless otherwise
+indicated, and therefore elements unrecognizable as any other type of element
+are typically encloded in &lt;p&gt; tags.</p>
+<p>All sentence markup was automatically produced by the sentence
+splitter included in the <a href="http://gate.ac.uk">Gate</a> system, and there
+are occasional errors, usually due to the presence of unrecognized abbreviations in
+mid-sentence. The sentence splitter also puts punctuation appearing after the
+terminating period (e.g., closing quotation mark, closing parenthesis) outside
+the sentence boundary.</p>
+<p><em>Part-of-speech tagging</em> was done
+automatically at Northern Arizona University using the Biber tagger, with no
+hand-validation. The annotations include both <a href="Biber-tags.txt">Biber's
+part-of-speech tags</a> and lemmas. The Biber tagger has an average accuracy
+similar to most taggers (95% or higher). Additional part of speech tags have also
+been generated with the Hepple part of speech tagger included in Gate.</p>
+<p>Due to some inconsistencies in the way clitics (e.g.,
+"don't", let's") are treated by the Biber tagger (some treated as two separate
+words, some as one with extra information), a few words in the corpus are not
+annotated for part of speech because they were skipped during
+post-processing. Words that have not been tagged have
+not been included in the word counts for the corpus.</p>
+<h2>Gold standard sub-corpus</h2>
+<p>The ANC Project has obtained funds from the <a href="http://www.nsf.gov">U.S. National Science Foundation</a> to hand-validate both
+the structural markup and part of speech annotation in a 10 million word subset
+of the ANC in order to create a "gold standard" corpus. The gold standard
+corpus will be balanced along the same lines as the entire 100 million+ words
+of the ANC, and will therefore not coincide exactly with the 20 million words
+in the second release. The remaining portion of the corpus will be corrected to
+the extent possible using automated means and whatever level of hand-validation
+can be accomplished under our budget.</p>
+<h3>Funky characters in the data</h3>
+<p>Note on the <em>OUP and Berlitz
+files:</em> The original Quark Express files contained characters
+that were encoded with numeric codes that may or may not correspond to an
+International Standards Organization (ISO) hexidecimal character. Where
+possible these values have been converted to the corresponding entity, for
+example 0x00E9 becomes &amp;eacute;. When the numeric
+values did not correspond to any known character defined in the ISO standard,
+the value is encoded as a numeric entity--e.g., the value 0x1A is encoded as
+&amp;#x001A;.</p>
+</div>
+<!--#include virtual="/templates/footer.html" -->

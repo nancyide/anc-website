@@ -1,0 +1,317 @@
+<!--#include virtual="/templates/header.html" -->
+<title>ANC Software</title>
+<!--#include virtual="/templates/menu.html" -->
+<div class="one-column"> 
+		<div class="item">
+		<h2>Contents</h2>
+		<ul>
+			<li><a href="#anc-tool">ANC Tool</a></li>
+			<li><a href="#xces-parser">XCES Parser</a></li>
+			<li><a href="#character-conversion">Character Conversion</a></li>
+			<li><a href="#gate-tools">GATE Tools</a></li>
+		    <li><a href="#uima">UIMA Tools</a></li>
+		</ul>
+		<h2>Notes</h2>
+		<ul>
+		<li>All of the software published on this page requires Java 1.6 or later and assumes that a graphical display is available.</li>
+		<li>The XML files are UTF-8 and  the text files are either UTF-8 (Open ANC, MASC) or UTF-16 (ANC 2nd Release).  <strong>Please be sure to select the correct character encoding when processing any of the ANC files.</strong> If you see &quot;Asian characters&quot; that means you have specified UTF-16 when the text files are actually UTF-8. If you see &quot;little boxes&quot; every other character in the text that means you have specified UTF-8 when the text files are actually UTF-16 . </li>
+		</ul>
+		<h2>Software</h2>
+		<a name="anc-tool"></a>
+		<h3>ANC Tool</h3>
+		  <p>The ANC Tool is a Java program used to process 
+		    the ANC files with standoff annotations into files with inline annotations--that is, with the annotations merged 
+		    into the primary data and contained in a single file. </p>
+		  <p>The ANC GrAF Tool can be downloaded in a number of formats</p>
+		<ul>
+		  <li>Java jar file.
+		    <ul>
+		      <li>packaged as a <a href="https://anc.org/tools/ANCTool-2.0.0-dist.zip">.zip</a> file</li>
+		      <li>packaged as a <a href="https://anc.org/tools/ANCTool-2.0.0-dist.tar.gz">.tar.gz</a> file</li>
+		    </ul>		    
+		  </li>
+		  <li><a href="https://anc.org/tools/ANCTool-2.0.0-win.zip">Windows executable</a></li>
+		  <li><a href="https://anc.org/tools/ANCTool-2.0.0.dmg">Mac OS X executable</a>. Requires OS X 10.6 (Snow Leopard) or later.</li>
+		  <li>Source code is available from the <a href="https://www.americannationalcorpus.org/svn/project_anctool/trunk/">ANC Public Subversion</a> server.</li>
+		</ul>
+  <p><b>Note:</b> Generating the Mac OS X and Windows executables from the Java jar files is still
+  experimental. If the native executables appear to hang or quit unexpectedly see the instructions
+  below for running the jar file from the command line with increased memory settings.</p>
+<h4>Output formats</h4>
+	    <p>The following output formats are supported. </p>
+	  <ul>
+	<li><b>XCES XML</b><br/>
+	Converts the ANC into XML encoded according to the <a href="http://www.xces.org">XCES</a>.
+	</li>
+	<li><b>Text with part of speech</b> (MonoConc Pro)<br/>
+	Rewrites the ANC text files to include part of speech tags in a format compatible with MonoConc/MonoConc Pro. <i>(Let us know if you have any character encoding issues.)</i>.  Tags appear after the word and separated by an underscore.  For example, <i>word_NN</i>.
+	</li>
+	<li><b>Text with part of speech</b> (WordSmith)<br/>
+	Rewrites the ANC text files to include part of speech tags using a subset of SGML (and we use the term loosely) that WordSmith understands. WordSmith does not (seem to) use a SGML parser but simply looks for text between &lt; and &gt; characters. For example: <em>&lt;W NN&gt;word</em></li>
+	<li><strong>NLTK</strong> (Experimental)<strong><br />
+	  </strong>Rewrites the ANC text files into a format suitable for use with NLTK. This option has not been tested.</li>
+	  </ul>
+		  <!--
+    <p>The ANCTool provides a simple graphical interface through which the user specifies 
+    the primary data documents to be used and selects one or more of the annotations 
+    to be merged into the primary data. </p>
+    <p>The ANCTool is available as a Java jar file. The Java jar file is plaform independent and can be used 
+    on any system with Java 1.5, or later, installed. The latest version of Java 
+    can be downloaded from <a href="http://www.java.com/en/download/manual.jsp">Sun 
+    Microsystems</a>.</p>
+    -->
+	<h4>Installation</h4>
+	<!--<p>Download the <a href="https://anc.org/tools/ANCTool-latest.zip">ANCTool</a> and unzip the file to any convenient location.</p>-->
+	<p>Download the ANCTool and unzip the file to any convenient location.</p>
+	<h4>Running</h4>
+	<p>The ANCTool is an executable Java application that can be executed on most operating system by 
+	  double clicking on the jar file. However, it is recommended that the jar file be started from the
+	command line with the following command:</p>
+	<pre>    java -Xmx500M -jar ANCTool-x.y.z-jar.jar</pre>
+	<p>Where x.y.z is the version number (i.e. 1.2.6). The <tt>-Xmx500M</tt> option increases the amount
+	of memory Java will make available to the ANC Tool. If the ANC Tool appears to <i>hang</i> or quits
+	abruptly run the jar file from the command line and increase the memory size.</p> 
+	  
+	  <p>The first time you run the ANC Tool you will be asked to select the ANC home directory.  This is the root directory of your ANC installation and should include (at least) the ANC's data directory. </p>
+	<h4>Using</h4>
+	<p>Additional information on using the ANC Tool can be found <a href="anctool.html">here</a>.</p>
+  <p class="right">Back to the <a href="#top-of-page">top</a>.</p>
+	<hr/>
+		<a name="xces-parser"></a>
+		<h3>XCES Parser - A Java SAX (like) Parser</h3>
+  <ul>
+    <li><a href="https://anc.org/tools/xces-parser.zip">Download</a> the jar file.</li>
+    <li>Download the <a href="https://anc.org/tools/xces-parser-doc.zip">Javadoc documentation</a>.</li>
+	<li>Get the <a href="source.html#xces-parser">Java source code</a>.</li>
+  </ul>
+  <p>With the xces-parser package programmers and tool developers have an easy method to use the ANC files 
+    with existing XML tools. For example, the ANCTool above is simply a front end for the xces-parser that uses different  org.sax.helpers.DefaultHandler implementations to achieve the desired output. </p>
+  <p>The classes in the Java package org.xces.standoff.parsers implement (most of) the SAXParserFactory, SAXParser, and XMLReader interfaces 
+      to permit SAX aware applications to process ANC documents with standoff annotations 
+      as if they were XML files; there is no need to preprocess the ANC into XML 
+      ahead of time. For example, the parser can be used with <a href="http://saxon.sourceforge.net">Saxon</a> to apply XSLT stylesheets directly to an ANC document with standoff annoations. </p>
+  <p>The jar file can also be run from the command line to merge ANC documents 
+    into XML files with inline annotations. The usage is:</p>
+  <pre>     java -jar xces-parser.jar -a -b -c [-milestone|-nest|-discard] [-utf8|-utf16|-ascii] [-offsets] filename.anc
+	    </pre>
+  <p>Where:</p>
+  <ul>
+    <li>filename.anc is the XCES header file for the document.</li>
+    <li>a, b, c are the annotation types to load. The available annotations types 
+      are: 
+      <ul>
+        <li><b>s</b> : sentence boundary annotations.</li>
+        <li><b>biber</b> : Biber part of speech tags.</li>
+        <li><b>hepple</b> : Hepple part of speech tags.</li>
+        <li><b>np</b> : noun chunks.</li>
+        <li><b>vp</b> : verb chunks.</li>
+      </ul>
+    </li>
+	  <li>-milestone|-nest|-discard <i>(optional)</i> : defines how overlapping annotations are handled.
+	  	<ul>
+			<li>milestone: Create <a href="http://www.mulberrytech.com/Extreme/Proceedings/html/2004/DeRose01/EML2004DeRose01.html">CLIX/HORSE</a> milestone annotations.  That is <br/>
+			&lt;a&gt;...&lt;b&gt;...&lt;/a&gt;...&lt;/b&gt;<br />
+			becomes <br/>
+			&lt;a&gt;...&lt;b sId="b1"/&gt;...&lt;/a&gt;...&lt;b eId="b1"/&gt;<br />
+			</li>
+			<li>nest: Overlapping annotations are nested. That is<br/>
+			&lt;a&gt;...&lt;b&gt;...&lt;/a&gt;...&lt;/b&gt;<br />
+			becomes <br/>
+			&lt;a&gt;...&lt;b nest="b0"/&gt;...&lt;/b&gt;&lt;/a&gt;&lt;b nest="b0"&gt;...&lt;/b&gt;<br />			
+			</li>
+			<li>discard: Overlapping annotations are discarded. That is<br/>
+			&lt;a&gt;...&lt;b&gt;...&lt;/a&gt;...&lt;/b&gt;<br />
+			becomes <br/>
+			&lt;a&gt;......&lt;/a&gt;...<br />
+			</li>
+		</ul>
+		The default is <i>milestone</i>.
+	  </li>
+	  <li>-utf8|-utf16|-ascii <i>(optional)</i> : Specifies the character encoding used for the text content. 
+	  The default is utf16.</li>
+	  <li>-offsets <i>(optional)</i> : Causes the parser to include the start and end offsets with each annotation.</li>
+    </ul>
+  <p>So, for example, the command:</p>
+  <pre>     java -jar xces-parser.jar -s -hepple -np Chapter1.anc</pre>
+  <p>would create an XML file that included the sentence annotations, Hepple part of speech tags, and the noun phrase annotations.</p>
+  <p class="right">Back to the <a href="#top-of-page">top</a>.</p>
+  		
+		<hr/>
+		<a name="character-conversion"></a>
+		<h3>Character Conversion</h3>
+    <p><a href="https://anc.org/tools/ANCFileConversion-jar.zip">Download</a> the Java jar file.</p>
+<p>The ANC was processed on a dual processor Macintosh and currently the text 
+    files include Unix end of line characters. If you want to process the text 
+    files on a Windows system you <em>may</em> need to convert the end of line 
+    characters. This program will do a bulk conversion of the end of line characters 
+    on a directory of files. The program can also be used to convert between UTF-16 
+    and UTF-8 character encodings at the same time.</p>
+  <p>Like the above programs the ANCFileConversion jar file can be run from the 
+    command line:</p>
+  <pre>		java -jar ANCFileConversion.jar</pre>
+  <h3>Using</h3>
+  <p>Select the input and output directories. You may type the directory paths directly into the input fields, or click on the button beside each field to navigate to, and select a directory.</p>
+  <p>Select the &quot;File pattern filter&quot;. This should be left to the default (*.txt), but can be changed to process other types of files, including all the files in a directory. The ANCFileConversion utility does not process the contents of the files. For example, if changing the encoding of *.xml files it will not change the <em>encoding</em> attribute in the xml heading; that will need to be done separately.</p>
+  <p>Select the input and output character encodings and how end of line characters should be handled. If you select ASCII as the output encoding you <strong>will</strong> get garbage characters in the output since it is not possible to map all the characters used in the ANC into the 256 characters provided by 8-bit ASCII. Nor do we make any attempt to guess what  the most appropriate replacement character would be for an un-mappable character.</p>
+  <p><strong>Note</strong>: Performing the end of line character conversion will 
+      not be necessary for most applications. Conversion from UTF-16 to 
+      UTF-8 may be required depending on your  application's handling of Unicode 
+      characters. <br />
+  </p>
+  <p class="right">Back to the <a href="#top-of-page">top</a>.</p>
+  <hr />
+    <a name="gate-tools"></a> 
+  <h3>GATE Tools </h3>
+  <p>Download the Gate tools [<a href="https://anc.org/tools/GateTools-2.1.zip">zip</a> | <a href="https://anc.org/tools/GateTools-2.1.tar.gz">tgz</a>]</p>
+  <p><a href="http://gate.ac.uk">GATE</a> is an application framework (among 
+    other things) that was used to prepare the ANC. Therefore GATE is 
+    a natural companion to the ANC for many types of processing tasks. Several 
+    plugins are provided that allow GATE to work with ANC documents and load and 
+    save standoff annotations.</p>
+  <p>To install the plugins simply extract the contents of the GateTools archive 
+    into GATE's plugins folder, launch GATE and add the plugins with GATE's &quot;Manage 
+    Plugins&quot; dialog. See GATE's documentation for further information on adding custom
+    plugins. </p>
+  <p>After installation you should find the following items available in GATE<em>:</em></p>
+  <h3>Documents</h3>
+  <ul>
+    <li><strong>New ANC Document.</strong><br/>      		
+      The ANC Document resource accepts the same properties as the GATE Document 
+      class as well as the following properties:<br/>
+      <br/>
+      <table>
+        <tr>
+          <td><em>loadStandoff</em></td>
+          <td> : </td>
+          <td>A boolean indicating whether any standoff annotations should be 
+            loaded. Defaults to false. </td>
+        </tr>
+        <tr>
+          <td><em>standoffASName</em></td>
+          <td> : </td>
+          <td>The name of the annotation set the standoff annotations will be 
+            added to.</td>
+        </tr>
+        <tr>
+          <td><em>standoffAnnotations</em></td>
+          <td> : </td>
+          <td>A list of standoff annotation types to be loaded.</td>
+        </tr>
+      </table>
+      <br/>
+    </li>
+  </ul>
+  <h3>Processing Resources </h3>
+  <ul>
+    <li><strong>ANC Load GrAF Standoff</strong><br/>
+      Adds a set of standoff annotations to a document. The following properties 
+      are supported:<br/>
+      <br/>
+      <table>
+        <tr>
+          <td><em>document</em></td>
+          <td> : </td>
+          <td>The document the annotations will be added to</td>
+        </tr>
+        <tr>
+          <td><em>sourceUrl</em></td>
+          <td> : </td>
+          <td>The URL of the standoff annotation file.</td>
+        </tr>
+        <tr>
+          <td><em>standoffAsName</em></td>
+          <td> : </td>
+          <td>The annotation set to add the annotation to.</td>
+        </tr>
+      </table>
+      <br/>
+    </li>
+    <li><strong>ANC Save GrAF Standoff</strong><br/>
+      Saves annotations to a standoff XML file. The following properties are supported:<br/>
+      <br/>
+      <table>
+        <tr>
+          <td valign="top"><em>document</em></td>
+          <td> : </td>
+          <td>The document containing the annotations to save.</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>destination</em></td>
+          <td> : </td>
+          <td>The URL of the standoff annotation file to create.</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>inputASName</em></td>
+          <td> : </td>
+          <td>Set containing the annotations to be saved.</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>standoffTags</em></td>
+          <td> : </td>
+          <td>A list of annotation types to be saved. If this property is left 
+            empty all of the annotations in the input annotation set will be saved.</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>encoding</em></td>
+          <td> : </td>
+          <td>The character encoding to be used when writing the standoff annotation 
+            file. Default is UTF-8</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>namespace</em></td>
+          <td> : </td>
+          <td>The namespace to use for the XML document. Defaults to http://www.xces.org/schema/2003</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>version</em></td>
+          <td> : </td>
+          <td>The value of the version attribute in the root element of the document. 
+            Defaults to 1.0</td>
+        </tr>
+        <tr>
+          <td valign="top"><em>schemaLocation</em></td>
+          <td> : </td>
+          <td>If set will cause a xsi:schemaLocation attribute to be added to 
+            the root element of the standoff annotation file.</td>
+        </tr>
+      </table>
+      <br/>
+    </li>
+    <li><strong>ANC Save Content</strong><br/>
+      Save the content of the document to a text file. The following properties 
+      are supported:<br/>
+      <br/>
+      <table>
+        <tr>
+          <td><em>document</em></td>
+          <td> : </td>
+          <td>The document to save.</td>
+        </tr>
+        <tr>
+          <td><em>destination</em></td>
+          <td> : </td>
+          <td>The URL of the file to create.</td>
+        </tr>
+        <tr>
+          <td><em>encoding</em></td>
+          <td> : </td>
+          <td>The character encoding to use when creating the file. Defaults to 
+            UTF-8.</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+  <p>There is no corresponding <i>ANC Load Content</i> processing resourse. Since 
+    the content of an ANC document is stored as a text file the content can be 
+    loaded in a normal GATE document (remember, the text files are UTF-16).</p>
+  
+  	<h3>Using GATE</h3>
+	<p>Detailed instructions on using the ANC resources in GATE can be found <a href="using-gate.html">here</a>.</p>
+  <p class="right">Back to the <a href="#top-of-page">top</a>.</p>
+  <hr/>
+  <h3><a name="uima"></a>UIMA Tools</h3>
+  <p>The ANC's Uima tools provide tools to convert ANC standoff annotation files (GrAF) to <a href="http://uima.apache.org/">UIMA</a>'s Common Analysis Structure File (CAS), and to export annotations in UIMA CAS format to GrAF.</p>
+  <p>Instructions on using the UIMAUtils API and using the exectuable UIMAUtils.jar file can be found <a href="uima-utils.html">here</a>.</p>
+  </div>
+</div>
+      <!--#include virtual="/templates/footer.html" -->

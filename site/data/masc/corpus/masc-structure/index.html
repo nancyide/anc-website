@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Corpus Format and Structure | Open American National Corpus</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../wp-content/themes/anc/style.css" />
+	
+<style>.menu > ul > li:hover > .children,.menu > ul > li:focus-within > .children{display:block!important}.migration-note{padding:1em;border-left:4px solid #a63a3a;background:#f5f5f5}</style>
+</head>
+<body>
+<div id="nav">
+
+<div id="nav_content">
+
+<a href="../../../../" id="logo"></a>
+
+<div class="menu">
+	<ul>
+		<li>
+			<a href="../../../../" alt="Home">home</a>
+		</li>
+		<li class=""><a href="../../../../about/" alt="About the ANC Project">about</a>
+<ul class='children'>
+	<li class=""><a href="../../../../about/people/" alt="People">people</a></li>
+	<li class=""><a href="../../../../about/contact/" alt="Contact Us">contact</a></li>
+	<li class=""><a href="../../../../about/updates/" alt="Updates">updates</a></li>
+	<li class=""><a href="../../../../about/publications/" alt="Publications">publications</a></li>
+	<li class=""><a href="../../../../about/anc-in-the-news/" alt="anc in the news">anc in the news</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../../contribute/" alt="contribute">contribute</a>
+<ul class='children'>
+	<li class=""><a href="../../../../contribute/texts/" alt="Contribute Texts">texts</a></li>
+	<li class=""><a href="../../../../contribute/contribute/" alt="Contribute Annotations">data and annotations</a></li>
+</ul>
+</li>
+<li class="current-page-ancestor"><a href="../../../" alt="data">data</a>
+<ul class='children'>
+	<li class=""><a href="../../../oanc/" alt="Open ANC">oanc</a></li>
+	<li class="current-page-ancestor"><a href="../../" alt="MASC">masc</a></li>
+	<li class=""><a href="../../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+</ul>
+</li>
+<li class=""><a href="../../../../software/" alt="tools">tools</a>
+<ul class='children'>
+	<li class=""><a href="../../../../software/anc2go/" alt="ANC2Go">ANC2Go</a></li>
+	<li class=""><a href="../../../../software/anc-tool/" alt="ANC Tool">ANC Tool</a></li>
+	<li class=""><a href="../../../../software/gate-tools/" alt="GATE Tools">GATE Tools</a></li>
+	<li class=""><a href="../../../../software/uimautils/" alt="UIMA Tools">UIMA Tools</a></li>
+</ul>
+</li>
+	</ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div id="content_frame">
+
+
+<div id="subnav">
+
+	
+
+	<ul>
+		<li class=""><a href="../../../oanc/" alt="Open ANC">oanc</a></li>
+<li class="current-page-ancestor"><a href="../../" alt="MASC">masc</a></li>
+<li class=""><a href="../../../anc-second-release/" alt="ANC Second Release">second release</a></li>
+	</ul>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+					
+
+
+<div id="content_wrapper">
+
+	<div id="post-135" class="post-135 page type-page status-publish hentry">
+					
+					<h1><a href="../../" class="entry-title">MASC</a></h1>
+		
+					<div id="side-links">
+				<ul>
+					<li class="page_item page-item-113"><a href="../../about/">About</a></li>
+<li class="page_item page-item-120 page_item_has_children current_page_ancestor current_page_parent"><a href="../">The Corpus</a>
+<ul class='children'>
+	<li class="page_item page-item-839"><a href="../annotations/">Annotations</a></li>
+	<li class="page_item page-item-135 current_page_item"><a href="./" aria-current="page">Corpus Format and Structure</a></li>
+	<li class="page_item page-item-577"><a href="../577-2/">Corpus and annotation overview</a></li>
+	<li class="page_item page-item-526"><a href="../browse-masc-data/">Browse MASC Data</a></li>
+</ul>
+</li>
+<li class="page_item page-item-143"><a href="../../wordnet-framenet-annotations/">MASC Sentence Corpus</a></li>
+<li class="page_item page-item-920"><a href="../../masc-amt-word-sense-annotation/">MASC AMT Word Sense Annotation</a></li>
+<li class="page_item page-item-148"><a href="../../contribute/">Contribute Data and Annotations</a></li>
+<li class="page_item page-item-152 page_item_has_children"><a href="../../downloads/">Downloads</a>
+<ul class='children'>
+	<li class="page_item page-item-514"><a href="../../downloads/data-download/">Data Download</a></li>
+	<li class="page_item page-item-518"><a href="../../downloads/tool-downloads/">Tool Downloads</a></li>
+</ul>
+</li>
+				</ul>
+				<div class="lower"></div>
+			</div>
+			
+			<div id="content" class="sidelinks">
+			
+				
+		
+		
+					<h1 class="subentry-title">Corpus Format and Structure</h1>
+				
+		<div class="entry-content">
+					
+					
+
+
+
+
+
+					
+					
+						<p>Each MASC text is in a separate primary data document, with an associated header file and segmentation file. All annotations are contained in separate annotation files whose names indicate the contents. The following lists the files and describes their contents.</p>
+<p>For an overview of the LAF/GrAF corpus structure and headers, see Ide, N., Suderman, K. (forthcoming). <a href="http://www.cs.vassar.edu/~ide/papers/ide-suderman-LRE-LAF.pdf">The Linguistic Annotation Framework: A Standard for Annotation Interchange and Merging</a>. <em>Language Resources and Evaluation</em>.</p>
+<h2>HEADERS</h2>
+<p><strong>MASC Corpus Header</strong><br />
+<span style="color: #ff0000;">resource-header.xml</span> : The MASC corpus header included in the distribution contains information concerning the provenance, compilations procedures, organization, and content of the corpus. The following sections of the header are referred to by text and annotation files:</p>
+<ul>
+<li><em>Category class declaration</em> (element name: ClassDecl) : provides the category labels used to identify major and minor genre in text document headers.</li>
+<li><em>File structure</em> (element name: fileStruct) : provides information about all files, their naming conventions, and dependencies among annotation files.</li>
+<li><em>Annotation spaces</em> (element name: annotationSpaces) : identifies the annotations sets used in the annotation files and their naming conventions, as well as the conceptual annotation “layer” to which each set belongs.</li>
+<li><em>Annotation</em> (element name: annotationDecl) : identifies an annotation type included in each annotation set, indicates the method by which it was produced, and provides a brief description and link to the documentation and project that is responsible for creation for the annotation.</li>
+<li><em>Groups</em> (element name: groups) : identifies different annotation layers or other selected portions in the corpus and their naming conventions.</li>
+<li><em>Media</em> (element name: media) : identifies the formats of files included in the corpus and annotations and indicates the suffix for files conforming to that format.</li>
+<li><em>Anchors </em>(element name: anchorType): defines the mechanisms for pointing into primary data, depending on media type.</li>
+</ul>
+<p><strong>MASC Text (document) Headers</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;.hdr</span> contains the header for the document , which provides information about the provenance of the text and specifies the medium (UTF-8 text for all MASC documents), genre, sub-genre, domain, and subject information (element name: textClass), as well as information about the location of the primary text file and all associated annotation files, for human or machine consumption.</p>
+<p><strong>MASC Annotation Headers</strong><br />
+The header for each annotation file is included in the annotation file itself, rather than being provided as a separate XML document. Annotation headers indicate the location of all related documents and dependencies upon other annotation file. This latter information is used by some ANC tools to ensure that all required documents are loaded into GATE, UIMA, etc. Annotation headers also provide information about the types of anchors used in the annotation (character offsets for text), the annotation sets used.<br />
+All MASC annotations are in <a href="http://www.aclweb.org/anthology/W/W07/W07-1500.pdf">GrAF format</a> and linked to regions defined over the primary data or to other annotations.</p>
+<h2>PRIMARY DATA FILES</h2>
+<p><strong>Primary Data file</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;.txt</span> : The primary data in UTF-8 character encoding.</p>
+<p><strong>Segmentation file</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-seg.xml</span> : All MASC documents are associated with a base segmentation file that contains the minimal set of “regions” defined over the primary data. The regions represent the finest granularity required to define the various different tokenizations over the primary data.</p>
+<h2>ANNOTATION FILES ASSOCIATED WITH ALL MASC TEXTS</h2>
+<p><strong>Token / part-of-speech</strong><br />
+Two different tokenization and part of speech files are included for each text in MASC I:<br />
+<span style="color: #ff0000;">&lt;file-name&gt;-penn.xml</span> : tokens automatically produced by <a href="http://gate.ac.uk/sale/tao/splitch6.html#x9-1250006.2">GATE’s ANNIE tokenizer</a>, manually corrected, with lemma and part-of-speech annotation using the Penn tagset. **These tags have not been fully hand-corrected**.</p>
+<p><strong>Sentence boundary</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-s.xml</span> : Sentence regions defined over the primary data, produced automatically by the <a href="http://gate.ac.uk/sale/tao/splitch6.html#x9-1350006.4">GATE ANNIE sentence splitter</a> and manually validated.<br />
+** Note that the Penn Treebank syntactic annotation files also contain sentence boundaries.</p>
+<p><strong>Shallow parse</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-nc.xml</span> : noun chunks produced automatically by an enhanced version of <a href="http://gate.ac.uk/sale/tao/splitch17.html#x22-42000017.2">GATE’s noun phrase chunker</a> and manually corrected. See the <a href="http://gate.ac.uk/sale/tao/splitch17.html#x22-41900017.1">noun chunk validation guidelines</a>. Noun chunks point to tokens in the associated “penn-tok” file for that text.</p>
+<p><span style="color: #ff0000;">&lt;file-name&gt;-vc.xml</span> : verb chunks produced automatically by an enhanced version of <a href="http://gate.ac.uk/sale/tao/splitch17.html#x22-41900017.1">GATE’s verb group chunker</a> and manually corrected. See the <a href="http://www.anc.org/wiki/wiki/VerbChunks">verb chunk validation guidelines</a>. Verb chunks point to tokens in the associated “penn-tok” file for that text.</p>
+<p><strong>Named entities</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-ne.xml</span> : Named entity annotations for person, location, organization, and date produced by an in-house named entity recognizer implemented in GATE using the <a href="http://gate.ac.uk/sale/tao/splitch8.html#x12-1960008">JAPE language</a>. See the <a href="http://www.anc.org/wiki/wiki/NamedEntities">named entity validation guidelines</a>. Named entity annotations point to tokens in the associated “ptb-tok” file for that text.</p>
+<h2>ANNOTATION FILES ASSOCIATED WITH SOME TEXTS</h2>
+<p><strong>Penn Treebank syntax</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-ptb.xml</span> : Syntactic annotation produced by the <a href="http://www.cis.upenn.edu/~treebank/">Penn Treebank project</a> in their internal bracketed format and transduced to GrAF format for inclusion in MASC. Bottom-most nodes in the phrase structure trees point to tokens in the associated “ptb-tok” file for that text.</p>
+<p>For texts including Penn Treebank annotations, a second tokenization file is provided:<br />
+<span style="color: #ff0000;">&lt;file-name&gt;-ptb-tok.xml</span><strong> : </strong>tokenization and part-of-speech annotation provided by the Penn Treebank project, manually validated by that project.</p>
+<p><strong>FrameNet frame elements</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-fn.xml</span> : Semantic role annotation produced by the <a href="http://www.icsi.berkeley.edu/~framenet/">Framenet project</a> in their internal XML format and transduced to GrAF format for inclusion in MASC. Annotations point to tokens in the associated “fn-tok” file for that text, which include part-of-speech annotations using the Penn tagset.</p>
+<p>For texts including FrameNet annotations, a third tokenization file is provided:</p>
+<p><span style="color: #ff0000;">&lt;file-name&gt;-penn-fn-tok.xml</span> : tokenization and part-of-speech annotation using Penn tags provided by the FrameNet project, manually validated by that project.</p>
+<p><strong>MPQA opinion</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-mpqa.xml</span> : Opinion annotation produced by the <a href="http://www.cs.pitt.edu/mpqa">Pittsburgh Opinion Annotation project</a> using GATE. Annotations point to tokens in the associated “penn” file for that text (see above).</p>
+<p><strong>Committed belief</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-cb.xml</span> : Annotation for committed beliefs produced for the LU Corpus by researchers at Carnegie-Mellon University using GATE.</p>
+<p><strong>Event</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-event.xml</span> : Annotation for events produced for the LU Corpus by researchers at Carnegie-Mellon University using GATE.</p>
+<h2>ANNOTATIONS FOR ALL TEXTS THAT IS NOT YET AVAILABLE</h2>
+<p><strong>Coreference</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-coRef.xml</span> : coreference annotation produced automatically by an enhanced version of <a href="http://gate.ac.uk/sale/tao/split.html#QQ2-9-163">GATE’s pronominal and nominal coreferencers</a> and manually corrected. See the <a href="http://www.anc.org/wiki/wiki/CoReference">coreference validation guidelines</a>.</p>
+<p><strong>Discourse</strong><br />
+<span style="color: #ff0000;">&lt;file-name&gt;-clause.xml</span> : annotation of clause boundaries produced automatically by software developed at University &#8220;A.I. Cuza&#8221; in Iasi, Romania and manually corrected, plus nucleus/satellite annotation for all clauses.</p>
+						
+						<div class="clear"></div>
+						
+																	
+
+				
+				</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+				</div>
+
+			
+			
+
+
+
+<div class="clear"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+<div id="footer">
+<a class="footer-logo" href="../../../../"></a> &copy; 2002-2015 American National Corpus Project. All rights reserved. Please <a href="../../../../about/contact/">contact us</a> if you have any comments or questions.
+</div>
+</body>
+</html>

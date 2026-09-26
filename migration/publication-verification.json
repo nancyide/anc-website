@@ -1,0 +1,365 @@
+{
+  "checked_at_utc": "2026-09-26T16:29:26.269981+00:00",
+  "repository_visibility": "public",
+  "site_url": "https://nancyide.github.io/anc-website/",
+  "deployment_run": "https://github.com/nancyide/anc-website/actions/runs/36255521788",
+  "deployment_conclusion": "success",
+  "release_url": "https://github.com/nancyide/anc-website/releases/tag/datasets-2026-09-25",
+  "anonymous_download_checks": [
+    {
+      "asset": "coinco.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-1.0.2.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-1.0.2.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-1.0.3.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-1.0.3.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-3.0.0.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC-3.0.0.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC1.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC1.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC_AMT_RELEASE_1.0.tar.gz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "MASC_AMT_RELEASE_1.0.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "Mini-MASC.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "Mini-MASC.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "Propbank-original-format.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "Propbank-original-format.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc-conll.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc-conll.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc_500k_texts.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc_500k_texts.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc_wordsense.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "masc_wordsense.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "penn-treebank.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "penn-treebank.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-1.0.1-UTF8.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-installer.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC_GrAF.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC_GrAF.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-all-count.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-all-lemma.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-spoken-count.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-spoken-lemma.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-token-count.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-token-word.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-written-count.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC-written-lemma.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-bbn-entities.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-bbn-entities.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-parses.tgz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "OANC-parses.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANC.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCTool-2.0.0-dist.tar.gz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCTool-2.0.0-dist.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCTool-2.0.0-win.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCTool-2.0.0.dmg",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCTool-3.0.2.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "UimaUtils-2.0.1-javadoc.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "UimaUtils-2.0.1-sources.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "UimaUtils-2.0.1.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "org.xces.graf.uima-utils-1.0.0.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "C5-standard.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "C5-web.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "C7-standard.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "C7-web.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "Slate-coref-install.jar",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "ANCFileConversion-jar.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "GateTools-2.1.tar.gz",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "GateTools-2.1.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "xces-parser-doc.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "asset": "xces-parser.zip",
+      "status": "200",
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "custom_domain_changed": false
+}

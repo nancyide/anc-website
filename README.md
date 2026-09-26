@@ -1,6 +1,10 @@
 # American National Corpus — static migration
 
-Private staging copy of the ANC website. The live domain has not been moved.
+Public static test site: https://nancyide.github.io/anc-website/
+
+Dataset downloads: https://github.com/nancyide/anc-website/releases/tag/datasets-2026-09-25
+
+The original anc.org domain has not been moved.
 
 The `site/` directory contains static pages, the original theme assets, public documents, and small corpus text files. Dataset/software archives are kept as release assets rather than in Git history. Their original paths, sizes, SHA-256 checksums, and intended release URLs are listed in `migration/download-manifest.json`.
 
@@ -22,14 +26,14 @@ python3 scripts/check_site.py
 
 The report is written to `migration/link-check.json`. Missing local links fail the check. References to the original host and external image dependencies are reported separately and must be reviewed before launch. This does not validate every external website or fragment identifier.
 
-## Publishing is pending
+## Domain cutover is pending
 
-This repository and its dataset release are private staging resources. Draft release downloads are not available to public visitors. Do not switch DNS or retire the original server until the remaining checklist is complete.
+The repository and the dataset release are public. GitHub Pages deployment succeeded, and all 59 archive URLs returned HTTP 200 without authentication. Do not switch DNS or retire the original server until the remaining checklist is complete.
 
 - Review the static preview and migration notices for former interactive features.
 - Confirm the final dataset scope; the full server directory is approximately 80 GiB, substantially larger than the files linked from the captured pages. Unlinked datasets and services have not been migrated.
-- Publish the reviewed dataset release and confirm its assets can be downloaded anonymously.
-- Decide repository visibility, enable GitHub Pages with GitHub Actions as its source, then run the manual `Publish static website` workflow. The workflow refuses to deploy while the dataset release remains a draft.
+- Completed: published the dataset release and verified anonymous access to all 59 archives.
+- Completed: made the repository public and deployed the GitHub Pages test site. Future site changes require running the manual `Publish static website` workflow.
 - Validate navigation, download checksums, legacy redirects, and the custom domain's HTTPS certificate.
 - Arrange DNS access for `anc.org` and `www.anc.org`, retain a private backup, and plan rollback before cutover.
 

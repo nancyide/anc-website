@@ -7,7 +7,7 @@ The static preview contains 150 HTML documents: 63 captured WordPress page/post 
 - Kept the original ANC theme and main navigation. Replaced the obsolete jQuery menu dependency with CSS hover/focus navigation and removed the old Facebook widget.
 - Replaced n-gram search, document uploads, and the protected page's password form with explanatory notices. ANC2Go instructions are retained as historical documentation with links to full corpus downloads.
 - Preserved published page paths and rewrote internal links to work both under a project-site prefix and on the final custom domain.
-- Linked the 59 copied dataset/software archives to the planned release `datasets-2026-09-25`. These links will become public only when the repository/release access and publication are configured.
+- Linked the 59 copied dataset/software archives to the planned release `datasets-2026-09-25`. The release is now public and all 59 download links have been checked without authentication.
 - Repaired verified legacy destinations, including the consortium and MASC structure links. The unavailable resources below link to an explicit archive notice instead of depending on the old server.
 - Copied existing license/logo images locally. Replaced an Open Data badge whose image host no longer resolves with the text “Open Data,” keeping its surrounding link.
 - Added a readable HTML shell to legacy fragments that depended on server-side include comments.
@@ -28,7 +28,7 @@ The static preview contains 150 HTML documents: 63 captured WordPress page/post 
 
 - Review the functional changes and decide whether any unavailable legacy resource must be recovered before launch.
 - Confirm the scope of unlinked server data, applications, and downloads outside this captured site. This migration is not a full backup of the approximately 80 GiB website directory or other server data.
-- All 59 archives and SHA256SUMS have uploaded and their GitHub sizes/digests match the verified source copies. Publish the release after approval, then verify anonymous access.
-- Enable Pages and decide repository visibility; private Pages source requires an eligible GitHub plan.
+- Completed: all 59 archives and SHA256SUMS have uploaded, their GitHub sizes/digests match the verified source copies, and the public archive URLs work without authentication.
+- Completed: the repository is public and the GitHub Pages test site is deployed.
 - Arrange redirects for old direct download URLs and obtain DNS access. GitHub Pages alone cannot issue arbitrary binary-path HTTP redirects to release assets.
 - Test the final custom domain and valid HTTPS, retain a backup and rollback route, and only then retire the old host.

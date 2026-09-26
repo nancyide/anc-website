@@ -1,0 +1,19 @@
+{
+  "status": "prepared_not_deployed",
+  "archives": 59,
+  "distinct_paths_including_aliases": 86,
+  "host_path_rules": 172,
+  "http_and_https_urls_covered": 344,
+  "hosts": [
+    "anc.org",
+    "www.anc.org"
+  ],
+  "directory_aliases": {
+    "/OANC/": "/oanc/",
+    "/MASC/": "/masc/"
+  },
+  "preserve_query_string": false,
+  "include_subdomains": false,
+  "subpath_matching": false,
+  "preserve_path_suffix": false
+}

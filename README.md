@@ -40,3 +40,5 @@ The repository and the dataset release are public. GitHub Pages deployment succe
 WordPress administration, its database, private content, credentials, plugin logs, CGI programs, and the server configuration are not included. Existing copyright and dataset license statements remain in force; this repository does not relicense the source material.
 
 See [the preview review notes](migration/REVIEW.md) for migration changes and unresolved legacy resources.
+
+The user has requested preserving the old archive download URLs. [Redirect imports and the cutover plan](migration/redirects/README.md) are prepared; Cloudflare account setup and activation remain pending. No live DNS changes have been applied.

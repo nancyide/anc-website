@@ -28,7 +28,7 @@ The static preview contains 150 HTML documents: 63 captured WordPress page/post 
 
 - Review the functional changes and decide whether any unavailable legacy resource must be recovered before launch.
 - Confirm the scope of unlinked server data, applications, and downloads outside this captured site. This migration is not a full backup of the approximately 80 GiB website directory or other server data.
-- Complete release upload/verification, publish it, and verify anonymous access.
+- All 59 archives and SHA256SUMS have uploaded and their GitHub sizes/digests match the verified source copies. Publish the release after approval, then verify anonymous access.
 - Enable Pages and decide repository visibility; private Pages source requires an eligible GitHub plan.
 - Arrange redirects for old direct download URLs and obtain DNS access. GitHub Pages alone cannot issue arbitrary binary-path HTTP redirects to release assets.
 - Test the final custom domain and valid HTTPS, retain a backup and rollback route, and only then retire the old host.
